@@ -28,6 +28,11 @@ get('year').textContent=String(new Date().getFullYear());
 const menu=get('menu-toggle'),links=get('nav-links');menu?.addEventListener('click',()=>{const expanded=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!expanded));links.classList.toggle('is-open',!expanded)});links?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('is-open');menu.setAttribute('aria-expanded','false')}));
 document.querySelectorAll('.service-choose').forEach(button=>button.addEventListener('click',()=>{const choice=button.closest('[data-service]')?.dataset.service;if(choice)get('service').value=choice;get('request').scrollIntoView({behavior:'smooth',block:'start'});get('service').focus({preventScroll:true})}));
 translate(lang);
+const motionTargets=document.querySelectorAll('.service-card,.industry-card,.workflow-step,.faq-accordion details,.form-card,.access-copy');
+if('IntersectionObserver' in window){
+const motionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');motionObserver.unobserve(entry.target)}}),{threshold:.14,rootMargin:'0px 0px -32px'});
+motionTargets.forEach((el,index)=>{el.dataset.motion='';el.style.transitionDelay=`${Math.min(index%5,4)*70}ms`;motionObserver.observe(el)});
+}else{motionTargets.forEach(el=>el.classList.add('is-visible'))}
 const form=get('project-form');if(!form)return;
 const cfg=window.COTIVANTA_CONFIG||{};let captchaToken='',widgetId;const message=get('form-message'),submit=get('submit-button'),success=get('form-success');
 function showMessage(text){message.textContent=text;message.hidden=false;}
