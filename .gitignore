@@ -8,3 +8,5 @@ site/.env.*
 supabase/functions/.env
 supabase/functions/.env.*
 !supabase/functions/.env.example
+
+config.js
