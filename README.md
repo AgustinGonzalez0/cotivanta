@@ -16,6 +16,14 @@ Los estilos se cargan en este orden: `styles.css` (base y componentes compartido
 
 El proyecto incluye `.editorconfig` y `.prettierrc.json` para mantener una indentación y un formato coherentes. Podés activar «Format on Save» en tu editor con la extensión Prettier.
 
+Para actualizar la cantidad de clientes y equipos, `site/admin.html` incluye un panel con inicio de sesión de Supabase. La página pública consulta `public.site_settings`; si no está disponible, utiliza `clientCount` y `teamCount` de `site/config.js` como respaldo. El panel y la tabla **todavía requieren configuración y pruebas antes de publicarse**:
+
+1. Revisar y ejecutar `supabase/setup/site_settings.sql` en el proyecto correcto. El archivo crea una tabla nueva para contenido público; no modifica `project_requests`. No ejecutar dos veces.
+2. Crear manualmente en Supabase Dashboard → Authentication → Users una cuenta confirmada para `cotivanta@gmail.com`, sin compartir la contraseña por chat. Verificar que sea la única cuenta con ese correo. Un administrador del proyecto debe asignarle `app_metadata.cotivanta_admin = true` mediante el mecanismo administrativo de Supabase; los usuarios normales no pueden concederse este permiso. Después de asignarlo, iniciar una sesión nueva para que el token incluya el permiso.
+3. Iniciar sesión en `admin.html`, guardar una cifra de prueba autorizada, verificarla en la web pública y restaurar el valor deseado. Probar también que un usuario sin ese atributo no pueda actualizar la tabla.
+
+El panel usa la clave publicable; no almacena claves privadas ni persiste la sesión al recargar la página. La tabla solo permite lectura pública y escritura a cuentas autorizadas por RLS. Hasta completar esas pruebas, los valores en `site/config.js` siguen siendo el respaldo. Nunca pongas secretos en archivos del sitio. La comprobación local del panel se ejecuta con `node --test tests/admin.test.cjs`.
+
 - `site/privacy.html`: aviso **BORRADOR**. Requiere revisión e identificación del responsable.
 - `site/config.js`: configuración PÚBLICA para API y Turnstile.
 - `supabase/migrations/20261028010000_project_requests.sql`: esquema privado de solicitudes, con RLS y sin acceso público.

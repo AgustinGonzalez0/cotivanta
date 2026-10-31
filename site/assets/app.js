@@ -354,12 +354,12 @@
     proofTitle: "Ideas serias. <span>Resultados que se sienten.</span>",
     proofDesc:
       "No mostramos clientes ficticios ni prometemos soluciones genéricas. Escuchamos el contexto, diseñamos con intención y construimos una base sólida para que tu proyecto pueda crecer.",
-    proofStat1: "áreas de solución",
-    proofStat1Sub: "web, apps, automatización y más",
+    proofStat1: "clientes atendidos",
+    proofStat1Sub: "proyectos y necesidades diferentes",
     proofStat2: "idiomas disponibles",
     proofStat2Sub: "español e inglés",
-    proofStat3: "equipo independiente",
-    proofStat3Sub: "atención directa, sin intermediarios",
+    proofStat3: "equipos ayudados",
+    proofStat3Sub: "soluciones para trabajar mejor",
     proofClientsEyebrow: "PARA QUIÉN TRABAJAMOS",
     proofClientsIntro:
       "Cada cliente llega con una necesidad distinta. La tecnología se adapta a la idea, no al revés.",
@@ -383,12 +383,12 @@
     proofTitle: "Serious ideas. <span>Results you can feel.</span>",
     proofDesc:
       "We do not show fictional clients or promise generic solutions. We listen to the context, design with intention, and build a solid foundation for your project to grow.",
-    proofStat1: "solution areas",
-    proofStat1Sub: "web, apps, automation, and more",
+    proofStat1: "clients served",
+    proofStat1Sub: "different projects and needs",
     proofStat2: "available languages",
     proofStat2Sub: "Spanish and English",
-    proofStat3: "independent team",
-    proofStat3Sub: "direct attention, no middlemen",
+    proofStat3: "teams supported",
+    proofStat3Sub: "solutions for better work",
     proofClientsEyebrow: "WHO WE WORK WITH",
     proofClientsIntro:
       "Every client arrives with a different need. Technology should adapt to the idea, not the other way around.",
@@ -617,6 +617,42 @@
   const form = get("project-form");
   if (!form) return;
   const cfg = window.COTIVANTA_CONFIG || {};
+  const clientCount = cfg.clientCount;
+  if (Number.isSafeInteger(clientCount) && clientCount >= 0) {
+    const countElement = get("client-count");
+    if (countElement) countElement.textContent = String(clientCount);
+  }
+  const teamCount = cfg.teamCount;
+  if (Number.isSafeInteger(teamCount) && teamCount >= 0) {
+    const countElement = get("team-count");
+    if (countElement) countElement.textContent = String(teamCount);
+  }
+  // La configuración local sirve como respaldo si el servicio no está disponible.
+  if (cfg.supabaseUrl && cfg.supabasePublishableKey) {
+    fetch(
+      `${cfg.supabaseUrl}/rest/v1/site_settings?id=eq.1&select=client_count,team_count`,
+      {
+        headers: { apikey: cfg.supabasePublishableKey },
+      },
+    )
+      .then((response) => {
+        if (!response.ok) throw new Error("Settings unavailable");
+        return response.json();
+      })
+      .then((rows) => {
+        const count = rows?.[0]?.client_count;
+        if (Number.isSafeInteger(count) && count >= 0) {
+          const countElement = get("client-count");
+          if (countElement) countElement.textContent = String(count);
+        }
+        const teams = rows?.[0]?.team_count;
+        if (Number.isSafeInteger(teams) && teams >= 0) {
+          const teamElement = get("team-count");
+          if (teamElement) teamElement.textContent = String(teams);
+        }
+      })
+      .catch(() => {});
+  }
   let captchaToken = "",
     widgetId;
   const message = get("form-message"),

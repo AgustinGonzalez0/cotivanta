@@ -397,7 +397,7 @@ body {
   transform: none;
 }
 .proof-stats {
-  display: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .proof-note {
   display: none;
@@ -444,6 +444,9 @@ body {
   }
 }
 @media (max-width: 600px) {
+  .proof-stats {
+    grid-template-columns: 1fr;
+  }
   .hero h1 {
     font-size: clamp(44px, 11vw, 64px);
   }
