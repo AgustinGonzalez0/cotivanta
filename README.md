@@ -42,15 +42,16 @@ npx supabase functions deploy project-request --no-verify-jwt
 | `ALLOWED_ORIGINS` | Orígenes exactos permitidos, separados por coma (p.ej. `https://cotivanta.pages.dev,https://cotivanta.com`) |
 | `ALLOWED_TURNSTILE_HOSTNAMES` | Hostnames de Turnstile permitidos separados por coma (sin `https://`) |
 | `SUPABASE_URL` | Supabase project URL, normalmente predefinida |
-| `SUPABASE_SECRET_KEY` o `SUPABASE_SERVICE_ROLE_KEY` | Clave privada, normalmente predefinida |
+| `SUPABASE_SECRET_KEYS` | Mapa JSON de claves privadas actual (`{"default":"sb_secret_..."}`), normalmente predefinido |
+| `SUPABASE_SECRET_KEY` o `SUPABASE_SERVICE_ROLE_KEY` | Compatibilidad con configuraciones anteriores |
 
-**Por qué `verify_jwt=false`:** el formulario es público, y la función aplica otras protecciones: Turnstile verificado en backend, validación de payload, honeypot, allowlist de origen, credenciales privadas y RLS. Para un sistema con alto tráfico, agregar limitación de solicitudes por IP y monitoreo en la capa edge.
+**Por qué `verify_jwt=false`:** el formulario es público, y la función aplica otras protecciones: Turnstile verificado en backend, validación de payload, honeypot, allowlist de origen, credenciales privadas y RLS. Además aplica un límite best-effort de 5 solicitudes por IP cada 10 minutos por instancia; para tráfico alto conviene agregar rate limiting distribuido en Cloudflare.
 
 6. Editá `site/config.js` con **valores públicos únicamente**:
 
 ```js
 window.COTIVANTA_CONFIG = {
-  apiUrl: "https://YOUR_PROJECT_REF.supabase.co/functions/v1/project-request",
+  apiUrl: "https://eucejksxzyerpuingidd.supabase.co/functions/v1/project-request",
   turnstileSiteKey: "PUBLIC_TURNSTILE_SITE_KEY"
 };
 ```
@@ -67,7 +68,9 @@ Para Cloudflare Pages, publicá **solo `site/`** como web estática (Direct Uplo
 
 - ✅ Landing bilingüe con catálogo de servicios y formulario responsive.
 - ✅ Backend y SQL incluidos en el repositorio.
-- ✅ Protección con RLS, validación backend y desafío Turnstile (requiere configuración).
-- ⬜ No publicada en Internet.
-- ⬜ No conectada todavía a un Supabase real; no se han hecho envíos reales.
+- ✅ Protección con RLS, validación backend, allowlist CORS/hostname, honeypot y rate limit best-effort.
+- ✅ Edge Function `project-request` publicada en Supabase con `verify_jwt=false` para el formulario público.
+- ✅ Landing conectada a la URL pública de la Edge Function.
+- ⬜ Turnstile y secretos de producción pendientes: todavía no se deben aceptar solicitudes reales.
+- ⬜ No se ha realizado un envío real ni una prueba end-to-end con un token Turnstile válido.
 - ⬜ Aviso de privacidad pendiente de completar y revisar legalmente.
