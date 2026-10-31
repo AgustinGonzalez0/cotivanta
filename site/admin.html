@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Administración — Cotivanta</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/admin.css" />
+    <script defer src="config.js"></script>
+    <script defer src="assets/admin.js"></script>
+  </head>
+  <body>
+    <main class="admin-card">
+      <a class="brand" href="index.html">✳ cotivanta<span>.</span></a>
+      <p class="eyebrow">ACCESO PRIVADO</p>
+      <h1>Administrar la página</h1>
+      <p class="intro">
+        Iniciá sesión con una cuenta autorizada para actualizar las cifras de
+        clientes y equipos.
+      </p>
+      <form id="login-form">
+        <label for="admin-email">Correo electrónico</label>
+        <input id="admin-email" type="email" autocomplete="username" required />
+        <label for="admin-password">Contraseña</label>
+        <input
+          id="admin-password"
+          type="password"
+          autocomplete="current-password"
+          required
+        />
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <form id="settings-form" hidden>
+        <label for="client-count-input">Clientes atendidos</label>
+        <input
+          id="client-count-input"
+          type="number"
+          min="0"
+          max="10000000"
+          step="1"
+          required
+        />
+        <label for="team-count-input">Equipos ayudados</label>
+        <input
+          id="team-count-input"
+          type="number"
+          min="0"
+          max="10000000"
+          step="1"
+          required
+        />
+        <p class="hint">
+          Los números guardados se mostrarán en la página pública.
+        </p>
+        <button type="submit">Guardar cambios</button>
+        <button type="button" id="logout" class="secondary">
+          Cerrar sesión
+        </button>
+      </form>
+      <p id="admin-message" role="status" aria-live="polite"></p>
+      <a class="back" href="index.html">← Volver a Cotivanta</a>
+    </main>
+  </body>
+</html>
