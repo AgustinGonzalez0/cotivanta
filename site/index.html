@@ -1,59 +1,975 @@
 <!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a1721">
-<meta name="description" content="Cotivanta es un estudio de desarrollo y soluciones digitales. Sitios web, aplicaciones, automatizaciones y software a medida. Contanos tu proyecto.">
-<meta property="og:title" content="Cotivanta — Tu idea, hecha realidad digital"><meta property="og:description" content="Creamos soluciones digitales a medida para personas, emprendedores y empresas. Contanos qué necesitás."><meta property="og:type" content="website">
-<title>Cotivanta — Desarrollo y soluciones digitales a medida</title>
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/studio.css"><link rel="stylesheet" href="assets/experience.css"><link rel="stylesheet" href="assets/premium.css">
-<script defer src="config.js"></script><script defer src="assets/app.js"></script>
-</head>
-<body>
-<a class="skip-link" href="#main" data-i18n="skip">Ir al contenido</a>
-<header class="site-header" id="top"><nav class="nav container" aria-label="Navegación principal">
-<a class="logo" href="#top" aria-label="Cotivanta"><span class="logo-symbol" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="11" fill="#C9FF95"/><path d="M24.5 12.5A9 9 0 1 0 25 24" stroke="#12251C" stroke-width="4" stroke-linecap="round"/><circle cx="26.5" cy="12.1" r="2.6" fill="#12251C"/></svg></span><span>cotivanta<span class="brand-dot">.</span></span></a>
-<div class="nav-links" id="nav-links"><a href="#services" data-i18n="navServices">Servicios</a><a href="#process" data-i18n="navProcess">Cómo trabajamos</a><a href="#audience" data-i18n="navAbout">Para quiénes</a><a href="#faq" data-i18n="navFaq">Preguntas</a></div>
-<div class="nav-actions"><div class="lang-switch" role="group" aria-label="Idioma"><button type="button" class="lang-btn is-active" data-lang="es" aria-pressed="true">ES</button><button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button></div><a class="btn btn-sm btn-lime nav-cta" href="#request"><span data-i18n="navCta">Pedir presupuesto</span> ↗</a><button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button></div>
-</nav></header>
-<main id="main">
-<section class="hero section-dark"><div class="hero-decor"></div><div class="container hero-inner">
-<div class="hero-copy"><span class="eyebrow eyebrow-dark"><span class="status-pulse"></span><span data-i18n="heroBadge">ESTUDIO DIGITAL · PROYECTOS A MEDIDA</span></span>
-<h1 data-i18n="heroTitle">Tu idea merece <em>hacerse realidad.</em></h1>
-<p class="hero-description" data-i18n="heroDesc">Diseñamos y desarrollamos sitios web, aplicaciones y software a medida. No importa si sos una persona, emprendimiento o empresa: contanos qué querés crear.</p>
-<div class="hero-actions"><a href="#request" class="btn btn-lime btn-large"><span data-i18n="heroCta">Contanos tu proyecto</span><span class="arrow-up">↗</span></a><a href="#services" class="btn btn-ghost btn-large"><span data-i18n="heroSecondary">Explorar servicios</span><span>→</span></a></div>
-<div class="trust-row"><span class="trust-avatars" aria-hidden="true"><span>01</span><span>02</span><span>03</span></span><span data-i18n="heroNote">Escuchamos tu necesidad, evaluamos el alcance y te proponemos una solución. Sin compromiso inicial de contratación.</span></div></div>
-<div class="creation-engine" id="creation-engine" data-mode="web">
-<div class="engine-heading"><span>✳ &nbsp; COTIVANTA / CREATION ENGINE</span><span data-i18n="demoLabel">DEMOSTRACIÓN CONCEPTUAL</span></div>
-<div class="engine-stage" aria-hidden="true"><div class="engine-orbit orbit-a"></div><div class="engine-orbit orbit-b"></div><div class="engine-core"><span class="engine-core-mark">C<span>✳</span></span><span class="engine-core-label">COTIVANTA</span></div><div class="engine-node node-one"><i></i><span data-i18n="engineIdea">IDEA</span></div><div class="engine-node node-two"><i></i><span data-i18n="engineDesign">DISEÑO</span></div><div class="engine-node node-three"><i></i><span data-i18n="engineBuild">DESARROLLO</span></div><div class="engine-node node-four"><i></i><span data-i18n="engineProduct">PRODUCTO</span></div><div class="engine-output"><span class="output-dot"></span><span class="output-name">WEB EXPERIENCE</span><span class="output-arrow">↗</span></div></div>
-<div class="engine-controls"><span data-i18n="engineChoose">EXPLORÁ UNA IDEA</span><div class="engine-options" role="group" aria-label="Tipo de proyecto" data-engine-group><button type="button" data-engine="web" aria-pressed="true">Web</button><button type="button" data-engine="app" aria-pressed="false">App</button><button type="button" data-engine="automation" aria-pressed="false" data-i18n="engineAutomation">Automatización</button><button type="button" data-engine="software" aria-pressed="false">Software</button></div><p class="engine-description" aria-live="polite" data-i18n="engineWebDesc">Una presencia digital diseñada para conectar con las personas.</p></div></div>
-</div><div class="container hero-bottom"><span data-i18n="sectorIntro">TECNOLOGÍA PARA LAS IDEAS QUE MUEVEN EL MUNDO</span><div class="hero-sector-list"><span data-i18n="pill1">Personas</span><span data-i18n="pill2">Emprendedores</span><span data-i18n="pill3">Profesionales</span><span data-i18n="pill4">Pymes</span><span data-i18n="pill5">Empresas</span></div></div></section>
-<section class="problem-section section-light" id="services"><div class="container"><div class="section-intro two-up"><div><span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span><span data-i18n="servicesEyebrow">QUÉ HACEMOS</span></span><h2 data-i18n="servicesTitle">Un socio tecnológico para <span>cada gran idea.</span></h2></div><p data-i18n="servicesDesc">Desde una web para comenzar a vender hasta un sistema que transforme la forma de trabajar. Elegí una categoría o contanos una necesidad diferente.</p></div>
-<div class="service-grid">
-<article class="service-card" data-service="website"><span class="service-emoji">◈</span><span class="service-number">01 /</span><h3 data-i18n="serviceWebTitle">Páginas web</h3><p data-i18n="serviceWebDesc">Landings, páginas institucionales, portfolios y sitios comerciales que representen tu marca.</p><button type="button" class="service-choose" data-i18n="serviceLink">Consultar este servicio ↗</button></article>
-<article class="service-card" data-service="app"><span class="service-emoji">▣</span><span class="service-number">02 /</span><h3 data-i18n="serviceAppTitle">Apps web y móviles</h3><p data-i18n="serviceAppDesc">Productos digitales, plataformas y herramientas para tus clientes o tu equipo.</p><button type="button" class="service-choose" data-i18n="serviceLink">Consultar este servicio ↗</button></article>
-<article class="service-card" data-service="automation"><span class="service-emoji">↗</span><span class="service-number">03 /</span><h3 data-i18n="serviceAutoTitle">Automatizaciones</h3><p data-i18n="serviceAutoDesc">Procesos, tareas y seguimientos que hoy te hacen perder horas de trabajo.</p><button type="button" class="service-choose" data-i18n="serviceLink">Consultar este servicio ↗</button></article>
-<article class="service-card" data-service="custom-software"><span class="service-emoji">⌘</span><span class="service-number">04 /</span><h3 data-i18n="serviceSoftTitle">Software a medida</h3><p data-i18n="serviceSoftDesc">Sistemas administrativos, portales, paneles y soluciones internas específicas.</p><button type="button" class="service-choose" data-i18n="serviceLink">Consultar este servicio ↗</button></article>
-<article class="service-card" data-service="integrations"><span class="service-emoji">⇄</span><span class="service-number">05 /</span><h3 data-i18n="serviceIntegrationsTitle">Integraciones</h3><p data-i18n="serviceIntegrationsDesc">Conectá tus herramientas, APIs, bases de datos y servicios existentes.</p><button type="button" class="service-choose" data-i18n="serviceLink">Consultar este servicio ↗</button></article>
-<article class="service-card service-card-alt" data-service="other"><span class="service-emoji">✳</span><span class="service-number">06 /</span><h3 data-i18n="serviceOtherTitle">¿Tenés otra idea?</h3><p data-i18n="serviceOtherDesc">No hace falta que sepas cómo desarrollarla. Describinos lo que imaginás y evaluamos si podemos ayudarte.</p><button type="button" class="service-choose" data-i18n="serviceOtherLink">Contanos tu idea ↗</button></article>
-</div></div></section>
-<section class="lab-section" id="lab"><div class="container lab-layout"><div class="lab-copy"><span class="eyebrow eyebrow-dark">✳ &nbsp; COTIVANTA LAB / 01</span><h2 data-i18n="labTitle">Una idea en movimiento.</h2><p data-i18n="labDesc">Probá una automatización conceptual: una solicitud recorre distintas etapas hasta estar lista para revisar.</p><span class="lab-caption" data-i18n="labCaption">EJEMPLO INTERACTIVO · DATOS SIMULADOS</span></div><div class="lab-panel"><div class="lab-panel-head"><span>WORKFLOW / 01</span><span class="lab-indicator" data-i18n="labReady">LISTO PARA PROBAR</span></div><div class="lab-flow"><div class="lab-step" data-step="0"><span>01</span><strong data-i18n="labStep1">Solicitud</strong><small data-i18n="labSub1">Nuevo mensaje</small></div><div class="lab-line"></div><div class="lab-step" data-step="1"><span>02</span><strong data-i18n="labStep2">Organizar</strong><small data-i18n="labSub2">Preparar datos</small></div><div class="lab-line"></div><div class="lab-step" data-step="2"><span>03</span><strong data-i18n="labStep3">Revisar</strong><small data-i18n="labSub3">Listo para vos</small></div></div><div class="lab-actions"><button type="button" class="lab-run" id="lab-run" data-i18n="labRun">Ejecutar ejemplo ↗</button><p id="lab-status" aria-live="polite" data-i18n="labStatus">Todo ocurre en tu navegador.</p></div></div></div></section>
-<section class="how-section" id="process"><div class="container how-layout"><div class="how-copy"><span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span><span data-i18n="processEyebrow">EL PROCESO</span></span><h2 data-i18n="processTitle">De la primera charla <br/><span>al producto terminado.</span></h2><p data-i18n="processDesc">Trabajamos con alcances claros. Antes de empezar, revisamos la viabilidad, las funcionalidades, los plazos y el presupuesto. Cada propuesta depende de la complejidad de tu proyecto.</p><a href="#request" class="text-link"><span data-i18n="processLink">Empezar con una consulta</span> ↗</a></div><div class="steps-panel"><div class="workflow-step"><span class="step-number">01</span><div><h3 data-i18n="step1Title">Contanos qué necesitás</h3><p data-i18n="step1Desc">Completá el formulario con tu idea o problema.</p></div><span class="step-symbol">✎</span></div><div class="workflow-step"><span class="step-number">02</span><div><h3 data-i18n="step2Title">Evaluamos la propuesta</h3><p data-i18n="step2Desc">Revisamos si podemos ayudarte y qué preguntas faltan responder.</p></div><span class="step-symbol">⌕</span></div><div class="workflow-step"><span class="step-number">03</span><div><h3 data-i18n="step3Title">Definimos alcance y presupuesto</h3><p data-i18n="step3Desc">Acordamos entregables, etapas, costo y condiciones antes de avanzar.</p></div><span class="step-symbol">▤</span></div><div class="workflow-step"><span class="step-number">04</span><div><h3 data-i18n="step4Title">Construimos y entregamos</h3><p data-i18n="step4Desc">Desarrollamos el proyecto acordado con seguimiento y revisiones.</p></div><span class="step-symbol">✓</span></div></div></div></section>
-<section class="audience-section section-light" id="audience"><div class="container"><div class="section-intro center"><span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span><span data-i18n="audienceEyebrow">SIN LIMITARNOS A UN RUBRO</span></span><h2 data-i18n="audienceTitle">Ideas grandes, pequeñas <span>y completamente nuevas.</span></h2><p data-i18n="audienceDesc">Podés venir con una idea recién pensada o con un negocio en funcionamiento. No necesitás conocimientos técnicos para escribirnos.</p></div><div class="industry-grid studio-audience"><div class="industry-card"><span class="industry-icon">✦</span><strong data-i18n="audience1">Personas</strong><small data-i18n="audience1Sub">Proyectos personales</small></div><div class="industry-card"><span class="industry-icon">↗</span><strong data-i18n="audience2">Emprendedores</strong><small data-i18n="audience2Sub">Ideas y nuevos negocios</small></div><div class="industry-card"><span class="industry-icon">▤</span><strong data-i18n="audience3">Profesionales</strong><small data-i18n="audience3Sub">Herramientas para trabajar</small></div><div class="industry-card"><span class="industry-icon">⌂</span><strong data-i18n="audience4">Pymes</strong><small data-i18n="audience4Sub">Operaciones y crecimiento</small></div><div class="industry-card"><span class="industry-icon">◈</span><strong data-i18n="audience5">Equipos</strong><small data-i18n="audience5Sub">Software e integraciones</small></div></div></div></section>
-<section class="pilot-section section-dark"><div class="container pilot-layout"><div class="pilot-graphic" aria-hidden="true"><div class="pilot-ring ring-a"></div><div class="pilot-ring ring-b"></div><div class="pilot-mark">C<span>↗</span></div></div><div class="pilot-copy"><span class="eyebrow eyebrow-dark"><span class="status-pulse"></span><span data-i18n="ctaEyebrow">HABLEMOS DE TU IDEA</span></span><h2 data-i18n="ctaTitle">No necesitás saber programar. <em>Solo saber qué querés mejorar.</em></h2><p data-i18n="ctaDesc">Cotivanta está dando sus primeros pasos. Estamos recibiendo consultas para evaluar proyectos y desarrollar propuestas personalizadas. No publicamos clientes ficticios ni prometemos entregas sin revisar el alcance.</p><a href="#request" class="btn btn-lime"><span data-i18n="ctaButton">Solicitar una propuesta</span> ↗</a></div></div></section>
-<section class="faq-section section-light" id="faq"><div class="container faq-layout"><div><span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span><span data-i18n="faqEyebrow">PREGUNTAS FRECUENTES</span></span><h2 data-i18n="faqTitle">Resolvemos tus<br/>primeras dudas.</h2></div><div class="faq-accordion"><details><summary><span data-i18n="faq1Q">¿Solo trabajan con empresas?</span><span class="faq-plus">+</span></summary><p data-i18n="faq1A">No. Recibimos consultas de personas, profesionales, emprendimientos y empresas. Evaluamos cada proyecto según su alcance y viabilidad.</p></details><details><summary><span data-i18n="faq2Q">¿Cuánto cuesta un proyecto?</span><span class="faq-plus">+</span></summary><p data-i18n="faq2A">El precio depende de las funcionalidades, integraciones y esfuerzo necesario. Primero conocemos tu idea y luego presentamos una propuesta si podemos realizarla.</p></details><details><summary><span data-i18n="faq3Q">¿Puedo pedir algo que no aparece en servicios?</span><span class="faq-plus">+</span></summary><p data-i18n="faq3A">Sí. Seleccioná «Otro proyecto» y explicá qué necesitás. Te diremos si podemos ayudarte; no todos los proyectos serán aceptados.</p></details><details><summary><span data-i18n="faq4Q">¿La consulta tiene costo?</span><span class="faq-plus">+</span></summary><p data-i18n="faq4A">Enviar la solicitud inicial no tiene costo ni genera un compromiso de contratación. Cualquier trabajo pago requiere una propuesta acordada previamente.</p></details></div></div></section>
-<section class="access-section" id="request"><div class="container access-layout"><div class="access-copy"><span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span><span data-i18n="formEyebrow">EMPECEMOS</span></span><h2 data-i18n="formTitle">Contanos tu idea. <span>Nosotros vemos cómo crearla.</span></h2><p data-i18n="formDesc">Describí lo que necesitás con tus palabras. Revisaremos tu solicitud y, si podemos trabajar en ella, te contactaremos para conversar sobre el alcance.</p><div class="access-points"><span>✓ <span data-i18n="formPoint1">Consultas de personas y empresas</span></span><span>✓ <span data-i18n="formPoint2">Presupuesto adaptado a cada proyecto</span></span><span>✓ <span data-i18n="formPoint3">Sin obligación de contratar</span></span></div></div>
-<div class="form-card"><div class="form-header"><span class="form-tag" data-i18n="formTag">SOLICITUD DE PROYECTO</span><h3 data-i18n="formCardTitle">Hablemos de lo que querés construir.</h3><p data-i18n="formCardDesc">Los campos con * son obligatorios.</p></div>
-<form id="project-form" novalidate>
-<div class="form-row"><div class="field"><label for="name" data-i18n="labelName">Nombre completo *</label><input id="name" name="name" autocomplete="name" maxlength="100" minlength="2" required placeholder="Tu nombre"></div><div class="field"><label for="email" data-i18n="labelEmail">Correo electrónico *</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="tu@correo.com"></div></div>
-<div class="form-row"><div class="field"><label for="client-type" data-i18n="labelClient">Sos... *</label><select id="client-type" name="client-type" required><option value="" data-i18n="clientChoose">Elegí una opción</option><option value="individual" data-i18n="clientIndividual">Particular</option><option value="entrepreneur" data-i18n="clientEntrepreneur">Emprendedor/a</option><option value="professional" data-i18n="clientProfessional">Profesional</option><option value="business" data-i18n="clientBusiness">Empresa / equipo</option></select></div><div class="field"><label for="service" data-i18n="labelService">Qué necesitás *</label><select id="service" name="service" required><option value="" data-i18n="serviceChoose">Elegí un servicio</option><option value="website" data-i18n="optWebsite">Página web</option><option value="app" data-i18n="optApp">App web o móvil</option><option value="automation" data-i18n="optAuto">Automatización</option><option value="custom-software" data-i18n="optSoftware">Software a medida</option><option value="integrations" data-i18n="optIntegration">Integración de herramientas</option><option value="other" data-i18n="optOther">Otro proyecto</option></select></div></div>
-<div class="field"><label for="description" data-i18n="labelDescription">Describí tu proyecto *</label><textarea id="description" name="description" rows="5" minlength="20" maxlength="2500" required data-placeholder="descriptionPlaceholder" placeholder="¿Qué problema querés resolver? ¿Para quién sería? ¿Qué debería poder hacer?"></textarea><small class="field-hint" data-i18n="descriptionHint">No hace falta que sea técnico. Unos pocos detalles nos ayudan a entenderlo.</small></div>
-<div class="form-row"><div class="field"><label for="budget" data-i18n="labelBudget">Presupuesto estimado</label><select id="budget" name="budget"><option value="unsure" data-i18n="budgetUnsure">Todavía no lo sé</option><option value="under-500">Menos de US$500</option><option value="500-1500">US$500–1.500</option><option value="1500-5000">US$1.500–5.000</option><option value="over-5000">Más de US$5.000</option></select></div><div class="field"><label for="timeline" data-i18n="labelTimeline">¿Para cuándo lo necesitás?</label><select id="timeline" name="timeline"><option value="flexible" data-i18n="timelineFlexible">Flexible / por definir</option><option value="within-month" data-i18n="timelineMonth">Dentro de 1 mes</option><option value="1-3-months" data-i18n="timelineQuarter">En 1 a 3 meses</option><option value="later" data-i18n="timelineLater">Más adelante</option></select></div></div>
-<div class="form-row"><div class="field"><label for="organization" data-i18n="labelOrganization">Empresa o marca (opcional)</label><input id="organization" name="organization" maxlength="150" autocomplete="organization" placeholder="Tu marca"></div><div class="field"><label for="language" data-i18n="labelLanguage">Idioma preferido</label><select id="language" name="language"><option value="es">Español</option><option value="en">English</option></select></div></div>
-<div class="field hp-field" aria-hidden="true"><label for="fax_number">Fax number</label><input id="fax_number" name="fax_number" tabindex="-1" autocomplete="off"></div><div class="captcha-wrap" id="turnstile-container" aria-label="Verificación de seguridad"></div>
-<label class="consent-label"><input id="consent" name="consent" type="checkbox" required><span data-i18n="consentText">Acepto que Cotivanta use estos datos para evaluar y responder mi solicitud, y leí el <a href="privacy.html">Aviso de privacidad</a>.</span></label>
-<div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div><button type="submit" class="btn btn-dark btn-submit" id="submit-button"><span data-i18n="formSubmit">Enviar solicitud</span><span>↗</span></button><p class="form-footnote" data-i18n="formFootnote">Enviar la consulta no garantiza la aceptación del proyecto.</p>
-</form>
-<div id="form-success" class="success-state" hidden><div class="success-icon">✓</div><h3 data-i18n="successTitle">Solicitud recibida.</h3><p data-i18n="successDesc">Gracias por contarnos tu proyecto. Vamos a revisarlo y te contactaremos si podemos ayudarte.</p><button type="button" class="text-link success-reset" id="reset-form" data-i18n="successReset">Enviar otra solicitud ↗</button></div>
-</div></div></section>
-</main><footer class="footer section-dark"><div class="container footer-inner"><div><a href="#top" class="logo footer-logo"><span class="logo-symbol" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="11" fill="#C9FF95"/><path d="M24.5 12.5A9 9 0 1 0 25 24" stroke="#12251C" stroke-width="4" stroke-linecap="round"/><circle cx="26.5" cy="12.1" r="2.6" fill="#12251C"/></svg></span><span>cotivanta<span class="brand-dot">.</span></span></a><p data-i18n="footerTag">Ideas que se convierten en soluciones digitales.</p><a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a></div><div class="footer-nav"><a href="#services" data-i18n="footerServices">Servicios</a><a href="#request" data-i18n="footerRequest">Pedir presupuesto</a><a href="privacy.html" data-i18n="footerPrivacy">Privacidad</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Cotivanta. <span data-i18n="footerRights">Todos los derechos reservados.</span></span><span data-i18n="footerStage">Estudio digital independiente · Recibiendo consultas.</span></div></footer>
-</body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a1721" />
+    <meta
+      name="description"
+      content="Cotivanta es un estudio de desarrollo y soluciones digitales. Sitios web, aplicaciones, automatizaciones y software a medida. Contanos tu proyecto."
+    />
+    <meta
+      property="og:title"
+      content="Cotivanta — Tu idea, hecha realidad digital"
+    />
+    <meta
+      property="og:description"
+      content="Creamos soluciones digitales a medida para personas, emprendedores y empresas. Contanos qué necesitás."
+    />
+    <meta property="og:type" content="website" />
+    <title>Cotivanta — Desarrollo y soluciones digitales a medida</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/studio.css" />
+    <link rel="stylesheet" href="assets/experience.css" />
+    <link rel="stylesheet" href="assets/premium.css" />
+    <script defer src="config.js"></script>
+    <script defer src="assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Ir al contenido</a>
+    <header class="site-header" id="top">
+      <nav class="nav container" aria-label="Navegación principal">
+        <a class="logo" href="#top" aria-label="Cotivanta"
+          ><span class="logo-symbol" aria-hidden="true"
+            ><svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="11" fill="#C9FF95" />
+              <path
+                d="M24.5 12.5A9 9 0 1 0 25 24"
+                stroke="#12251C"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <circle cx="26.5" cy="12.1" r="2.6" fill="#12251C" /></svg></span
+          ><span>cotivanta<span class="brand-dot">.</span></span></a
+        >
+        <div class="nav-links" id="nav-links">
+          <a href="#services" data-i18n="navServices">Servicios</a
+          ><a href="#process" data-i18n="navProcess">Cómo trabajamos</a
+          ><a href="#audience" data-i18n="navAbout">Para quiénes</a
+          ><a href="#faq" data-i18n="navFaq">Preguntas</a>
+        </div>
+        <div class="nav-actions">
+          <div class="lang-switch" role="group" aria-label="Idioma">
+            <button
+              type="button"
+              class="lang-btn is-active"
+              data-lang="es"
+              aria-pressed="true"
+            >
+              ES</button
+            ><button
+              type="button"
+              class="lang-btn"
+              data-lang="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+          <a class="btn btn-sm btn-lime nav-cta" href="#request"
+            ><span data-i18n="navCta">Pedir presupuesto</span> ↗</a
+          ><button
+            type="button"
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero section-dark">
+        <div class="hero-decor"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow eyebrow-dark"
+              ><span class="status-pulse"></span
+              ><span data-i18n="heroBadge"
+                >ESTUDIO DIGITAL · PROYECTOS A MEDIDA</span
+              ></span
+            >
+            <h1 data-i18n="heroTitle">
+              Tu idea merece <em>hacerse realidad.</em>
+            </h1>
+            <p class="hero-description" data-i18n="heroDesc">
+              Diseñamos y desarrollamos sitios web, aplicaciones y software a
+              medida. No importa si sos una persona, emprendimiento o empresa:
+              contanos qué querés crear.
+            </p>
+            <div class="hero-actions">
+              <a href="#request" class="btn btn-lime btn-large"
+                ><span data-i18n="heroCta">Contanos tu proyecto</span
+                ><span class="arrow-up">↗</span></a
+              ><a href="#services" class="btn btn-ghost btn-large"
+                ><span data-i18n="heroSecondary">Explorar servicios</span
+                ><span>→</span></a
+              >
+            </div>
+            <div class="trust-row">
+              <span class="trust-avatars" aria-hidden="true"
+                ><span>01</span><span>02</span><span>03</span></span
+              ><span data-i18n="heroNote"
+                >Escuchamos tu necesidad, evaluamos el alcance y te proponemos
+                una solución. Sin compromiso inicial de contratación.</span
+              >
+            </div>
+          </div>
+          <div class="creation-engine" id="creation-engine" data-mode="web">
+            <div class="engine-heading">
+              <span>✳ &nbsp; COTIVANTA / CREATION ENGINE</span
+              ><span data-i18n="demoLabel">DEMOSTRACIÓN CONCEPTUAL</span>
+            </div>
+            <div class="engine-stage" aria-hidden="true">
+              <div class="engine-orbit orbit-a"></div>
+              <div class="engine-orbit orbit-b"></div>
+              <div class="engine-core">
+                <span class="engine-core-mark">C<span>✳</span></span
+                ><span class="engine-core-label">COTIVANTA</span>
+              </div>
+              <div class="engine-node node-one">
+                <i></i><span data-i18n="engineIdea">IDEA</span>
+              </div>
+              <div class="engine-node node-two">
+                <i></i><span data-i18n="engineDesign">DISEÑO</span>
+              </div>
+              <div class="engine-node node-three">
+                <i></i><span data-i18n="engineBuild">DESARROLLO</span>
+              </div>
+              <div class="engine-node node-four">
+                <i></i><span data-i18n="engineProduct">PRODUCTO</span>
+              </div>
+              <div class="engine-output">
+                <span class="output-dot"></span
+                ><span class="output-name">WEB EXPERIENCE</span
+                ><span class="output-arrow">↗</span>
+              </div>
+            </div>
+            <div class="engine-controls">
+              <span data-i18n="engineChoose">EXPLORÁ UNA IDEA</span>
+              <div
+                class="engine-options"
+                role="group"
+                aria-label="Tipo de proyecto"
+                data-engine-group
+              >
+                <button type="button" data-engine="web" aria-pressed="true">
+                  Web</button
+                ><button type="button" data-engine="app" aria-pressed="false">
+                  App</button
+                ><button
+                  type="button"
+                  data-engine="automation"
+                  aria-pressed="false"
+                  data-i18n="engineAutomation"
+                >
+                  Automatización</button
+                ><button
+                  type="button"
+                  data-engine="software"
+                  aria-pressed="false"
+                >
+                  Software
+                </button>
+              </div>
+              <p
+                class="engine-description"
+                aria-live="polite"
+                data-i18n="engineWebDesc"
+              >
+                Una presencia digital diseñada para conectar con las personas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container hero-bottom">
+          <span data-i18n="sectorIntro"
+            >TECNOLOGÍA PARA LAS IDEAS QUE MUEVEN EL MUNDO</span
+          >
+          <div class="hero-sector-list">
+            <span data-i18n="pill1">Personas</span
+            ><span data-i18n="pill2">Emprendedores</span
+            ><span data-i18n="pill3">Profesionales</span
+            ><span data-i18n="pill4">Pymes</span
+            ><span data-i18n="pill5">Empresas</span>
+          </div>
+        </div>
+      </section>
+      <section class="proof-section" id="proof">
+        <div class="container">
+          <div class="proof-heading">
+            <div>
+              <span class="eyebrow eyebrow-light"
+                ><span class="eyebrow-line"></span
+                ><span data-i18n="proofEyebrow">SEÑALES DE CALIDAD</span></span
+              >
+              <h2 data-i18n="proofTitle">
+                Ideas serias. <span>Resultados que se sienten.</span>
+              </h2>
+            </div>
+            <p data-i18n="proofDesc">
+              No mostramos clientes ficticios ni prometemos soluciones
+              genéricas. Escuchamos el contexto, diseñamos con intención y
+              construimos una base sólida para que tu proyecto pueda crecer.
+            </p>
+          </div>
+          <div class="proof-stats">
+            <article class="proof-stat">
+              <strong>06</strong
+              ><span data-i18n="proofStat1">áreas de solución</span
+              ><small data-i18n="proofStat1Sub"
+                >web, apps, automatización y más</small
+              >
+            </article>
+            <article class="proof-stat">
+              <strong>02</strong
+              ><span data-i18n="proofStat2">idiomas disponibles</span
+              ><small data-i18n="proofStat2Sub">español e inglés</small>
+            </article>
+            <article class="proof-stat proof-stat-accent">
+              <strong>01</strong
+              ><span data-i18n="proofStat3">equipo independiente</span
+              ><small data-i18n="proofStat3Sub"
+                >atención directa, sin intermediarios</small
+              >
+            </article>
+          </div>
+          <div class="proof-client-head">
+            <span class="eyebrow eyebrow-light"
+              ><span class="eyebrow-line"></span
+              ><span data-i18n="proofClientsEyebrow"
+                >PARA QUIÉN TRABAJAMOS</span
+              ></span
+            >
+            <p data-i18n="proofClientsIntro">
+              Cada cliente llega con una necesidad distinta. La tecnología se
+              adapta a la idea, no al revés.
+            </p>
+          </div>
+          <div class="proof-grid">
+            <article class="proof-card">
+              <span class="proof-card-number">01</span
+              ><span class="proof-card-icon">↗</span>
+              <h3 data-i18n="proofClient1">Personas con una idea</h3>
+              <p data-i18n="proofClient1Sub">
+                Convertimos una primera intuición en un proyecto claro y
+                posible.
+              </p>
+            </article>
+            <article class="proof-card">
+              <span class="proof-card-number">02</span
+              ><span class="proof-card-icon">✦</span>
+              <h3 data-i18n="proofClient2">Emprendimientos</h3>
+              <p data-i18n="proofClient2Sub">
+                Creamos una presencia digital que ayude a crecer con confianza.
+              </p>
+            </article>
+            <article class="proof-card">
+              <span class="proof-card-number">03</span
+              ><span class="proof-card-icon">▤</span>
+              <h3 data-i18n="proofClient3">Profesionales y equipos</h3>
+              <p data-i18n="proofClient3Sub">
+                Diseñamos herramientas que ordenan el trabajo y ahorran tiempo.
+              </p>
+            </article>
+            <article class="proof-card">
+              <span class="proof-card-number">04</span
+              ><span class="proof-card-icon">◈</span>
+              <h3 data-i18n="proofClient4">Empresas en evolución</h3>
+              <p data-i18n="proofClient4Sub">
+                Integramos sistemas y procesos para acompañar nuevos desafíos.
+              </p>
+            </article>
+          </div>
+          <div class="proof-note">
+            <span>✳</span>
+            <p data-i18n="proofNote">
+              La cantidad de clientes y casos publicados se actualizará cuando
+              existan resultados verificables para compartir.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="problem-section section-light" id="services">
+        <div class="container">
+          <div class="section-intro two-up">
+            <div>
+              <span class="eyebrow eyebrow-light"
+                ><span class="eyebrow-line"></span
+                ><span data-i18n="servicesEyebrow">QUÉ HACEMOS</span></span
+              >
+              <h2 data-i18n="servicesTitle">
+                Un socio tecnológico para <span>cada gran idea.</span>
+              </h2>
+            </div>
+            <p data-i18n="servicesDesc">
+              Desde una web para comenzar a vender hasta un sistema que
+              transforme la forma de trabajar. Elegí una categoría o contanos
+              una necesidad diferente.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card" data-service="website">
+              <span class="service-emoji">◈</span
+              ><span class="service-number">01 /</span>
+              <h3 data-i18n="serviceWebTitle">Páginas web</h3>
+              <p data-i18n="serviceWebDesc">
+                Landings, páginas institucionales, portfolios y sitios
+                comerciales que representen tu marca.
+              </p>
+              <button
+                type="button"
+                class="service-choose"
+                data-i18n="serviceLink"
+              >
+                Consultar este servicio ↗
+              </button>
+            </article>
+            <article class="service-card" data-service="app">
+              <span class="service-emoji">▣</span
+              ><span class="service-number">02 /</span>
+              <h3 data-i18n="serviceAppTitle">Apps web y móviles</h3>
+              <p data-i18n="serviceAppDesc">
+                Productos digitales, plataformas y herramientas para tus
+                clientes o tu equipo.
+              </p>
+              <button
+                type="button"
+                class="service-choose"
+                data-i18n="serviceLink"
+              >
+                Consultar este servicio ↗
+              </button>
+            </article>
+            <article class="service-card" data-service="automation">
+              <span class="service-emoji">↗</span
+              ><span class="service-number">03 /</span>
+              <h3 data-i18n="serviceAutoTitle">Automatizaciones</h3>
+              <p data-i18n="serviceAutoDesc">
+                Procesos, tareas y seguimientos que hoy te hacen perder horas de
+                trabajo.
+              </p>
+              <button
+                type="button"
+                class="service-choose"
+                data-i18n="serviceLink"
+              >
+                Consultar este servicio ↗
+              </button>
+            </article>
+            <article class="service-card" data-service="custom-software">
+              <span class="service-emoji">⌘</span
+              ><span class="service-number">04 /</span>
+              <h3 data-i18n="serviceSoftTitle">Software a medida</h3>
+              <p data-i18n="serviceSoftDesc">
+                Sistemas administrativos, portales, paneles y soluciones
+                internas específicas.
+              </p>
+              <button
+                type="button"
+                class="service-choose"
+                data-i18n="serviceLink"
+              >
+                Consultar este servicio ↗
+              </button>
+            </article>
+            <article class="service-card" data-service="integrations">
+              <span class="service-emoji">⇄</span
+              ><span class="service-number">05 /</span>
+              <h3 data-i18n="serviceIntegrationsTitle">Integraciones</h3>
+              <p data-i18n="serviceIntegrationsDesc">
+                Conectá tus herramientas, APIs, bases de datos y servicios
+                existentes.
+              </p>
+              <button
+                type="button"
+                class="service-choose"
+                data-i18n="serviceLink"
+              >
+                Consultar este servicio ↗
+              </button>
+            </article>
+            <article class="service-card service-card-alt" data-service="other">
+              <span class="service-emoji">✳</span
+              ><span class="service-number">06 /</span>
+              <h3 data-i18n="serviceOtherTitle">¿Tenés otra idea?</h3>
+              <p data-i18n="serviceOtherDesc">
+                No hace falta que sepas cómo desarrollarla. Describinos lo que
+                imaginás y evaluamos si podemos ayudarte.
+              </p>
+              <button
+                type="button"
+                class="service-choose"
+                data-i18n="serviceOtherLink"
+              >
+                Contanos tu idea ↗
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="lab-section" id="lab">
+        <div class="container lab-layout">
+          <div class="lab-copy">
+            <span class="eyebrow eyebrow-dark"
+              >✳ &nbsp; COTIVANTA LAB / 01</span
+            >
+            <h2 data-i18n="labTitle">Una idea en movimiento.</h2>
+            <p data-i18n="labDesc">
+              Probá una automatización conceptual: una solicitud recorre
+              distintas etapas hasta estar lista para revisar.
+            </p>
+            <span class="lab-caption" data-i18n="labCaption"
+              >EJEMPLO INTERACTIVO · DATOS SIMULADOS</span
+            >
+          </div>
+          <div class="lab-panel">
+            <div class="lab-panel-head">
+              <span>WORKFLOW / 01</span
+              ><span class="lab-indicator" data-i18n="labReady"
+                >LISTO PARA PROBAR</span
+              >
+            </div>
+            <div class="lab-flow">
+              <div class="lab-step" data-step="0">
+                <span>01</span><strong data-i18n="labStep1">Solicitud</strong
+                ><small data-i18n="labSub1">Nuevo mensaje</small>
+              </div>
+              <div class="lab-line"></div>
+              <div class="lab-step" data-step="1">
+                <span>02</span><strong data-i18n="labStep2">Organizar</strong
+                ><small data-i18n="labSub2">Preparar datos</small>
+              </div>
+              <div class="lab-line"></div>
+              <div class="lab-step" data-step="2">
+                <span>03</span><strong data-i18n="labStep3">Revisar</strong
+                ><small data-i18n="labSub3">Listo para vos</small>
+              </div>
+            </div>
+            <div class="lab-actions">
+              <button
+                type="button"
+                class="lab-run"
+                id="lab-run"
+                data-i18n="labRun"
+              >
+                Ejecutar ejemplo ↗
+              </button>
+              <p id="lab-status" aria-live="polite" data-i18n="labStatus">
+                Todo ocurre en tu navegador.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="how-section" id="process">
+        <div class="container how-layout">
+          <div class="how-copy">
+            <span class="eyebrow eyebrow-light"
+              ><span class="eyebrow-line"></span
+              ><span data-i18n="processEyebrow">EL PROCESO</span></span
+            >
+            <h2 data-i18n="processTitle">
+              De la primera charla <br /><span>al producto terminado.</span>
+            </h2>
+            <p data-i18n="processDesc">
+              Trabajamos con alcances claros. Antes de empezar, revisamos la
+              viabilidad, las funcionalidades, los plazos y el presupuesto. Cada
+              propuesta depende de la complejidad de tu proyecto.
+            </p>
+            <a href="#request" class="text-link"
+              ><span data-i18n="processLink">Empezar con una consulta</span>
+              ↗</a
+            >
+          </div>
+          <div class="steps-panel">
+            <div class="workflow-step">
+              <span class="step-number">01</span>
+              <div>
+                <h3 data-i18n="step1Title">Contanos qué necesitás</h3>
+                <p data-i18n="step1Desc">
+                  Completá el formulario con tu idea o problema.
+                </p>
+              </div>
+              <span class="step-symbol">✎</span>
+            </div>
+            <div class="workflow-step">
+              <span class="step-number">02</span>
+              <div>
+                <h3 data-i18n="step2Title">Evaluamos la propuesta</h3>
+                <p data-i18n="step2Desc">
+                  Revisamos si podemos ayudarte y qué preguntas faltan
+                  responder.
+                </p>
+              </div>
+              <span class="step-symbol">⌕</span>
+            </div>
+            <div class="workflow-step">
+              <span class="step-number">03</span>
+              <div>
+                <h3 data-i18n="step3Title">Definimos alcance y presupuesto</h3>
+                <p data-i18n="step3Desc">
+                  Acordamos entregables, etapas, costo y condiciones antes de
+                  avanzar.
+                </p>
+              </div>
+              <span class="step-symbol">▤</span>
+            </div>
+            <div class="workflow-step">
+              <span class="step-number">04</span>
+              <div>
+                <h3 data-i18n="step4Title">Construimos y entregamos</h3>
+                <p data-i18n="step4Desc">
+                  Desarrollamos el proyecto acordado con seguimiento y
+                  revisiones.
+                </p>
+              </div>
+              <span class="step-symbol">✓</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="audience-section section-light" id="audience">
+        <div class="container">
+          <div class="section-intro center">
+            <span class="eyebrow eyebrow-light"
+              ><span class="eyebrow-line"></span
+              ><span data-i18n="audienceEyebrow"
+                >SIN LIMITARNOS A UN RUBRO</span
+              ></span
+            >
+            <h2 data-i18n="audienceTitle">
+              Ideas grandes, pequeñas <span>y completamente nuevas.</span>
+            </h2>
+            <p data-i18n="audienceDesc">
+              Podés venir con una idea recién pensada o con un negocio en
+              funcionamiento. No necesitás conocimientos técnicos para
+              escribirnos.
+            </p>
+          </div>
+          <div class="industry-grid studio-audience">
+            <div class="industry-card">
+              <span class="industry-icon">✦</span
+              ><strong data-i18n="audience1">Personas</strong
+              ><small data-i18n="audience1Sub">Proyectos personales</small>
+            </div>
+            <div class="industry-card">
+              <span class="industry-icon">↗</span
+              ><strong data-i18n="audience2">Emprendedores</strong
+              ><small data-i18n="audience2Sub">Ideas y nuevos negocios</small>
+            </div>
+            <div class="industry-card">
+              <span class="industry-icon">▤</span
+              ><strong data-i18n="audience3">Profesionales</strong
+              ><small data-i18n="audience3Sub"
+                >Herramientas para trabajar</small
+              >
+            </div>
+            <div class="industry-card">
+              <span class="industry-icon">⌂</span
+              ><strong data-i18n="audience4">Pymes</strong
+              ><small data-i18n="audience4Sub">Operaciones y crecimiento</small>
+            </div>
+            <div class="industry-card">
+              <span class="industry-icon">◈</span
+              ><strong data-i18n="audience5">Equipos</strong
+              ><small data-i18n="audience5Sub">Software e integraciones</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pilot-section section-dark">
+        <div class="container pilot-layout">
+          <div class="pilot-graphic" aria-hidden="true">
+            <div class="pilot-ring ring-a"></div>
+            <div class="pilot-ring ring-b"></div>
+            <div class="pilot-mark">C<span>↗</span></div>
+          </div>
+          <div class="pilot-copy">
+            <span class="eyebrow eyebrow-dark"
+              ><span class="status-pulse"></span
+              ><span data-i18n="ctaEyebrow">HABLEMOS DE TU IDEA</span></span
+            >
+            <h2 data-i18n="ctaTitle">
+              No necesitás saber programar.
+              <em>Solo saber qué querés mejorar.</em>
+            </h2>
+            <p data-i18n="ctaDesc">
+              Cotivanta está dando sus primeros pasos. Estamos recibiendo
+              consultas para evaluar proyectos y desarrollar propuestas
+              personalizadas. No publicamos clientes ficticios ni prometemos
+              entregas sin revisar el alcance.
+            </p>
+            <a href="#request" class="btn btn-lime"
+              ><span data-i18n="ctaButton">Solicitar una propuesta</span> ↗</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="faq-section section-light" id="faq">
+        <div class="container faq-layout">
+          <div>
+            <span class="eyebrow eyebrow-light"
+              ><span class="eyebrow-line"></span
+              ><span data-i18n="faqEyebrow">PREGUNTAS FRECUENTES</span></span
+            >
+            <h2 data-i18n="faqTitle">Resolvemos tus<br />primeras dudas.</h2>
+          </div>
+          <div class="faq-accordion">
+            <details>
+              <summary>
+                <span data-i18n="faq1Q">¿Solo trabajan con empresas?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq1A">
+                No. Recibimos consultas de personas, profesionales,
+                emprendimientos y empresas. Evaluamos cada proyecto según su
+                alcance y viabilidad.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq2Q">¿Cuánto cuesta un proyecto?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq2A">
+                El precio depende de las funcionalidades, integraciones y
+                esfuerzo necesario. Primero conocemos tu idea y luego
+                presentamos una propuesta si podemos realizarla.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq3Q"
+                  >¿Puedo pedir algo que no aparece en servicios?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq3A">
+                Sí. Seleccioná «Otro proyecto» y explicá qué necesitás. Te
+                diremos si podemos ayudarte; no todos los proyectos serán
+                aceptados.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq4Q">¿La consulta tiene costo?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq4A">
+                Enviar la solicitud inicial no tiene costo ni genera un
+                compromiso de contratación. Cualquier trabajo pago requiere una
+                propuesta acordada previamente.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section class="access-section" id="request">
+        <div class="container access-layout">
+          <div class="access-copy">
+            <span class="eyebrow eyebrow-light"
+              ><span class="eyebrow-line"></span
+              ><span data-i18n="formEyebrow">EMPECEMOS</span></span
+            >
+            <h2 data-i18n="formTitle">
+              Contanos tu idea. <span>Nosotros vemos cómo crearla.</span>
+            </h2>
+            <p data-i18n="formDesc">
+              Describí lo que necesitás con tus palabras. Revisaremos tu
+              solicitud y, si podemos trabajar en ella, te contactaremos para
+              conversar sobre el alcance.
+            </p>
+            <div class="access-points">
+              <span
+                >✓
+                <span data-i18n="formPoint1"
+                  >Consultas de personas y empresas</span
+                ></span
+              ><span
+                >✓
+                <span data-i18n="formPoint2"
+                  >Presupuesto adaptado a cada proyecto</span
+                ></span
+              ><span
+                >✓
+                <span data-i18n="formPoint3"
+                  >Sin obligación de contratar</span
+                ></span
+              >
+            </div>
+          </div>
+          <div class="form-card">
+            <div class="form-header">
+              <span class="form-tag" data-i18n="formTag"
+                >SOLICITUD DE PROYECTO</span
+              >
+              <h3 data-i18n="formCardTitle">
+                Hablemos de lo que querés construir.
+              </h3>
+              <p data-i18n="formCardDesc">Los campos con * son obligatorios.</p>
+            </div>
+            <form id="project-form" novalidate>
+              <div class="form-row">
+                <div class="field">
+                  <label for="name" data-i18n="labelName"
+                    >Nombre completo *</label
+                  ><input
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    maxlength="100"
+                    minlength="2"
+                    required
+                    placeholder="Tu nombre"
+                  />
+                </div>
+                <div class="field">
+                  <label for="email" data-i18n="labelEmail"
+                    >Correo electrónico *</label
+                  ><input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+                    placeholder="tu@correo.com"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="client-type" data-i18n="labelClient"
+                    >Sos... *</label
+                  ><select id="client-type" name="client-type" required>
+                    <option value="" data-i18n="clientChoose">
+                      Elegí una opción
+                    </option>
+                    <option value="individual" data-i18n="clientIndividual">
+                      Particular
+                    </option>
+                    <option value="entrepreneur" data-i18n="clientEntrepreneur">
+                      Emprendedor/a
+                    </option>
+                    <option value="professional" data-i18n="clientProfessional">
+                      Profesional
+                    </option>
+                    <option value="business" data-i18n="clientBusiness">
+                      Empresa / equipo
+                    </option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="service" data-i18n="labelService"
+                    >Qué necesitás *</label
+                  ><select id="service" name="service" required>
+                    <option value="" data-i18n="serviceChoose">
+                      Elegí un servicio
+                    </option>
+                    <option value="website" data-i18n="optWebsite">
+                      Página web
+                    </option>
+                    <option value="app" data-i18n="optApp">
+                      App web o móvil
+                    </option>
+                    <option value="automation" data-i18n="optAuto">
+                      Automatización
+                    </option>
+                    <option value="custom-software" data-i18n="optSoftware">
+                      Software a medida
+                    </option>
+                    <option value="integrations" data-i18n="optIntegration">
+                      Integración de herramientas
+                    </option>
+                    <option value="other" data-i18n="optOther">
+                      Otro proyecto
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="description" data-i18n="labelDescription"
+                  >Describí tu proyecto *</label
+                ><textarea
+                  id="description"
+                  name="description"
+                  rows="5"
+                  minlength="20"
+                  maxlength="2500"
+                  required
+                  data-placeholder="descriptionPlaceholder"
+                  placeholder="¿Qué problema querés resolver? ¿Para quién sería? ¿Qué debería poder hacer?"
+                ></textarea
+                ><small class="field-hint" data-i18n="descriptionHint"
+                  >No hace falta que sea técnico. Unos pocos detalles nos ayudan
+                  a entenderlo.</small
+                >
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="budget" data-i18n="labelBudget"
+                    >Presupuesto estimado</label
+                  ><select id="budget" name="budget">
+                    <option value="unsure" data-i18n="budgetUnsure">
+                      Todavía no lo sé
+                    </option>
+                    <option value="under-500">Menos de US$500</option>
+                    <option value="500-1500">US$500–1.500</option>
+                    <option value="1500-5000">US$1.500–5.000</option>
+                    <option value="over-5000">Más de US$5.000</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="timeline" data-i18n="labelTimeline"
+                    >¿Para cuándo lo necesitás?</label
+                  ><select id="timeline" name="timeline">
+                    <option value="flexible" data-i18n="timelineFlexible">
+                      Flexible / por definir
+                    </option>
+                    <option value="within-month" data-i18n="timelineMonth">
+                      Dentro de 1 mes
+                    </option>
+                    <option value="1-3-months" data-i18n="timelineQuarter">
+                      En 1 a 3 meses
+                    </option>
+                    <option value="later" data-i18n="timelineLater">
+                      Más adelante
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="organization" data-i18n="labelOrganization"
+                    >Empresa o marca (opcional)</label
+                  ><input
+                    id="organization"
+                    name="organization"
+                    maxlength="150"
+                    autocomplete="organization"
+                    placeholder="Tu marca"
+                  />
+                </div>
+                <div class="field">
+                  <label for="language" data-i18n="labelLanguage"
+                    >Idioma preferido</label
+                  ><select id="language" name="language">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field hp-field" aria-hidden="true">
+                <label for="fax_number">Fax number</label
+                ><input
+                  id="fax_number"
+                  name="fax_number"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+              <div
+                class="captcha-wrap"
+                id="turnstile-container"
+                aria-label="Verificación de seguridad"
+              ></div>
+              <label class="consent-label"
+                ><input
+                  id="consent"
+                  name="consent"
+                  type="checkbox"
+                  required
+                /><span data-i18n="consentText"
+                  >Acepto que Cotivanta use estos datos para evaluar y responder
+                  mi solicitud, y leí el
+                  <a href="privacy.html">Aviso de privacidad</a>.</span
+                ></label
+              >
+              <div
+                id="form-message"
+                class="form-message"
+                role="status"
+                aria-live="polite"
+                hidden
+              ></div>
+              <button
+                type="submit"
+                class="btn btn-dark btn-submit"
+                id="submit-button"
+              >
+                <span data-i18n="formSubmit">Enviar solicitud</span
+                ><span>↗</span>
+              </button>
+              <p class="form-footnote" data-i18n="formFootnote">
+                Enviar la consulta no garantiza la aceptación del proyecto.
+              </p>
+            </form>
+            <div id="form-success" class="success-state" hidden>
+              <div class="success-icon">✓</div>
+              <h3 data-i18n="successTitle">Solicitud recibida.</h3>
+              <p data-i18n="successDesc">
+                Gracias por contarnos tu proyecto. Vamos a revisarlo y te
+                contactaremos si podemos ayudarte.
+              </p>
+              <button
+                type="button"
+                class="text-link success-reset"
+                id="reset-form"
+                data-i18n="successReset"
+              >
+                Enviar otra solicitud ↗
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer section-dark">
+      <div class="container footer-inner">
+        <div>
+          <a href="#top" class="logo footer-logo"
+            ><span class="logo-symbol" aria-hidden="true"
+              ><svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+                <rect width="36" height="36" rx="11" fill="#C9FF95" />
+                <path
+                  d="M24.5 12.5A9 9 0 1 0 25 24"
+                  stroke="#12251C"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+                <circle
+                  cx="26.5"
+                  cy="12.1"
+                  r="2.6"
+                  fill="#12251C"
+                /></svg></span
+            ><span>cotivanta<span class="brand-dot">.</span></span></a
+          >
+          <p data-i18n="footerTag">
+            Ideas que se convierten en soluciones digitales.
+          </p>
+          <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>
+        </div>
+        <div class="footer-nav">
+          <a href="#services" data-i18n="footerServices">Servicios</a
+          ><a href="#request" data-i18n="footerRequest">Pedir presupuesto</a
+          ><a href="privacy.html" data-i18n="footerPrivacy">Privacidad</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="year">2026</span> Cotivanta.
+          <span data-i18n="footerRights"
+            >Todos los derechos reservados.</span
+          ></span
+        ><span data-i18n="footerStage"
+          >Estudio digital independiente · Recibiendo consultas.</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
