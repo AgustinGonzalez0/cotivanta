@@ -6,7 +6,9 @@
 
 - `site/index.html`: landing (ES/EN), catálogo de 6 categorías, proceso, FAQ y formulario de consultas.
 - `site/assets/styles.css` y `studio.css`: estilos responsive.
+- `site/assets/experience.css` y `premium.css`: dirección visual e interacciones del rediseño; el formulario conserva los estilos compartidos.
 - `site/assets/app.js`: traducción, interacción de servicios, validación del formulario.
+- El Creation Engine y Cotivanta Lab son demostraciones conceptuales con estado local; no representan proyectos de clientes ni envían datos.
 - `site/privacy.html`: aviso **BORRADOR**. Requiere revisión e identificación del responsable.
 - `site/config.js`: configuración PÚBLICA para API y Turnstile.
 - `supabase/migrations/20261028010000_project_requests.sql`: esquema privado de solicitudes, con RLS y sin acceso público.
