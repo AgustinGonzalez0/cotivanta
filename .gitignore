@@ -1,0 +1,26 @@
+# Local frontend overrides. Never commit private keys or secrets.
+site/config.local.js
+site/.env
+site/.env.*
+!site/.env.example
+
+# Supabase Edge Function local secrets.
+supabase/functions/.env
+supabase/functions/.env.*
+!supabase/functions/.env.example
+
+node_modules/
+dist/
+coverage/
+*.log
+
+# Private development material, regardless of directory.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+supabase/.temp/
+supabase/.branches/
