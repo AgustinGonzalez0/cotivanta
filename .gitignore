@@ -8,3 +8,19 @@ site/.env.*
 supabase/functions/.env
 supabase/functions/.env.*
 !supabase/functions/.env.example
+
+node_modules/
+dist/
+coverage/
+*.log
+
+# Private development material, regardless of directory.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+supabase/.temp/
+supabase/.branches/

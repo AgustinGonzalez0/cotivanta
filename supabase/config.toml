@@ -1,2 +1,5 @@
 [functions.project-request]
 verify_jwt = false
+
+[functions.notify-requests]
+verify_jwt = false

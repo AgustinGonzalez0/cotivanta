@@ -1,4 +1,26 @@
 /* Cotivanta — digital services studio: overrides/additions to the shared design system */
+.logo-symbol {
+  flex-shrink: 0;
+}
+.logo-symbol img {
+  display: block;
+  width: 34px;
+  height: 34px;
+}
+.footer-logo .logo-symbol img {
+  width: 32px;
+  height: 32px;
+}
+.footer-nav {
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .logo-symbol img,
+  .footer-logo .logo-symbol img {
+    width: 30px;
+    height: 30px;
+  }
+}
 .studio-visual {
   isolation: isolate;
 }

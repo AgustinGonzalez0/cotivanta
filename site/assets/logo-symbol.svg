@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none">
+  <title>Cotivanta — Piezas a medida</title>
+  <g fill="#0A1721">
+    <path d="M30 28V26C30 12.745 40.745 2 54 2H62V28H30Z"/>
+    <path d="M26 20V56H8C4.686 56 2 53.314 2 50V44C2 40.817 3.264 37.764 5.515 35.515L26 20Z"/>
+    <path d="M2 60H22C28.627 60 34 65.373 34 72V88L6 66C3.5 64 2 62 2 60Z"/>
+    <path d="M46 68H82C82 82.359 70.359 94 56 94H40V74C40 70.686 42.686 68 46 68Z"/>
+  </g>
+  <path d="M68 2H70C84.359 2 96 13.641 96 28H74C70.686 28 68 25.314 68 22V2Z" fill="#C9FF95"/>
+</svg>

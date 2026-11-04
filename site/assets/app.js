@@ -2,6 +2,11 @@
   "use strict";
   const translations = {
     es: {
+      footerPolicies: "Políticas y términos",
+      privacyDetailsTitle: "Información de privacidad",
+      privacySummary: '<strong>Responsable: Agustín Gonzales (Cotivanta).</strong> Contacto: <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>. Solo usamos la consulta para evaluar tu problema, responder y cotizar; no te suscribimos a publicidad. Los campos con * son obligatorios; sin ellos no podemos recibirla. Podés solicitar acceso, rectificación o supresión por email. <a href="privacy.html">Leé la política de privacidad en español</a>, con los proveedores, Estados Unidos como destino previsto de Supabase y los puntos pendientes.',
+      privacyPending: "<strong>Formulario pendiente de habilitación:</strong> faltan el domicilio legal, el plazo de conservación y la revisión de las transferencias internacionales. La documentación sigue en borrador.",
+      policyChanged: "La política de privacidad cambió. Recargá la página, revisá la versión vigente y volvé a aceptar antes de enviar.",
       skip: "Ir al contenido",
       navServices: "Servicios",
       navProcess: "Cómo trabajamos",
@@ -155,7 +160,7 @@
       labelOrganization: "Empresa o marca (opcional)",
       labelLanguage: "Idioma preferido",
       consentText:
-        'Acepto que Cotivanta use estos datos para evaluar y responder mi solicitud, y leí el <a href="privacy.html">Aviso de privacidad</a>.',
+        'Acepto que Cotivanta use estos datos para evaluar y responder mi solicitud, y leí el <a href="privacy.html" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a> (abre otra pestaña).',
       formSubmit: "Enviar solicitud",
       formFootnote:
         "Enviar la consulta no garantiza la aceptación del proyecto.",
@@ -177,6 +182,11 @@
       sending: "Enviando solicitud...",
     },
     en: {
+      footerPolicies: "Policies & terms",
+      privacyDetailsTitle: "Privacy information",
+      privacySummary: '<strong>Data controller: Agustín Gonzales (Cotivanta).</strong> Contact: <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>. We only use your inquiry to assess your problem, reply and prepare a quote; it does not subscribe you to advertising. Fields marked * are required; without them we cannot receive it. You may request access, correction or deletion by email. <a href="privacy.html">Read the privacy policy in Spanish</a>, including providers, the United States as the planned Supabase destination and outstanding items.',
+      privacyPending: "<strong>The form is not ready for live submissions:</strong> the legal address, retention period and international transfer review are still pending. The documentation remains a draft.",
+      policyChanged: "The privacy policy has changed. Reload this page, review the current version and accept it again before submitting.",
       skip: "Skip to content",
       navServices: "Services",
       navProcess: "Our process",
@@ -329,7 +339,7 @@
       labelOrganization: "Company or brand (optional)",
       labelLanguage: "Preferred language",
       consentText:
-        'I agree that Cotivanta may use my information to assess and respond to my request, and I have read the <a href="privacy.html">Privacy Notice</a>.',
+        'I agree that Cotivanta may use my information to assess and respond to my request, and I have read the <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Notice</a> (opens a new tab).',
       formSubmit: "Send project inquiry",
       formFootnote:
         "Submitting an inquiry does not guarantee project acceptance.",
@@ -474,6 +484,29 @@
     labRunning: "Running the example…",
     labDone: "Example complete. You can run it again.",
   });
+  Object.assign(translations.es, {
+    adminLogin: "Administración", menuLabel: "Abrir menú", namePlaceholder: "Tu nombre", organizationPlaceholder: "Tu marca",
+    budgetUnder: "Menos de US$500", budgetOver: "Más de US$5.000",
+    proofNote: "Solo mostramos cifras verificadas. Un guion indica que no hay una cifra publicada disponible.",
+    intakeDisabled: 'El formulario está temporalmente deshabilitado. Podés contactarnos en <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.',
+    captchaUnavailable: "No se pudo cargar la verificación de seguridad. Revisá la conexión o recargá la página; tus datos no se enviaron.",
+    rateLimited: "Se alcanzó el límite de intentos. Esperá unos minutos antes de volver a enviar.",
+    uncertain: "No pudimos confirmar la recepción. Tus datos siguen aquí: podés reintentar sin cambiar la consulta para evitar duplicados.",
+    unavailable: "El servicio no está disponible. Conservamos lo escrito en esta página; intentá más tarde.",
+    reference: "Referencia de tu consulta: ", trimmedInvalid: "Completá este campo con información válida, no solo espacios.",
+  });
+  Object.assign(translations.en, {
+    adminLogin: "Administration", menuLabel: "Open menu", namePlaceholder: "Your name", organizationPlaceholder: "Your brand",
+    budgetUnder: "Under US$500", budgetOver: "Over US$5,000",
+    proofNote: "We only display verified figures. A dash means no published figure is available.",
+    intakeDisabled: 'The form is temporarily disabled. You can contact us at <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.',
+    captchaUnavailable: "The security verification could not load. Check your connection or reload the page; your information was not sent.",
+    rateLimited: "The attempt limit was reached. Please wait a few minutes before trying again.",
+    uncertain: "We could not confirm receipt. Your information is still here: retry the unchanged inquiry to avoid duplicates.",
+    unavailable: "The service is unavailable. Your draft remains on this page; please try later.",
+    reference: "Your inquiry reference: ", trimmedInvalid: "Enter valid information, not only spaces.",
+  });
+  let formMessageKey = "";
   let lang = (navigator.language || "").toLowerCase().startsWith("en")
     ? "en"
     : "es";
@@ -493,6 +526,9 @@
     document.querySelectorAll("[data-placeholder]").forEach((el) => {
       el.placeholder = copy()[el.dataset.placeholder] || "";
     });
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      el.setAttribute("aria-label", copy()[el.dataset.i18nAria]);
+    });
     document.querySelectorAll("[data-lang]").forEach((b) => {
       const on = b.dataset.lang === lang;
       b.classList.toggle("is-active", on);
@@ -500,7 +536,8 @@
     });
     if (get("language") && !get("language").dataset.edited)
       get("language").value = lang;
-    get("form-message")?.setAttribute("hidden", "");
+    if (formMessageKey && get("form-message")) get("form-message").textContent = copy()[formMessageKey];
+    if (get("project-form")?.getAttribute("aria-busy") === "true") get("submit-button").querySelector("[data-i18n]").textContent = copy().sending;
   }
   document
     .querySelectorAll("[data-lang]")
@@ -619,84 +656,71 @@
   const form = get("project-form");
   if (!form) return;
   const cfg = window.COTIVANTA_CONFIG || {};
-  const clientCount = cfg.clientCount;
-  if (Number.isSafeInteger(clientCount) && clientCount >= 0) {
-    const countElement = get("client-count");
-    if (countElement) countElement.textContent = String(clientCount);
+  const http = window.CotivantaHTTP;
+  function publishCounts(values) {
+    for (const [id, value] of [["client-count", values.client_count], ["team-count", values.team_count]]) {
+      if (get(id)) get(id).textContent = values.metrics_verified === true && Number.isSafeInteger(value) && value >= 0 && value <= 10000000 ? String(value) : "—";
+    }
   }
-  const teamCount = cfg.teamCount;
-  if (Number.isSafeInteger(teamCount) && teamCount >= 0) {
-    const countElement = get("team-count");
-    if (countElement) countElement.textContent = String(teamCount);
-  }
-  // La configuración local sirve como respaldo si el servicio no está disponible.
-  if (cfg.supabaseUrl && cfg.supabasePublishableKey) {
-    fetch(
-      `${cfg.supabaseUrl}/rest/v1/site_settings?id=eq.1&select=client_count,team_count`,
-      {
-        headers: { apikey: cfg.supabasePublishableKey },
-      },
-    )
-      .then((response) => {
-        if (!response.ok) throw new Error("Settings unavailable");
-        return response.json();
-      })
-      .then((rows) => {
-        const count = rows?.[0]?.client_count;
-        if (Number.isSafeInteger(count) && count >= 0) {
-          const countElement = get("client-count");
-          if (countElement) countElement.textContent = String(count);
-        }
-        const teams = rows?.[0]?.team_count;
-        if (Number.isSafeInteger(teams) && teams >= 0) {
-          const teamElement = get("team-count");
-          if (teamElement) teamElement.textContent = String(teams);
-        }
+  publishCounts({ client_count: cfg.clientCount, team_count: cfg.teamCount, metrics_verified: cfg.metricsVerified });
+  if (http && cfg.supabaseUrl && cfg.supabasePublishableKey) {
+    http.json(`${cfg.supabaseUrl}/rest/v1/site_settings?id=eq.1&select=client_count,team_count,metrics_verified`, { headers: { apikey: cfg.supabasePublishableKey } }, 8000)
+      .then(({ response, body }) => {
+        const row = body?.[0];
+        if (response.ok && row?.metrics_verified === true && [row.client_count, row.team_count].every(value => Number.isSafeInteger(value) && value >= 0 && value <= 10000000)) publishCounts(row);
       })
       .catch(() => {});
   }
-  let captchaToken = "",
-    widgetId;
+  let captchaToken = "", widgetId, inFlight = false, submissionKey = "", signature = "";
+  const enabled = cfg.projectRequestsEnabled === true && !!cfg.apiUrl && !!cfg.turnstileSiteKey && !!http && typeof window.crypto?.randomUUID === "function";
+  const fields = get("request-fields");
   const message = get("form-message"),
     submit = get("submit-button"),
     success = get("form-success");
-  function showMessage(text) {
-    message.textContent = text;
+  function showMessage(key) {
+    formMessageKey = key;
+    message.textContent = copy()[key];
     message.hidden = false;
   }
   function initCaptcha() {
-    if (!cfg.turnstileSiteKey || !window.turnstile) return;
-    widgetId = window.turnstile.render("#turnstile-container", {
+    if (!enabled || !window.turnstile) { showMessage("captchaUnavailable"); return; }
+    try { widgetId = window.turnstile.render("#turnstile-container", {
       sitekey: cfg.turnstileSiteKey,
       action: "project_request",
       theme: "light",
       callback: (t) => (captchaToken = t),
       "expired-callback": () => (captchaToken = ""),
-      "error-callback": () => (captchaToken = ""),
+      "error-callback": () => { captchaToken = ""; showMessage("captchaUnavailable"); },
     });
+    } catch { showMessage("captchaUnavailable"); }
   }
-  if (cfg.turnstileSiteKey) {
+  if (enabled) {
     const script = document.createElement("script");
     script.src =
       "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
     script.async = true;
     script.onload = initCaptcha;
+    script.onerror = () => showMessage("captchaUnavailable");
     document.head.append(script);
   }
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (inFlight) return;
+    if (!enabled) { showMessage("unavailable"); return; }
     message.hidden = true;
+    formMessageKey = "";
+    for (const [id, minimum] of [["name", 2], ["description", 20], ["email", 1], ["organization", 0]]) {
+      const input = get(id);
+      input.value = input.value.trim();
+      input.setCustomValidity(input.value.length < minimum ? copy().trimmedInvalid : "");
+    }
     if (!form.checkValidity()) {
       form.reportValidity();
-      showMessage(copy().invalid);
-      return;
-    }
-    if (!cfg.apiUrl || !cfg.turnstileSiteKey) {
-      showMessage(copy().config);
+      showMessage("invalid");
       return;
     }
     if (!captchaToken) {
-      showMessage(copy().captcha);
+      showMessage("captcha");
       return;
     }
     const payload = {
@@ -710,27 +734,48 @@
       organization: get("organization").value.trim(),
       language: get("language").value,
       consent: get("consent").checked,
+      privacyVersion: form.dataset.privacyVersion,
       faxNumber: get("fax_number").value,
-      turnstileToken: captchaToken,
     };
+    const currentSignature = JSON.stringify(payload);
+    if (!submissionKey || signature !== currentSignature) {
+      submissionKey = window.crypto.randomUUID();
+      signature = currentSignature;
+    }
+    payload.submissionKey = submissionKey;
+    payload.turnstileToken = captchaToken;
+    inFlight = true;
+    fields.disabled = true;
+    form.setAttribute("aria-busy", "true");
     submit.disabled = true;
     submit.querySelector("[data-i18n]").textContent = copy().sending;
     try {
-      const response = await fetch(cfg.apiUrl, {
+      const { response, body: result } = await http.json(cfg.apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      if (!response.ok) throw new Error("HTTP " + response.status);
-      const result = await response.json();
-      if (result.ok !== true) throw new Error("Unexpected response");
+      if (response.status === 409 && result?.code === "policy_changed") {
+        get("consent").checked = false;
+        showMessage("policyChanged");
+        return;
+      }
+      if (response.status === 429) { showMessage("rateLimited"); return; }
+      if (response.status === 403) { showMessage("captchaUnavailable"); return; }
+      if (response.status === 400) { showMessage("invalid"); return; }
+      if (response.status === 409) { submissionKey = ""; showMessage("failure"); return; }
+      if (!response.ok || result?.ok !== true || typeof result.requestId !== "string") throw new Error("Unconfirmed receipt");
       form.hidden = true;
       success.hidden = false;
+      get("request-reference").textContent = copy().reference + result.requestId;
       success.scrollIntoView({ behavior: "smooth", block: "center" });
-    } catch (err) {
-      console.error("Project inquiry failed:", err);
-      showMessage(copy().failure);
+      success.focus({ preventScroll: true });
+    } catch {
+      showMessage("uncertain");
     } finally {
+      inFlight = false;
+      fields.disabled = false;
+      form.setAttribute("aria-busy", "false");
       submit.disabled = false;
       submit.querySelector("[data-i18n]").textContent = copy().formSubmit;
       captchaToken = "";
@@ -738,8 +783,16 @@
         window.turnstile.reset(widgetId);
     }
   });
+  form.addEventListener("input", (event) => event.target.setCustomValidity?.(""));
+  // Enable only after the submit interceptor is registered. With failed JS, HTML stays fail-closed.
+  fields.disabled = !enabled;
+  submit.disabled = !enabled;
+  get("intake-status").hidden = enabled;
   get("reset-form")?.addEventListener("click", () => {
     form.reset();
+    submissionKey = "";
+    signature = "";
+    formMessageKey = "";
     form.hidden = false;
     success.hidden = true;
     message.hidden = true;

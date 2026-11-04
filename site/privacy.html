@@ -1,88 +1,140 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a1721" />
-    <title>Cotivanta — Aviso de privacidad (borrador)</title>
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <link rel="stylesheet" href="assets/studio.css" />
-  </head>
-  <body>
-    <header class="site-header privacy-header">
-      <nav class="nav container">
-        <a class="logo" href="index.html"
-          ><span class="logo-symbol">✳</span
-          ><span>cotivanta<span class="brand-dot">.</span></span></a
-        ><a class="btn btn-sm btn-lime" href="index.html#request"
-          >Volver al formulario ↗</a
-        >
-      </nav>
-    </header>
-    <main class="privacy-main">
-      <div class="container privacy-content">
-        <span class="eyebrow eyebrow-light"
-          >AVISO DE PRIVACIDAD · BORRADOR</span
-        >
-        <h1>Cómo tratamos tus datos</h1>
-        <p class="privacy-updated">
-          Versión preliminar · octubre de 2026. REVISAR ANTES DE PUBLICAR.
-        </p>
-        <p>
-          Cotivanta es un estudio digital independiente. Para consultas sobre
-          privacidad o sobre una solicitud, podés escribir a
-          <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>. Este
-          texto es un borrador operativo y debe revisarse junto con los
-          requisitos legales aplicables antes de presentarlo como política
-          definitiva.
-        </p>
-        <h2>1. Qué recopilamos</h2>
-        <p>
-          Nombre, correo, tipo de cliente, servicio solicitado, descripción del
-          proyecto, presupuesto estimado y plazo opcionales, empresa o marca
-          opcional, idioma preferido y fecha del consentimiento. Cloudflare
-          Turnstile puede procesar datos técnicos para detectar abuso.
-        </p>
-        <h2>2. Para qué</h2>
-        <p>
-          Utilizamos la información para evaluar la viabilidad de tu proyecto,
-          responder consultas y, si ambas partes lo desean, preparar una
-          propuesta de trabajo. No implica consentimiento para recibir campañas
-          ajenas a tu solicitud.
-        </p>
-        <h2>3. Proveedores</h2>
-        <p>
-          Prevemos alojar las solicitudes en Supabase y usar Cloudflare
-          Turnstile para protección del formulario. No vendemos las solicitudes.
-          Los proveedores técnicos podrán tratar los datos necesarios para la
-          prestación de sus servicios.
-        </p>
-        <h2>4. Conservación</h2>
-        <p>
-          Como criterio preliminar, revisaríamos periódicamente las consultas y
-          eliminaríamos las inactivas al cabo de 12 meses, salvo que exista una
-          relación comercial o una obligación aplicable que justifique
-          conservarlas. Debe confirmarse e implementarse un procedimiento de
-          borrado antes del lanzamiento.
-        </p>
-        <h2>5. Tus derechos</h2>
-        <p>
-          Podrás solicitar acceso, corrección o eliminación, así como retirar el
-          consentimiento, escribiendo a
-          <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>. Antes de
-          entregar o eliminar información se podrá solicitar una verificación
-          razonable de identidad.
-        </p>
-        <h2>6. Pendiente antes del lanzamiento</h2>
-        <p>
-          Completar identificación del titular, domicilio y canal de privacidad,
-          región de almacenamiento, transferencias internacionales si
-          corresponden y revisión jurídica según la jurisdicción de los
-          clientes.
-        </p>
-        <a class="back-link" href="index.html">← Volver a Cotivanta</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1721">
+  <meta name="robots" content="noindex, follow">
+  <meta name="privacy-version" content="2026-10-30.1-draft">
+  <meta name="description" content="Borrador de la política de privacidad de Cotivanta para consultas y cotizaciones en Argentina.">
+  <title>Cotivanta — Política de privacidad (borrador)</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=3">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/studio.css">
+  <link rel="stylesheet" href="assets/policies.css">
+  <script defer src="assets/legal.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Ir al contenido</a>
+  <header class="site-header privacy-header">
+    <nav class="nav container" aria-label="Navegación principal" data-i18n-aria="mainNav">
+      <a class="logo" href="index.html" aria-label="Cotivanta, inicio" data-i18n-aria="home"><span class="logo-symbol" aria-hidden="true"><img src="assets/logo-symbol-light.svg" width="34" height="34" alt=""></span><span>cotivanta</span></a>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-aria="language">
+          <button type="button" class="lang-btn is-active" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn-sm btn-lime" href="index.html#request" data-i18n="backToForm">Volver al formulario ↗</a>
       </div>
-    </main>
-  </body>
+    </nav>
+  </header>
+
+  <main id="main" class="legal-main container">
+    <div class="legal-intro" data-i18n="privacyIntro">
+      <span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span>PRIVACIDAD · ARGENTINA</span>
+      <h1>Cómo tratamos <span>tus datos.</span></h1>
+      <p>Información para quienes nos cuentan un problema o proyecto y solicitan una cotización.</p>
+      <p class="legal-updated">Última actualización: <time datetime="2026-10-30">30 de octubre de 2026</time> · Versión 2026-10-30.1-draft · Borrador, no habilitado para recepción de datos reales.</p>
+    </div>
+    <aside class="legal-notice" aria-labelledby="draft-title" data-i18n="privacyNotice">
+      <strong id="draft-title">Revisión pendiente antes de habilitar el formulario</strong>
+      <p>Faltan el domicilio legal del responsable, la información fiscal aplicable, un plazo de conservación aprobado, la revisión de proveedores y transferencias internacionales y la organización de los procedimientos de atención y seguridad. Esta política no certifica cumplimiento legal ni acredita una inscripción ante la AAIP.</p>
+    </aside>
+
+    <div class="legal-documents">
+      <section class="legal-document" id="responsable" aria-labelledby="responsible-title" data-i18n="responsible">
+        <span class="legal-number">01 / RESPONSABLE</span>
+        <h2 id="responsible-title">Quién trata los datos</h2>
+        <p>El responsable de la base de consultas de Cotivanta es <strong>Agustín Gonzales</strong>, en Argentina. Para consultas generales o para ejercer derechos sobre datos personales, escribí a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
+        <p><strong>Domicilio legal:</strong> pendiente de informar. <strong>CUIT e información fiscal aplicable:</strong> pendientes de completar. El responsable debe completar esta identificación antes de recibir datos reales.</p>
+      </section>
+
+      <section class="legal-document" id="datos" aria-labelledby="data-title" data-i18n="data">
+        <span class="legal-number">02 / DATOS Y FORMULARIO</span>
+        <h2 id="data-title">Qué solicitamos y qué ocurre si no lo proporcionás</h2>
+        <p>Los campos obligatorios son nombre completo, correo electrónico, tipo de cliente, servicio solicitado y descripción del problema o proyecto. La aceptación del aviso de privacidad es necesaria en este formulario. Sin estos campos y la aceptación, el sitio no permite enviar la consulta; no se genera una obligación de contratar.</p>
+        <p>El presupuesto, el plazo y la empresa o marca son opcionales. También se registra el idioma seleccionado. Se puede dejar el presupuesto o el plazo sin definir. Los datos inexactos, especialmente el correo, pueden impedir que podamos responder o evaluar correctamente la solicitud.</p>
+        <p>La implementación del backend registra la fecha de aceptación y la versión de la política asociada a cada nueva solicitud. Estos registros solo se generan si el formulario y la base están configurados y el envío se completa correctamente.</p>
+        <p>No pedimos datos sensibles, documentos de identidad, contraseñas ni credenciales. No incluyas esa información ni datos personales innecesarios de otras personas en la descripción.</p>
+      </section>
+
+      <section class="legal-document" id="finalidad" aria-labelledby="purpose-title" data-i18n="purpose">
+        <span class="legal-number">03 / FINALIDAD Y CONSENTIMIENTO</span>
+        <h2 id="purpose-title">Para qué usaríamos la información</h2>
+        <p>La única finalidad comercial prevista es recibir el problema o proyecto que necesitás resolver, evaluar su viabilidad, contactarte para aclaraciones y preparar o dar seguimiento a una cotización. No utilizamos el formulario para crear cuentas, suscribirte a newsletters, realizar publicidad ni incorporar herramientas de analítica.</p>
+        <p>El tratamiento de la consulta se plantea sobre el consentimiento libre, expreso e informado, de acuerdo con los artículos 5 y 6 de la Ley 25.326. El checkbox está desmarcado inicialmente. Podés revocar el consentimiento sin efectos retroactivos escribiendo al correo de contacto; esto puede impedir continuar la evaluación o el contacto si no existe otra causa legítima de conservación.</p>
+        <p>Si contratás un proyecto, habrá que informarte sobre el tratamiento adicional necesario para esa relación. Una consulta no autoriza usos incompatibles con su finalidad ni acepta por sí misma un contrato de servicios.</p>
+      </section>
+
+      <section class="legal-document" id="proveedores" aria-labelledby="providers-title" data-i18n="providers">
+        <span class="legal-number">04 / ACCESO Y PROVEEDORES</span>
+        <h2 id="providers-title">Quién puede acceder a la información</h2>
+        <p>El acceso debe limitarse al responsable y a los integrantes del equipo que necesiten intervenir en la evaluación y respuesta, sujetos a confidencialidad. Antes del lanzamiento se deben asignar y comprobar sus permisos individuales.</p>
+        <ul>
+          <li><strong>Supabase:</strong> proveedor previsto para recibir y almacenar los datos de la consulta y sus registros de aceptación.</li>
+          <li><strong>Cloudflare Turnstile:</strong> servicio previsto de verificación y prevención de abuso. Puede procesar datos técnicos, como IP e información del navegador, cuando se configure y cargue en el sitio.</li>
+          <li><strong>Google / Gmail:</strong> las comunicaciones dirigidas a cotivanta@gmail.com son procesadas por el proveedor del correo; se utilizaría también para responder si el equipo gestiona allí las consultas. El formulario no envía automáticamente un email.</li>
+          <li><strong>Alojamiento web:</strong> proveedor definitivo pendiente de confirmar; puede tratar registros técnicos de navegación y seguridad.</li>
+        </ul>
+        <p>No se prevé vender los datos ni compartirlos para publicidad. Podrán existir comunicaciones exigidas por una obligación legal o un requerimiento válido de autoridad competente.</p>
+        <p>Fuentes de los proveedores: <a href="https://supabase.com/privacy">Supabase</a>, <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> y <a href="https://policies.google.com/privacy?hl=es">Google</a>. Sus políticas no sustituyen las obligaciones del responsable ni los acuerdos que correspondan.</p>
+      </section>
+
+      <section class="legal-document" id="transferencias" aria-labelledby="transfers-title" data-i18n="transfers">
+        <span class="legal-number">05 / TRANSFERENCIAS INTERNACIONALES</span>
+        <h2 id="transfers-title">Supabase en Estados Unidos</h2>
+        <p>El responsable informó que su proyecto Supabase está alojado en <strong>Estados Unidos</strong>. Antes de habilitar el formulario se debe comprobar la región exacta y revisar los destinos adicionales de soporte, subproveedores, correo y servicios de seguridad; no se afirma que todos los tratamientos ocurran únicamente en ese país.</p>
+        <p>Estados Unidos no figura en la lista de destinos adecuados de la AAIP consultada para este borrador. Las transferencias deben resolverse conforme al artículo 12 de la Ley 25.326, su Decreto reglamentario 1558/2001 y las normas complementarias: por ejemplo, mediante garantías contractuales aplicables o consentimiento expreso para la transferencia cuando corresponda.</p>
+        <div class="legal-pending"><strong>Mecanismo pendiente de verificar</strong><p>No se declara que ya existan cláusulas contractuales válidas para el caso ni se interpreta la aceptación general de esta política como consentimiento expreso a una transferencia internacional. Antes de recibir datos se debe seleccionar, documentar e implementar la vía que corresponda e informar sus condiciones.</p></div>
+        <p>Información oficial: <a href="https://www.argentina.gob.ar/transferencias-internacionales">AAIP — Transferencias internacionales</a>.</p>
+      </section>
+
+      <section class="legal-document" id="conservacion" aria-labelledby="retention-title" data-i18n="retention">
+        <span class="legal-number">06 / CONSERVACIÓN Y SEGURIDAD</span>
+        <h2 id="retention-title">Conservación, eliminación y protección</h2>
+        <p>El plazo concreto de conservación de consultas está <strong>pendiente de aprobación</strong> antes del lanzamiento. No se presenta el plazo de 12 meses del borrador anterior como una regla legal ni como un borrado ya implementado. Conforme al artículo 4 de la Ley 25.326, los datos deben suprimirse cuando dejen de ser necesarios o pertinentes, sin perjuicio de las obligaciones de conservación que correspondan.</p>
+        <p>El procedimiento debe abarcar la base, las comunicaciones por correo, las copias y los respaldos según sus ciclos de retención; también debe contemplar excepciones justificadas por obligaciones legales o derechos de terceros.</p>
+        <p>El código incluye validación de entradas, controles de origen, verificación de Turnstile y una base con RLS y sin permisos públicos de lectura o escritura. La aplicación efectiva de esos controles depende de desplegar y configurar correctamente el backend. Antes del lanzamiento deben verificarse HTTPS, permisos, secretos, autenticación de administradores, copias, recuperación y respuesta a incidentes. No se garantiza seguridad absoluta ni se afirma haber auditado el servicio en producción.</p>
+      </section>
+
+      <section class="legal-document" id="derechos" aria-labelledby="rights-title" data-i18n="privacyRights">
+        <span class="legal-number">07 / DERECHOS Y RECLAMOS</span>
+        <h2 id="rights-title">Cómo ejercer tus derechos en Argentina</h2>
+        <p>Escribí a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>, dirigido a Agustín Gonzales, indicando si solicitás acceso, rectificación, actualización, supresión, confidencialidad o revocación del consentimiento y un medio para responder. No se exige una fórmula específica. Se verificará tu identidad por medios proporcionales; no envíes documentos sensibles sin una indicación fundada y un canal adecuado.</p>
+        <ul>
+          <li><strong>Acceso:</strong> respuesta dentro de 10 días corridos desde la intimación fehaciente. Es gratuito a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo, conforme al artículo 14.</li>
+          <li><strong>Rectificación, actualización o supresión:</strong> las operaciones que correspondan deben realizarse en un máximo de 5 días hábiles desde el reclamo o desde que se advierta el error, conforme al artículo 16.</li>
+          <li><strong>Gratuidad:</strong> la rectificación, actualización o supresión de datos inexactos o incompletos se realiza sin cargo, conforme al artículo 19.</li>
+          <li><strong>Límites de la supresión:</strong> puede no corresponder cuando exista una obligación legal de conservar o se perjudiquen derechos o intereses legítimos de terceros; cualquier respuesta debe explicar su fundamento.</li>
+        </ul>
+        <blockquote class="legal-authority">LA AGENCIA DE ACCESO A LA INFORMACIÓN PÚBLICA, en su carácter de Órgano de Control de la Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.</blockquote>
+        <p>Podés consultar los canales oficiales para ejercer derechos y presentar reclamos en <a href="https://www.argentina.gob.ar/aaip/datospersonales">argentina.gob.ar/aaip/datospersonales</a>. El responsable debe organizar la atención del correo y los plazos antes de recibir solicitudes reales.</p>
+      </section>
+
+      <section class="legal-document" id="cookies" aria-labelledby="cookies-title" data-i18n="privacyCookies">
+        <span class="legal-number">08 / COOKIES</span>
+        <h2 id="cookies-title">Sin analítica ni publicidad incorporada</h2>
+        <p>El código actual no incorpora Analytics, Pixel ni newsletters y no guarda el idioma en cookies o almacenamiento local. Deben comprobarse las tecnologías del hosting y de los terceros al desplegar. Si se agregan tecnologías no esenciales, habrá que revisar sus requisitos de información y consentimiento antes de cargarlas.</p>
+        <a class="text-link" href="policies.html#cookies">Consultar la política de cookies y almacenamiento ↗</a>
+      </section>
+
+      <section class="legal-document" id="versiones" aria-labelledby="versions-title" data-i18n="versions">
+        <span class="legal-number">09 / VERSIONES Y MARCO LEGAL</span>
+        <h2 id="versions-title">Historial de la política</h2>
+        <p>La versión que acompaña al formulario es <strong>2026-10-30.1-draft</strong>. Es un borrador sin entrada en vigor para la recepción de datos reales. Los cambios posteriores deben identificarse y conservarse sin modificar los archivos históricos.</p>
+        <ul><li>Versión de trabajo actual: 2026-10-30.1-draft, publicada en esta página.</li><li><a href="privacy/initial-draft.txt">Borrador anterior — octubre de 2026 (archivo histórico)</a>.</li></ul>
+        <p>Marco consultado: <a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/actualizacion">Ley 25.326</a>, <a href="https://www.argentina.gob.ar/normativa/nacional/decreto-1558-2001-70368/actualizacion">Decreto 1558/2001</a> y <a href="https://www.argentina.gob.ar/normativa/nacional/norma-307621/texto">Resolución AAIP 14/2018</a>. Esta información general requiere revisión jurídica para las condiciones reales de Cotivanta.</p>
+      </section>
+    </div>
+    <a class="legal-back" href="policies.html" data-i18n="allPolicies">← Ver todas las políticas y términos</a>
+  </main>
+
+  <footer class="footer section-dark">
+    <div class="container footer-inner">
+      <div><a href="index.html" class="logo footer-logo" aria-label="Cotivanta, inicio" data-i18n-aria="home"><span class="logo-symbol" aria-hidden="true"><img src="assets/logo-symbol-light.svg" width="32" height="32" alt=""></span><span>cotivanta</span></a><p data-i18n="tagline">Ideas que se convierten en soluciones digitales.</p></div>
+      <nav class="footer-nav" aria-label="Enlaces del pie de página" data-i18n-aria="footerNav"><a href="index.html#services" data-i18n="services">Servicios</a><a href="index.html#request" data-i18n="quote">Pedir presupuesto</a><a href="privacy.html" aria-current="page" data-i18n="privacy">Privacidad</a><a href="policies.html" data-i18n="policies">Políticas y términos</a></nav>
+    </div>
+    <div class="container footer-bottom"><span data-i18n="copyright">© 2026 Cotivanta. Todos los derechos reservados.</span><span data-i18n="legalStatus">Información legal · Documentación en revisión.</span></div>
+  </footer>
+</body>
 </html>

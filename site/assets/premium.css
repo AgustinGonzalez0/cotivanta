@@ -91,22 +91,22 @@ body {
   align-items: center;
   justify-content: center;
   color: #14352a;
-  background: linear-gradient(145deg, #ddffbe, #9fdf7c);
+  background: linear-gradient(145deg, #f7f8f2, #e3ecd9);
   box-shadow:
     0 0 0 12px #c9ff950a,
     0 18px 60px #0004;
   transform: rotate(-8deg);
 }
 .engine-core-mark {
-  font-size: 68px;
-  font-weight: 850;
-  letter-spacing: -0.13em;
-  line-height: 1;
+  display: block;
+  width: 72px;
+  height: 72px;
 }
-.engine-core-mark span {
-  font-size: 22px;
-  vertical-align: top;
-  letter-spacing: 0;
+.engine-core-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .engine-core-label {
   font-size: 8px;
@@ -177,7 +177,7 @@ body {
 .creation-engine[data-mode="automation"] .engine-core {
   border-radius: 50%;
   transform: rotate(0);
-  background: linear-gradient(145deg, #e3fbb9, #a4dc85);
+  background: linear-gradient(145deg, #f5faeb, #dfecd2);
 }
 .creation-engine[data-mode="software"] .engine-core {
   border-radius: 12px;
@@ -469,7 +469,8 @@ body {
     height: 108px;
   }
   .engine-core-mark {
-    font-size: 55px;
+    width: 60px;
+    height: 60px;
   }
   .engine-node {
     font-size: 8px;

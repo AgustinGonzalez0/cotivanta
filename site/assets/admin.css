@@ -16,18 +16,43 @@ body {
   background: radial-gradient(circle at 70% 20%, #24513c, #09171b 55%);
 }
 .admin-card {
-  width: min(100%, 480px);
+  width: min(100%, 720px);
   padding: clamp(26px, 6vw, 44px);
   border-radius: 20px;
   background: #f4f8f1;
   box-shadow: 0 30px 80px #0005;
 }
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: #173c35;
   font-size: 23px;
   font-weight: 800;
   letter-spacing: -0.06em;
   text-decoration: none;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+[hidden] { display: none !important; }
+#mfa-qr { max-width: 100%; height: auto; }
+.verification { display: flex; gap: 10px; align-items: flex-start; }
+.verification input { width: auto; margin: 3px 0 0; }
+#inbox { margin-top: 36px; border-top: 1px solid #cbdcca; padding-top: 24px; }
+.inquiry-card { background: #fff; border: 1px solid #d5e0d2; border-radius: 12px; padding: 18px; margin: 16px 0; overflow-wrap: anywhere; }
+.inquiry-card p { font-size: 14px; line-height: 1.6; }
+.inquiry-card small { font-size: 11px; }
+.inquiry-card select { width: 100%; padding: 10px; margin: 8px 0; }
+.inquiry-description { white-space: pre-wrap; }
+.inquiry-card summary { cursor: pointer; padding: 12px 0; }
+.inbox-pages { display: flex; gap: 12px; }
+.brand img {
+  display: block;
+  flex-shrink: 0;
 }
 .brand span {
   color: #70a752;

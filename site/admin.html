@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
     <title>Administración — Cotivanta</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="assets/admin.css" />
-    <script defer src="config.js"></script>
-    <script defer src="assets/admin.js"></script>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=3" />
+    <link rel="stylesheet" href="assets/admin.css?v=security-20261103" />
+    <script defer src="config.js?v=security-20261103"></script>
+    <script defer src="assets/http.js?v=security-20261103"></script>
+    <script defer src="assets/admin.js?v=security-20261103"></script>
   </head>
   <body>
     <main class="admin-card">
-      <a class="brand" href="index.html">✳ cotivanta<span>.</span></a>
+      <a class="brand" href="index.html"><img src="assets/logo-symbol.svg" width="34" height="34" alt="" />cotivanta<span>.</span></a>
       <p class="eyebrow">ACCESO PRIVADO</p>
       <h1>Administrar la página</h1>
       <p class="intro">
-        Iniciá sesión con una cuenta autorizada para actualizar las cifras de
-        clientes y equipos.
+        Acceso con cuenta autorizada y segundo factor para gestionar consultas y cifras verificadas.
       </p>
-      <form id="login-form">
+      <noscript><p>Necesitás JavaScript para acceder. No ingreses credenciales con los scripts bloqueados.</p></noscript>
+      <form id="login-form" method="post" action="admin.html">
+        <fieldset id="admin-login-fields" disabled>
         <label for="admin-email">Correo electrónico</label>
         <input id="admin-email" type="email" autocomplete="username" required />
         <label for="admin-password">Contraseña</label>
@@ -30,8 +32,19 @@
           required
         />
         <button type="submit">Iniciar sesión</button>
+        </fieldset>
       </form>
-      <form id="settings-form" hidden>
+      <form id="mfa-form" method="post" action="admin.html" hidden>
+        <div id="mfa-enrollment" hidden>
+          <p>Configurá tu autenticador escaneando este QR. No compartas ni guardes una captura del código.</p>
+          <img id="mfa-qr" width="220" height="220" alt="Código de configuración del segundo factor" />
+        </div>
+        <label for="mfa-code">Código de tu autenticador</label>
+        <input id="mfa-code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required />
+        <button type="submit">Verificar segundo factor</button>
+        <button type="button" id="cancel-session" class="secondary">Cancelar</button>
+      </form>
+      <form id="settings-form" method="post" action="admin.html" hidden>
         <label for="client-count-input">Clientes atendidos</label>
         <input
           id="client-count-input"
@@ -53,11 +66,20 @@
         <p class="hint">
           Los números guardados se mostrarán en la página pública.
         </p>
+        <label class="verification"><input id="metrics-verified" type="checkbox" />Confirmo que ambas cifras están verificadas y se pueden publicar.</label>
         <button type="submit">Guardar cambios</button>
-        <button type="button" id="logout" class="secondary">
-          Cerrar sesión
-        </button>
       </form>
+      <section id="inbox" hidden aria-labelledby="inbox-title">
+        <h2 id="inbox-title">Consultas recibidas</h2>
+        <button type="button" id="refresh-inbox" class="secondary">Actualizar consultas</button>
+        <p id="inbox-message" role="status"></p>
+        <div id="request-list"></div>
+        <nav class="inbox-pages" aria-label="Páginas de consultas">
+          <button type="button" id="previous-page" class="secondary">Anterior</button>
+          <button type="button" id="next-page" class="secondary">Siguiente</button>
+        </nav>
+      </section>
+      <button type="button" id="logout" class="secondary" hidden>Cerrar sesión</button>
       <p id="admin-message" role="status" aria-live="polite"></p>
       <a class="back" href="index.html">← Volver a Cotivanta</a>
     </main>

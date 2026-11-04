@@ -18,13 +18,15 @@
     />
     <meta property="og:type" content="website" />
     <title>Cotivanta — Desarrollo y soluciones digitales a medida</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=3" />
+    <link rel="stylesheet" href="assets/styles.css?v=security-20261103" />
     <link rel="stylesheet" href="assets/studio.css" />
     <link rel="stylesheet" href="assets/experience.css" />
-    <link rel="stylesheet" href="assets/premium.css" />
-    <script defer src="config.js"></script>
-    <script defer src="assets/app.js"></script>
+    <link rel="stylesheet" href="assets/premium.css?v=pieces-20261103" />
+    <link rel="stylesheet" href="assets/policies.css?v=privacy-details-20261103" />
+    <script defer src="config.js?v=security-20261103"></script>
+    <script defer src="assets/http.js?v=security-20261103"></script>
+    <script defer src="assets/app.js?v=security-20261103"></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Ir al contenido</a>
@@ -32,15 +34,7 @@
       <nav class="nav container" aria-label="Navegación principal">
         <a class="logo" href="#top" aria-label="Cotivanta"
           ><span class="logo-symbol" aria-hidden="true"
-            ><svg width="34" height="34" viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="11" fill="#C9FF95" />
-              <path
-                d="M24.5 12.5A9 9 0 1 0 25 24"
-                stroke="#12251C"
-                stroke-width="4"
-                stroke-linecap="round"
-              />
-              <circle cx="26.5" cy="12.1" r="2.6" fill="#12251C" /></svg></span
+            ><img src="assets/logo-symbol-light.svg" width="34" height="34" alt="" /></span
           ><span>cotivanta<span class="brand-dot">.</span></span></a
         >
         <div class="nav-links" id="nav-links">
@@ -75,6 +69,7 @@
             class="menu-toggle"
             id="menu-toggle"
             aria-label="Abrir menú"
+            data-i18n-aria="menuLabel"
             aria-expanded="false"
             aria-controls="nav-links"
           >
@@ -129,8 +124,10 @@
               <div class="engine-orbit orbit-a"></div>
               <div class="engine-orbit orbit-b"></div>
               <div class="engine-core">
-                <span class="engine-core-mark">C<span>✳</span></span
-                ><span class="engine-core-label">COTIVANTA</span>
+                <span class="engine-core-mark">
+                  <img src="assets/logo-symbol.svg?v=pieces-20261103" width="72" height="72" alt="" />
+                </span>
+                <span class="engine-core-label">COTIVANTA</span>
               </div>
               <div class="engine-node node-one">
                 <i></i><span data-i18n="engineIdea">IDEA</span>
@@ -288,10 +285,7 @@
           </div>
           <div class="proof-note">
             <span>✳</span>
-            <p data-i18n="proofNote">
-              La cantidad de clientes y casos publicados se actualizará cuando
-              existan resultados verificables para compartir.
-            </p>
+              <p data-i18n="proofNote">Solo mostramos cifras verificadas. Un guion indica que no hay una cifra publicada disponible.</p>
           </div>
         </div>
       </section>
@@ -588,7 +582,7 @@
           <div class="pilot-graphic" aria-hidden="true">
             <div class="pilot-ring ring-a"></div>
             <div class="pilot-ring ring-b"></div>
-            <div class="pilot-mark">C<span>↗</span></div>
+            <div class="pilot-mark"><img src="assets/logo-symbol.svg?v=pieces-20261103" width="120" height="120" alt="" /></div>
           </div>
           <div class="pilot-copy">
             <span class="eyebrow eyebrow-dark"
@@ -712,8 +706,17 @@
                 Hablemos de lo que querés construir.
               </h3>
               <p data-i18n="formCardDesc">Los campos con * son obligatorios.</p>
+              <p id="intake-status" class="intake-status" role="status" data-i18n="intakeDisabled">El formulario está temporalmente deshabilitado. Podés contactarnos en <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
+              <noscript><p>Este formulario necesita JavaScript. No ingreses datos aquí; escribí a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p></noscript>
             </div>
-            <form id="project-form" novalidate>
+            <form
+              id="project-form"
+              method="post"
+              action="index.html#request"
+              data-privacy-version="2026-10-30.1-draft"
+              novalidate
+            >
+              <fieldset id="request-fields" disabled>
               <div class="form-row">
                 <div class="field">
                   <label for="name" data-i18n="labelName"
@@ -725,6 +728,7 @@
                     maxlength="100"
                     minlength="2"
                     required
+                    data-placeholder="namePlaceholder"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -818,10 +822,10 @@
                     <option value="unsure" data-i18n="budgetUnsure">
                       Todavía no lo sé
                     </option>
-                    <option value="under-500">Menos de US$500</option>
+                    <option value="under-500" data-i18n="budgetUnder">Menos de US$500</option>
                     <option value="500-1500">US$500–1.500</option>
                     <option value="1500-5000">US$1.500–5.000</option>
-                    <option value="over-5000">Más de US$5.000</option>
+                    <option value="over-5000" data-i18n="budgetOver">Más de US$5.000</option>
                   </select>
                 </div>
                 <div class="field">
@@ -852,6 +856,7 @@
                     name="organization"
                     maxlength="150"
                     autocomplete="organization"
+                    data-placeholder="organizationPlaceholder"
                     placeholder="Tu marca"
                   />
                 </div>
@@ -887,7 +892,7 @@
                 /><span data-i18n="consentText"
                   >Acepto que Cotivanta use estos datos para evaluar y responder
                   mi solicitud, y leí el
-                  <a href="privacy.html">Aviso de privacidad</a>.</span
+                  <a href="privacy.html" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a>.</span
                 ></label
               >
               <div
@@ -901,6 +906,7 @@
                 type="submit"
                 class="btn btn-dark btn-submit"
                 id="submit-button"
+                disabled
               >
                 <span data-i18n="formSubmit">Enviar solicitud</span
                 ><span>↗</span>
@@ -908,14 +914,24 @@
               <p class="form-footnote" data-i18n="formFootnote">
                 Enviar la consulta no garantiza la aceptación del proyecto.
               </p>
+              </fieldset>
+              <details class="legal-disclosure">
+                <summary data-i18n="privacyDetailsTitle">Información de privacidad</summary>
+                <aside class="legal-summary" id="privacy-summary" aria-label="Información sobre datos personales">
+                  <p data-i18n="privacySummary"><strong>Responsable: Agustín Gonzales (Cotivanta).</strong> Contacto: <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>. Solo usamos la consulta para evaluar tu problema, responder y cotizar; no te suscribimos a publicidad. Los campos con * son obligatorios; sin ellos no podemos recibirla. Podés solicitar acceso, rectificación o supresión por email. <a href="privacy.html">Leé la política de privacidad en español</a>, con los proveedores, Estados Unidos como destino previsto de Supabase y los puntos pendientes.</p>
+                  <p data-i18n="privacyPending"><strong>Formulario pendiente de habilitación:</strong> faltan el domicilio legal, el plazo de conservación y la revisión de las transferencias internacionales. La documentación sigue en borrador.</p>
+                  <blockquote lang="es">LA AGENCIA DE ACCESO A LA INFORMACIÓN PÚBLICA, en su carácter de Órgano de Control de la Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.</blockquote>
+                </aside>
+              </details>
             </form>
-            <div id="form-success" class="success-state" hidden>
+            <div id="form-success" class="success-state" role="status" tabindex="-1" hidden>
               <div class="success-icon">✓</div>
               <h3 data-i18n="successTitle">Solicitud recibida.</h3>
               <p data-i18n="successDesc">
                 Gracias por contarnos tu proyecto. Vamos a revisarlo y te
                 contactaremos si podemos ayudarte.
               </p>
+              <p id="request-reference"></p>
               <button
                 type="button"
                 class="text-link success-reset"
@@ -934,20 +950,7 @@
         <div>
           <a href="#top" class="logo footer-logo"
             ><span class="logo-symbol" aria-hidden="true"
-              ><svg width="32" height="32" viewBox="0 0 36 36" fill="none">
-                <rect width="36" height="36" rx="11" fill="#C9FF95" />
-                <path
-                  d="M24.5 12.5A9 9 0 1 0 25 24"
-                  stroke="#12251C"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                />
-                <circle
-                  cx="26.5"
-                  cy="12.1"
-                  r="2.6"
-                  fill="#12251C"
-                /></svg></span
+              ><img src="assets/logo-symbol-light.svg" width="32" height="32" alt="" /></span
             ><span>cotivanta<span class="brand-dot">.</span></span></a
           >
           <p data-i18n="footerTag">
@@ -959,6 +962,7 @@
           <a href="#services" data-i18n="footerServices">Servicios</a
           ><a href="#request" data-i18n="footerRequest">Pedir presupuesto</a
           ><a href="privacy.html" data-i18n="footerPrivacy">Privacidad</a
+          ><a href="policies.html" data-i18n="footerPolicies">Políticas y términos</a
           ><a href="admin.html" data-i18n="adminLogin">Iniciar sesión</a>
         </div>
       </div>
