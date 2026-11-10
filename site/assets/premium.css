@@ -551,3 +551,113 @@ body {
     transform: none;
   }
 }
+
+/* Refinements: layout fixes, legibility and focus visibility. Keep last so they win over earlier layers. */
+.service-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.service-card,
+.service-card:first-child,
+.service-card:last-child {
+  grid-column: auto;
+}
+.service-card:first-child {
+  background: #fff;
+}
+.service-card:first-child:after {
+  content: none;
+}
+.service-card:first-child .service-choose {
+  max-width: none;
+}
+.service-card:hover {
+  border-color: #b9d8b2;
+}
+.service-choose {
+  transition: gap 0.25s ease;
+}
+.service-card:hover .service-choose {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.hero h1 {
+  letter-spacing: -0.05em;
+}
+.section-intro h2,
+.how-copy h2,
+.audience-section h2,
+.faq-section h2,
+.access-copy h2,
+.proof-heading h2 {
+  letter-spacing: -0.045em;
+}
+.eyebrow {
+  font-size: 11px;
+}
+.trust-row > span:last-child {
+  font-size: 13px;
+  color: #aebfbc;
+}
+.engine-heading,
+.engine-controls > span,
+.engine-node,
+.engine-output,
+.lab-caption,
+.lab-panel-head,
+.lab-step span,
+.lab-step small {
+  font-size: 10px;
+}
+.engine-options button {
+  font-size: 13px;
+}
+.proof-stat small {
+  font-size: 12px;
+  color: #5d7266;
+}
+.proof-client-head > p {
+  font-size: 14px;
+  color: #5d7266;
+}
+.field label {
+  font-size: 12px;
+}
+.field-hint {
+  font-size: 12px;
+  color: #6c7d72;
+}
+.consent-label {
+  font-size: 12px;
+  color: #56665b;
+}
+.form-footnote {
+  font-size: 12px;
+  color: #6c7d72;
+}
+.access-copy {
+  position: sticky;
+  top: 110px;
+}
+.section-light :focus-visible,
+.proof-section :focus-visible,
+.how-section :focus-visible,
+.access-section :focus-visible,
+.form-card :focus-visible {
+  outline-color: #1d62a8;
+}
+.field select {
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .access-copy {
+    position: static;
+  }
+}
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}

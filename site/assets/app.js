@@ -648,6 +648,7 @@
     motionTargets.forEach((el, index) => {
       el.dataset.motion = "";
       el.style.transitionDelay = `${Math.min(index % 5, 4) * 70}ms`;
+      el.addEventListener("transitionend", () => { el.style.transitionDelay = ""; }, { once: true });
       motionObserver.observe(el);
     });
   } else {
