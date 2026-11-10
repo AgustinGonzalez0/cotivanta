@@ -28,10 +28,27 @@ export function createNotificationHandler(env: Env, fetcher: typeof fetch = fetc
         if (!/^[0-9a-f-]{36}$/i.test(row.request_id)) return false;
         let sent = false;
         try {
+          const lookup = await fetcher(`${url}/rest/v1/project_requests?id=eq.${row.request_id}&select=created_at,name,email,client_type,service,description,budget,timeline,organization,language&limit=1`, { headers, signal: AbortSignal.timeout(8000) });
+          const found = lookup.ok ? await lookup.json() : null;
+          const request = Array.isArray(found) ? found[0] : null;
+          if (!request) throw new Error("request_unavailable");
+          // Visitor data is untrusted: plain text only, no HTML, and no visitor value is used in the subject.
+          const clean = (value: unknown) => String(value ?? "").replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, "").slice(0, 2600);
+          const replyTo = /^[^\s<>,;"']+@[^\s<>,;"']+\.[^\s<>,;"']+$/.test(String(request.email)) ? [String(request.email)] : undefined;
+          const text = [
+            "Nueva consulta recibida en Cotivanta.", "",
+            `Nombre: ${clean(request.name)}`, `Correo: ${clean(request.email)}`,
+            `Tipo de cliente: ${clean(request.client_type)}`, `Servicio: ${clean(request.service)}`,
+            `Presupuesto: ${clean(request.budget)}`, `Plazo: ${clean(request.timeline)}`,
+            `Empresa o marca: ${clean(request.organization) || "-"}`, `Idioma: ${clean(request.language)}`,
+            `Recibida: ${clean(request.created_at)}`, "", "Descripción:", clean(request.description), "",
+            `Referencia: ${row.request_id}`, `Panel privado: ${adminUrl}`,
+            "Podés responder a este correo: la respuesta va a la persona que escribió.",
+          ].join("\n");
           const email = await fetcher("https://api.resend.com/emails", {
             method: "POST", signal: AbortSignal.timeout(8000),
             headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json", "Idempotency-Key": `cotivanta-${row.request_id}` },
-            body: JSON.stringify({ from, to: [to], subject: "Nueva consulta en Cotivanta", text: `Hay una nueva consulta. Referencia: ${row.request_id}\nRevisala en el panel privado: ${adminUrl}\nNo respondas a esta notificación automática.` }),
+            body: JSON.stringify({ from, to: [to], ...(replyTo ? { reply_to: replyTo } : {}), subject: "Nueva consulta en Cotivanta", text }),
           });
           sent = email.ok;
           await email.body?.cancel();
