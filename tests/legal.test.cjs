@@ -35,18 +35,21 @@ test("legal pages, home and admin have valid local links and anchors", () => {
   }
 });
 
-test("main's landing sections and admin entry remain present", () => {
+test("the agency landing keeps its sections, and no public link points to the admin panel", () => {
   const html = read("index.html");
-  for (const id of ["creation-engine", "proof", "services", "lab", "process", "audience", "faq", "request"]) {
-    assert.ok(html.includes(`id="${id}"`));
+  for (const id of ["creation-engine", "proof", "services", "process", "work", "apply", "faq", "request"]) {
+    assert.ok(html.includes(`id="${id}"`), `missing section #${id}`);
   }
-  assert.match(html, /href="admin.html"/);
+  // El panel sigue existiendo (admin.html), pero la portada no lo enlaza: se entra escribiendo su dirección.
+  assert.doesNotMatch(html, /admin\.html/);
   assert.match(html, /href="policies.html"/);
   assert.match(html, /href="assets\/premium.css(?:\?v=[^"]+)?"/);
 });
 
 test("form privacy details are collapsed after the fields and submit button", () => {
-  const html = read("index.html");
+  // Hay dos formularios públicos con el mismo patrón; este test valida el de solicitud de servicios.
+  const page = read("index.html");
+  const html = page.slice(page.search(/<form\s+id="project-form"/));
   const disclosure = html.match(/<details\b([^>]*class="legal-disclosure"[^>]*)>([\s\S]*?)<\/details>/);
   assert.ok(disclosure);
   assert.doesNotMatch(disclosure[1], /\bopen\b/);

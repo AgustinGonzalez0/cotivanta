@@ -1,0 +1,286 @@
+/* Cotivanta · agencia multidisciplinaria.
+   Se carga al final: complementa styles/studio/experience/premium sin tocar los estilos existentes.
+   Todo está escrito para la política CSP del sitio (sin estilos en línea). */
+
+/* ---------- Hero: el titular nuevo es más largo ---------- */
+.hero h1 {
+  font-size: clamp(40px, 4.7vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+.hero-actions {
+  flex-wrap: wrap;
+}
+.hero-actions .btn {
+  white-space: normal;
+  text-align: left;
+}
+.creation-engine[data-mode="design"] .engine-core {
+  border-radius: 24px;
+  transform: rotate(5deg);
+  background: linear-gradient(145deg, #dcf6f2, #97d9c8);
+}
+.creation-engine[data-mode="audiovisual"] .engine-core {
+  border-radius: 50%;
+  transform: rotate(0);
+  background: linear-gradient(145deg, #f5faeb, #dfecd2);
+}
+.creation-engine[data-mode="marketing"] .engine-core {
+  border-radius: 12px;
+  transform: rotate(-3deg);
+  background: linear-gradient(145deg, #d4e9ff, #a4cdbc);
+}
+.creation-engine[data-mode="business"] .engine-core {
+  border-radius: 40px 14px 40px 14px;
+  transform: rotate(2deg);
+  background: linear-gradient(145deg, #fdf3d9, #e9d8a6);
+}
+.engine-options button {
+  min-height: 44px;
+}
+
+/* ---------- Categorías de servicios ---------- */
+.category-grid {
+  align-items: stretch;
+}
+.category-fallback {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0 0 0 20px;
+  color: #365a43;
+  line-height: 1.9;
+}
+.service-card {
+  min-height: 0;
+}
+.service-card h3 {
+  font-size: 24px;
+  padding-right: 34px;
+}
+.service-chips {
+  list-style: none;
+  margin: 20px 0 6px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.service-chip {
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid #d3e2cf;
+  border-radius: 999px;
+  background: #f4f9f1;
+  color: #2f5a3d;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.25;
+  text-align: left;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+.service-chip:hover {
+  background: var(--mint);
+  border-color: #9fd27c;
+  color: #10231d;
+}
+.service-card .service-choose {
+  padding-top: 22px;
+}
+.services-note {
+  margin-top: 30px;
+  color: #5d7266;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ---------- Cómo funciona (lista ordenada con el aspecto anterior) ---------- */
+ol.steps-panel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Trabajá con Cotivanta ---------- */
+.work-points {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+  max-width: 480px;
+}
+.work-points li {
+  position: relative;
+  padding-left: 28px;
+  color: #c8d9d3;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.work-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--mint);
+  font-weight: 800;
+}
+.pilot-copy p {
+  max-width: 500px;
+}
+.apply-section {
+  background: #e4f1d8;
+}
+
+/* ---------- Formularios: grupos, etiquetas de grupo y atributo hidden ---------- */
+.form-card [hidden] {
+  display: none !important;
+}
+.form-group + .form-group {
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid #e6eee3;
+}
+.form-group > h4 {
+  margin: 0 0 16px;
+  color: #4d7161;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.field-label {
+  color: #3e5548;
+  font-size: 12px;
+  font-weight: 780;
+}
+.success-state p#pro-reference,
+.success-state p#request-reference {
+  margin-top: 14px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Especialidades e idiomas (casillas) ---------- */
+.spec-groups {
+  display: grid;
+  gap: 8px;
+}
+.spec-group {
+  border: 1px solid #dde6df;
+  border-radius: 10px;
+  background: #fafcf9;
+}
+.spec-group > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 12px 14px;
+  color: #2a4636;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.spec-group > summary::-webkit-details-marker {
+  display: none;
+}
+.spec-group > summary::after {
+  content: "+";
+  margin-left: 4px;
+  color: #5a8a5a;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.spec-group[open] > summary::after {
+  transform: rotate(45deg);
+}
+.spec-count {
+  margin-left: auto;
+  color: #3b7d4a;
+  font-size: 12px;
+  font-weight: 700;
+}
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 16px;
+  padding: 2px 14px 14px;
+}
+.check-grid#pro-languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+}
+.field .check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 40px;
+  padding: 8px 0;
+  color: #2f4a3a;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.field .check input {
+  display: inline-block;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  min-height: 0;
+  margin: 1px 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  accent-color: #377f48;
+}
+.check-grid#pro-languages .check {
+  min-height: 42px;
+  padding: 8px 14px;
+  border: 1px solid #dde6df;
+  border-radius: 999px;
+  background: #fafcf9;
+}
+
+/* ---------- Móvil: campos cómodos al tacto y sin zoom automático en iOS ---------- */
+@media (max-width: 600px) {
+  .field input:not([type="checkbox"]),
+  .field select,
+  .field textarea {
+    min-height: 48px;
+    font-size: 16px;
+  }
+  .field textarea {
+    min-height: 112px;
+  }
+  .check-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-chip {
+    min-height: 38px;
+  }
+  .hero-actions .btn {
+    min-height: 54px;
+  }
+  .btn-submit {
+    min-height: 54px;
+  }
+  .form-group + .form-group {
+    margin-top: 22px;
+    padding-top: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spec-group > summary::after,
+  .service-chip {
+    transition: none;
+  }
+}

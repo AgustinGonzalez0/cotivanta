@@ -12,6 +12,7 @@ function setup({ emailOk = true, jobKey = "synthetic-job-secret-with-at-least-32
     const body = options.body ? JSON.parse(options.body) : null; calls.push({ url, options, body });
     if (url.includes("/rest/v1/project_requests")) return Response.json(lookupRows);
     if (url.includes("claim_project_notifications")) return Response.json([{ request_id: requestId }]);
+    if (url.includes("claim_professional_notifications")) return Response.json([]);
     if (url.includes("api.resend.com")) return Response.json({}, { status: emailOk ? 200 : 500 });
     return new Response(null, { status: 204 });
   });

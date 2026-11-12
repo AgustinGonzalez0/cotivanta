@@ -8,7 +8,8 @@ before(async () => {
   base = `http://127.0.0.1:${server.address().port}`; browser = await launch();
 });
 after(async () => { await browser?.close(); await new Promise(resolve => server?.close(resolve)); });
-const fill = `for (const [id,value] of Object.entries({name:'Prueba Sintética',email:'audit@example.invalid',description:'Consulta sintética para pruebas locales.', 'client-type':'individual',service:'website'})) document.getElementById(id).value=value; document.getElementById('consent').checked=true;`;
+// El servicio depende de la categoría: se elige la categoría (con su evento) y después el servicio.
+const fill = `const set=(id,value)=>{const e=document.getElementById(id);e.value=value;e.dispatchEvent(new Event('change',{bubbles:true}))}; set('category','tech'); set('service','website'); for (const [id,value] of Object.entries({name:'Prueba Sintética',email:'audit@example.invalid',description:'Consulta sintética para pruebas locales.', 'client-type':'individual'})) document.getElementById(id).value=value; document.getElementById('consent').checked=true;`;
 const sent = page => page.requests.filter(request => request.url.includes("functions/v1/project-request"));
 test("failed app script cannot submit visitor data into URL", async () => {
   const page = await browser.page(base, "/", { noApp: true });
@@ -58,7 +59,7 @@ test("English labels and native privacy disclosure work with keyboard", async ()
   assert.equal(await page.evaluate("document.getElementById('name').placeholder"), "Your name");
   assert.equal(await page.evaluate("document.getElementById('organization').placeholder"), "Your brand");
   assert.equal(await page.evaluate("document.getElementById('menu-toggle').getAttribute('aria-label')"), "Open menu");
-  assert.equal(await page.evaluate("document.querySelector('#budget option[value=under-500]').textContent"), "Under US$500");
+  assert.equal(await page.evaluate("document.querySelector('#budget option[value=amount]').textContent"), "I have an approximate amount");
   await page.evaluate("document.querySelector('.legal-disclosure summary').focus()"); await page.key("Enter");
   assert.equal(await page.evaluate("document.querySelector('.legal-disclosure').open"), true); await page.close();
 });

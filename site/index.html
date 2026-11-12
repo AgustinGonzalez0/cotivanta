@@ -6,27 +6,43 @@
     <meta name="theme-color" content="#0a1721" />
     <meta
       name="description"
-      content="Cotivanta es un estudio de desarrollo y soluciones digitales. Sitios web, aplicaciones, automatizaciones y software a medida. Contanos tu proyecto."
+      content="Cotivanta es una agencia de servicios profesionales: tecnología, diseño, producción audiovisual, marketing y negocios. Contanos qué necesitás y coordinamos el talento adecuado."
     />
     <meta
       property="og:title"
-      content="Cotivanta — Tu idea, hecha realidad digital"
+      content="Cotivanta — Conectamos tus ideas con el talento adecuado"
     />
     <meta
       property="og:description"
-      content="Creamos soluciones digitales a medida para personas, emprendedores y empresas. Contanos qué necesitás."
+      content="Tecnología, diseño, audiovisual, marketing y soluciones empresariales. Cotivanta coordina todo el proceso. Pedí tu presupuesto o sumate como profesional."
     />
     <meta property="og:type" content="website" />
-    <title>Cotivanta — Desarrollo y soluciones digitales a medida</title>
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:card" content="summary" />
+    <title>Cotivanta — Agencia de servicios profesionales</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=3" />
     <link rel="stylesheet" href="assets/styles.css?v=security-20261103" />
     <link rel="stylesheet" href="assets/studio.css" />
     <link rel="stylesheet" href="assets/experience.css" />
     <link rel="stylesheet" href="assets/premium.css?v=polish-20261110" />
     <link rel="stylesheet" href="assets/policies.css?v=privacy-details-20261103" />
+    <link rel="stylesheet" href="assets/agency.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cotivanta",
+        "description": "Agencia de servicios profesionales: tecnología, diseño, producción audiovisual, marketing y negocios.",
+        "email": "cotivanta@gmail.com"
+      }
+    </script>
+    <script defer src="assets/catalog.js"></script>
+    <script defer src="assets/agency-copy.js"></script>
     <script defer src="config.js?v=security-20261103"></script>
     <script defer src="assets/http.js?v=security-20261103"></script>
+    <script defer src="assets/agency.js"></script>
     <script defer src="assets/app.js?v=polish-20261110"></script>
+    <script defer src="assets/professional.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Ir al contenido</a>
@@ -39,10 +55,9 @@
         >
         <div class="nav-links" id="nav-links">
           <a href="#services" data-i18n="navServices">Servicios</a
-          ><a href="#process" data-i18n="navProcess">Cómo trabajamos</a
-          ><a href="#audience" data-i18n="navAbout">Para quiénes</a
-          ><a href="#faq" data-i18n="navFaq">Preguntas</a
-          >
+          ><a href="#process" data-i18n="navProcess">Cómo funciona</a
+          ><a href="#work" data-i18n="navWork">Trabajá con nosotros</a
+          ><a href="#faq" data-i18n="navFaq">Preguntas</a>
         </div>
         <div class="nav-actions">
           <div class="lang-switch" role="group" aria-label="Idioma">
@@ -86,23 +101,25 @@
             <span class="eyebrow eyebrow-dark"
               ><span class="status-pulse"></span
               ><span data-i18n="heroBadge"
-                >ESTUDIO DIGITAL · PROYECTOS A MEDIDA</span
+                >AGENCIA DE SERVICIOS PROFESIONALES</span
               ></span
             >
             <h1 data-i18n="heroTitle">
-              Tu idea merece <em>hacerse realidad.</em>
+              Conectamos tus ideas con el <em>talento adecuado</em> para
+              hacerlas realidad.
             </h1>
             <p class="hero-description" data-i18n="heroDesc">
-              Diseñamos y desarrollamos sitios web, aplicaciones y software a
-              medida. No importa si sos una persona, emprendimiento o empresa:
-              contanos qué querés crear.
+              Desde tecnología y diseño hasta marketing, producción audiovisual
+              y soluciones empresariales. En Cotivanta encontramos el talento
+              que necesitás y coordinamos todo el proceso para que no tengas que
+              preocuparte por nada.
             </p>
             <div class="hero-actions">
               <a href="#request" class="btn btn-lime btn-large"
-                ><span data-i18n="heroCta">Contanos tu proyecto</span
+                ><span data-i18n="heroCta">Quiero contratar un servicio</span
                 ><span class="arrow-up">↗</span></a
-              ><a href="#services" class="btn btn-ghost btn-large"
-                ><span data-i18n="heroSecondary">Explorar servicios</span
+              ><a href="#work" class="btn btn-ghost btn-large"
+                ><span data-i18n="heroWork">Quiero trabajar con Cotivanta</span
                 ><span>→</span></a
               >
             </div>
@@ -110,14 +127,14 @@
               <span class="trust-avatars" aria-hidden="true"
                 ><span>01</span><span>02</span><span>03</span></span
               ><span data-i18n="heroNote"
-                >Escuchamos tu necesidad, evaluamos el alcance y te proponemos
-                una solución. Sin compromiso inicial de contratación.</span
+                >Analizamos tu pedido, definimos el alcance y te presentamos un
+                presupuesto. Recién ahí decidís si avanzar.</span
               >
             </div>
           </div>
-          <div class="creation-engine" id="creation-engine" data-mode="web">
+          <div class="creation-engine" id="creation-engine" data-mode="tech">
             <div class="engine-heading">
-              <span>✳ &nbsp; COTIVANTA / CREATION ENGINE</span
+              <span>✳ &nbsp; COTIVANTA / NETWORK</span
               ><span data-i18n="demoLabel">DEMOSTRACIÓN CONCEPTUAL</span>
             </div>
             <div class="engine-stage" aria-hidden="true">
@@ -133,67 +150,59 @@
                 <i></i><span data-i18n="engineIdea">IDEA</span>
               </div>
               <div class="engine-node node-two">
-                <i></i><span data-i18n="engineDesign">DISEÑO</span>
+                <i></i><span data-i18n="engineTalent">TALENTO</span>
               </div>
               <div class="engine-node node-three">
-                <i></i><span data-i18n="engineBuild">DESARROLLO</span>
+                <i></i><span data-i18n="engineCoordination">COORDINACIÓN</span>
               </div>
               <div class="engine-node node-four">
-                <i></i><span data-i18n="engineProduct">PRODUCTO</span>
+                <i></i><span data-i18n="engineDelivery">ENTREGA</span>
               </div>
               <div class="engine-output">
                 <span class="output-dot"></span
-                ><span class="output-name">WEB EXPERIENCE</span
+                ><span class="output-name" data-i18n="engineTechName">TECNOLOGÍA</span
                 ><span class="output-arrow">↗</span>
               </div>
             </div>
             <div class="engine-controls">
-              <span data-i18n="engineChoose">EXPLORÁ UNA IDEA</span>
+              <span data-i18n="engineChoose">EXPLORÁ UNA CATEGORÍA</span>
               <div
                 class="engine-options"
                 role="group"
-                aria-label="Tipo de proyecto"
+                aria-label="Categoría de servicio"
+                data-i18n-aria="engineGroup"
                 data-engine-group
               >
-                <button type="button" data-engine="web" aria-pressed="true">
-                  Web</button
-                ><button type="button" data-engine="app" aria-pressed="false">
-                  App</button
-                ><button
-                  type="button"
-                  data-engine="automation"
-                  aria-pressed="false"
-                  data-i18n="engineAutomation"
-                >
-                  Automatización</button
-                ><button
-                  type="button"
-                  data-engine="software"
-                  aria-pressed="false"
-                >
-                  Software
+                <button type="button" data-engine="tech" aria-pressed="true" data-i18n="engineTech">
+                  Tecnología</button
+                ><button type="button" data-engine="design" aria-pressed="false" data-i18n="engineDesign">
+                  Diseño</button
+                ><button type="button" data-engine="audiovisual" aria-pressed="false" data-i18n="engineVideo">
+                  Audiovisual</button
+                ><button type="button" data-engine="marketing" aria-pressed="false" data-i18n="engineMarketing">
+                  Marketing</button
+                ><button type="button" data-engine="business" aria-pressed="false" data-i18n="engineBusiness">
+                  Negocios
                 </button>
               </div>
               <p
                 class="engine-description"
                 aria-live="polite"
-                data-i18n="engineWebDesc"
+                data-i18n="engineTechDesc"
               >
-                Una presencia digital diseñada para conectar con las personas.
+                Sitios web, apps y sistemas pensados para tu negocio.
               </p>
             </div>
           </div>
         </div>
         <div class="container hero-bottom">
-          <span data-i18n="sectorIntro"
-            >TECNOLOGÍA PARA LAS IDEAS QUE MUEVEN EL MUNDO</span
-          >
+          <span data-i18n="sectorIntro">TODO EN UN SOLO LUGAR</span>
           <div class="hero-sector-list">
-            <span data-i18n="pill1">Personas</span
-            ><span data-i18n="pill2">Emprendedores</span
-            ><span data-i18n="pill3">Profesionales</span
-            ><span data-i18n="pill4">Pymes</span
-            ><span data-i18n="pill5">Empresas</span>
+            <span data-i18n="pill1">Tecnología</span
+            ><span data-i18n="pill2">Diseño</span
+            ><span data-i18n="pill3">Audiovisual</span
+            ><span data-i18n="pill4">Marketing</span
+            ><span data-i18n="pill5">Negocios</span>
           </div>
         </div>
       </section>
@@ -203,21 +212,21 @@
             <div>
               <span class="eyebrow eyebrow-light"
                 ><span class="eyebrow-line"></span
-                ><span data-i18n="proofEyebrow">SEÑALES DE CALIDAD</span></span
+                ><span data-i18n="proofEyebrow">SIN PROMESAS VACÍAS</span></span
               >
               <h2 data-i18n="proofTitle">
-                Ideas serias. <span>Resultados que se sienten.</span>
+                Solo mostramos <span>lo que podemos respaldar.</span>
               </h2>
             </div>
             <p data-i18n="proofDesc">
-              No mostramos clientes ficticios ni prometemos soluciones
-              genéricas. Escuchamos el contexto, diseñamos con intención y
-              construimos una base sólida para que tu proyecto pueda crecer.
+              No publicamos testimonios ni casos que no existan. Las cifras de
+              esta sección aparecen únicamente cuando están verificadas; si no
+              hay una cifra disponible, vas a ver un guion.
             </p>
           </div>
           <div class="proof-stats">
             <article class="proof-stat">
-              <strong id="client-count">200</strong
+              <strong id="client-count">27</strong
               ><span data-i18n="proofStat1">clientes atendidos</span
               ><small data-i18n="proofStat1Sub"
                 >proyectos y necesidades diferentes</small
@@ -236,57 +245,6 @@
               >
             </article>
           </div>
-          <div class="proof-client-head">
-            <span class="eyebrow eyebrow-light"
-              ><span class="eyebrow-line"></span
-              ><span data-i18n="proofClientsEyebrow"
-                >PARA QUIÉN TRABAJAMOS</span
-              ></span
-            >
-            <p data-i18n="proofClientsIntro">
-              Cada cliente llega con una necesidad distinta. La tecnología se
-              adapta a la idea, no al revés.
-            </p>
-          </div>
-          <div class="proof-grid">
-            <article class="proof-card">
-              <span class="proof-card-number">01</span
-              ><span class="proof-card-icon">↗</span>
-              <h3 data-i18n="proofClient1">Personas con una idea</h3>
-              <p data-i18n="proofClient1Sub">
-                Convertimos una primera intuición en un proyecto claro y
-                posible.
-              </p>
-            </article>
-            <article class="proof-card">
-              <span class="proof-card-number">02</span
-              ><span class="proof-card-icon">✦</span>
-              <h3 data-i18n="proofClient2">Emprendimientos</h3>
-              <p data-i18n="proofClient2Sub">
-                Creamos una presencia digital que ayude a crecer con confianza.
-              </p>
-            </article>
-            <article class="proof-card">
-              <span class="proof-card-number">03</span
-              ><span class="proof-card-icon">▤</span>
-              <h3 data-i18n="proofClient3">Profesionales y equipos</h3>
-              <p data-i18n="proofClient3Sub">
-                Diseñamos herramientas que ordenan el trabajo y ahorran tiempo.
-              </p>
-            </article>
-            <article class="proof-card">
-              <span class="proof-card-number">04</span
-              ><span class="proof-card-icon">◈</span>
-              <h3 data-i18n="proofClient4">Empresas en evolución</h3>
-              <p data-i18n="proofClient4Sub">
-                Integramos sistemas y procesos para acompañar nuevos desafíos.
-              </p>
-            </article>
-          </div>
-          <div class="proof-note">
-            <span>✳</span>
-              <p data-i18n="proofNote">Solo mostramos cifras verificadas. Un guion indica que no hay una cifra publicada disponible.</p>
-          </div>
         </div>
       </section>
       <section class="problem-section section-light" id="services">
@@ -298,167 +256,29 @@
                 ><span data-i18n="servicesEyebrow">QUÉ HACEMOS</span></span
               >
               <h2 data-i18n="servicesTitle">
-                Un socio tecnológico para <span>cada gran idea.</span>
+                Un solo equipo para <span>cada necesidad.</span>
               </h2>
             </div>
             <p data-i18n="servicesDesc">
-              Desde una web para comenzar a vender hasta un sistema que
-              transforme la forma de trabajar. Elegí una categoría o contanos
-              una necesidad diferente.
+              Elegí una categoría y contanos qué necesitás. Nosotros analizamos
+              el pedido, definimos el alcance y coordinamos a profesionales
+              independientes para ejecutarlo.
             </p>
           </div>
-          <div class="service-grid">
-            <article class="service-card" data-service="website">
-              <span class="service-emoji">◈</span
-              ><span class="service-number">01 /</span>
-              <h3 data-i18n="serviceWebTitle">Páginas web</h3>
-              <p data-i18n="serviceWebDesc">
-                Landings, páginas institucionales, portfolios y sitios
-                comerciales que representen tu marca.
-              </p>
-              <button
-                type="button"
-                class="service-choose"
-                data-i18n="serviceLink"
-              >
-                Consultar este servicio ↗
-              </button>
-            </article>
-            <article class="service-card" data-service="app">
-              <span class="service-emoji">▣</span
-              ><span class="service-number">02 /</span>
-              <h3 data-i18n="serviceAppTitle">Apps web y móviles</h3>
-              <p data-i18n="serviceAppDesc">
-                Productos digitales, plataformas y herramientas para tus
-                clientes o tu equipo.
-              </p>
-              <button
-                type="button"
-                class="service-choose"
-                data-i18n="serviceLink"
-              >
-                Consultar este servicio ↗
-              </button>
-            </article>
-            <article class="service-card" data-service="automation">
-              <span class="service-emoji">↗</span
-              ><span class="service-number">03 /</span>
-              <h3 data-i18n="serviceAutoTitle">Automatizaciones</h3>
-              <p data-i18n="serviceAutoDesc">
-                Procesos, tareas y seguimientos que hoy te hacen perder horas de
-                trabajo.
-              </p>
-              <button
-                type="button"
-                class="service-choose"
-                data-i18n="serviceLink"
-              >
-                Consultar este servicio ↗
-              </button>
-            </article>
-            <article class="service-card" data-service="custom-software">
-              <span class="service-emoji">⌘</span
-              ><span class="service-number">04 /</span>
-              <h3 data-i18n="serviceSoftTitle">Software a medida</h3>
-              <p data-i18n="serviceSoftDesc">
-                Sistemas administrativos, portales, paneles y soluciones
-                internas específicas.
-              </p>
-              <button
-                type="button"
-                class="service-choose"
-                data-i18n="serviceLink"
-              >
-                Consultar este servicio ↗
-              </button>
-            </article>
-            <article class="service-card" data-service="integrations">
-              <span class="service-emoji">⇄</span
-              ><span class="service-number">05 /</span>
-              <h3 data-i18n="serviceIntegrationsTitle">Integraciones</h3>
-              <p data-i18n="serviceIntegrationsDesc">
-                Conectá tus herramientas, APIs, bases de datos y servicios
-                existentes.
-              </p>
-              <button
-                type="button"
-                class="service-choose"
-                data-i18n="serviceLink"
-              >
-                Consultar este servicio ↗
-              </button>
-            </article>
-            <article class="service-card service-card-alt" data-service="other">
-              <span class="service-emoji">✳</span
-              ><span class="service-number">06 /</span>
-              <h3 data-i18n="serviceOtherTitle">¿Tenés otra idea?</h3>
-              <p data-i18n="serviceOtherDesc">
-                No hace falta que sepas cómo desarrollarla. Describinos lo que
-                imaginás y evaluamos si podemos ayudarte.
-              </p>
-              <button
-                type="button"
-                class="service-choose"
-                data-i18n="serviceOtherLink"
-              >
-                Contanos tu idea ↗
-              </button>
-            </article>
+          <div class="service-grid category-grid" id="category-grid">
+            <!-- Se reemplaza por las tarjetas del catálogo (assets/catalog.js). Esta lista es el respaldo sin JavaScript. -->
+            <ul class="category-fallback">
+              <li>Tecnología y desarrollo</li>
+              <li>Diseño y creatividad</li>
+              <li>Producción audiovisual</li>
+              <li>Marketing y comunicación</li>
+              <li>Administración y negocios</li>
+              <li>Otros servicios</li>
+            </ul>
           </div>
-        </div>
-      </section>
-      <section class="lab-section" id="lab">
-        <div class="container lab-layout">
-          <div class="lab-copy">
-            <span class="eyebrow eyebrow-dark"
-              >✳ &nbsp; COTIVANTA LAB / 01</span
-            >
-            <h2 data-i18n="labTitle">Una idea en movimiento.</h2>
-            <p data-i18n="labDesc">
-              Probá una automatización conceptual: una solicitud recorre
-              distintas etapas hasta estar lista para revisar.
-            </p>
-            <span class="lab-caption" data-i18n="labCaption"
-              >EJEMPLO INTERACTIVO · DATOS SIMULADOS</span
-            >
-          </div>
-          <div class="lab-panel">
-            <div class="lab-panel-head">
-              <span>WORKFLOW / 01</span
-              ><span class="lab-indicator" data-i18n="labReady"
-                >LISTO PARA PROBAR</span
-              >
-            </div>
-            <div class="lab-flow">
-              <div class="lab-step" data-step="0">
-                <span>01</span><strong data-i18n="labStep1">Solicitud</strong
-                ><small data-i18n="labSub1">Nuevo mensaje</small>
-              </div>
-              <div class="lab-line"></div>
-              <div class="lab-step" data-step="1">
-                <span>02</span><strong data-i18n="labStep2">Organizar</strong
-                ><small data-i18n="labSub2">Preparar datos</small>
-              </div>
-              <div class="lab-line"></div>
-              <div class="lab-step" data-step="2">
-                <span>03</span><strong data-i18n="labStep3">Revisar</strong
-                ><small data-i18n="labSub3">Listo para vos</small>
-              </div>
-            </div>
-            <div class="lab-actions">
-              <button
-                type="button"
-                class="lab-run"
-                id="lab-run"
-                data-i18n="labRun"
-              >
-                Ejecutar ejemplo ↗
-              </button>
-              <p id="lab-status" aria-live="polite" data-i18n="labStatus">
-                Todo ocurre en tu navegador.
-              </p>
-            </div>
-          </div>
+          <p class="services-note" data-i18n="servicesNote">
+            No publicamos precios fijos: cada trabajo se cotiza según su alcance.
+          </p>
         </div>
       </section>
       <section class="how-section" id="process">
@@ -466,118 +286,71 @@
           <div class="how-copy">
             <span class="eyebrow eyebrow-light"
               ><span class="eyebrow-line"></span
-              ><span data-i18n="processEyebrow">EL PROCESO</span></span
+              ><span data-i18n="processEyebrow">CÓMO FUNCIONA COTIVANTA</span></span
             >
             <h2 data-i18n="processTitle">
-              De la primera charla <br /><span>al producto terminado.</span>
+              De tu pedido <br /><span>al trabajo terminado.</span>
             </h2>
             <p data-i18n="processDesc">
-              Trabajamos con alcances claros. Antes de empezar, revisamos la
-              viabilidad, las funcionalidades, los plazos y el presupuesto. Cada
-              propuesta depende de la complejidad de tu proyecto.
+              Antes de empezar definimos qué se va a hacer, en qué plazo y a qué
+              precio. El precio depende de cada pedido. Vos tratás siempre con
+              Cotivanta, que coordina el trabajo con profesionales
+              independientes.
             </p>
             <a href="#request" class="text-link"
               ><span data-i18n="processLink">Empezar con una consulta</span>
               ↗</a
             >
           </div>
-          <div class="steps-panel">
-            <div class="workflow-step">
+          <ol class="steps-panel">
+            <li class="workflow-step">
               <span class="step-number">01</span>
               <div>
-                <h3 data-i18n="step1Title">Contanos qué necesitás</h3>
+                <h3 data-i18n="step1Title">Nos contás qué necesitás</h3>
                 <p data-i18n="step1Desc">
-                  Completá el formulario con tu idea o problema.
+                  Completás el formulario con tu pedido, un presupuesto
+                  aproximado y el plazo que tenés en mente.
                 </p>
               </div>
-              <span class="step-symbol">✎</span>
-            </div>
-            <div class="workflow-step">
+              <span class="step-symbol" aria-hidden="true">✎</span>
+            </li>
+            <li class="workflow-step">
               <span class="step-number">02</span>
               <div>
-                <h3 data-i18n="step2Title">Evaluamos la propuesta</h3>
+                <h3 data-i18n="step2Title">Encontramos al profesional adecuado</h3>
                 <p data-i18n="step2Desc">
-                  Revisamos si podemos ayudarte y qué preguntas faltan
-                  responder.
+                  Analizamos tu pedido, definimos el alcance y te enviamos un
+                  presupuesto. Si lo aceptás, buscamos a la persona indicada.
                 </p>
               </div>
-              <span class="step-symbol">⌕</span>
-            </div>
-            <div class="workflow-step">
+              <span class="step-symbol" aria-hidden="true">⌕</span>
+            </li>
+            <li class="workflow-step">
               <span class="step-number">03</span>
               <div>
-                <h3 data-i18n="step3Title">Definimos alcance y presupuesto</h3>
+                <h3 data-i18n="step3Title">Coordinamos y supervisamos el proyecto</h3>
                 <p data-i18n="step3Desc">
-                  Acordamos entregables, etapas, costo y condiciones antes de
-                  avanzar.
+                  Cotivanta gestiona el trabajo con el profesional y revisa el
+                  resultado antes de entregártelo.
                 </p>
               </div>
-              <span class="step-symbol">▤</span>
-            </div>
-            <div class="workflow-step">
+              <span class="step-symbol" aria-hidden="true">▤</span>
+            </li>
+            <li class="workflow-step">
               <span class="step-number">04</span>
               <div>
-                <h3 data-i18n="step4Title">Construimos y entregamos</h3>
+                <h3 data-i18n="step4Title">Recibís el trabajo terminado</h3>
                 <p data-i18n="step4Desc">
-                  Desarrollamos el proyecto acordado con seguimiento y
-                  revisiones.
+                  Te entregamos el resultado acordado. No tenés que coordinar
+                  con cada profesional.
                 </p>
               </div>
-              <span class="step-symbol">✓</span>
-            </div>
-          </div>
+              <span class="step-symbol" aria-hidden="true">✓</span>
+            </li>
+          </ol>
         </div>
       </section>
-      <section class="audience-section section-light" id="audience">
-        <div class="container">
-          <div class="section-intro center">
-            <span class="eyebrow eyebrow-light"
-              ><span class="eyebrow-line"></span
-              ><span data-i18n="audienceEyebrow"
-                >SIN LIMITARNOS A UN RUBRO</span
-              ></span
-            >
-            <h2 data-i18n="audienceTitle">
-              Ideas grandes, pequeñas <span>y completamente nuevas.</span>
-            </h2>
-            <p data-i18n="audienceDesc">
-              Podés venir con una idea recién pensada o con un negocio en
-              funcionamiento. No necesitás conocimientos técnicos para
-              escribirnos.
-            </p>
-          </div>
-          <div class="industry-grid studio-audience">
-            <div class="industry-card">
-              <span class="industry-icon">✦</span
-              ><strong data-i18n="audience1">Personas</strong
-              ><small data-i18n="audience1Sub">Proyectos personales</small>
-            </div>
-            <div class="industry-card">
-              <span class="industry-icon">↗</span
-              ><strong data-i18n="audience2">Emprendedores</strong
-              ><small data-i18n="audience2Sub">Ideas y nuevos negocios</small>
-            </div>
-            <div class="industry-card">
-              <span class="industry-icon">▤</span
-              ><strong data-i18n="audience3">Profesionales</strong
-              ><small data-i18n="audience3Sub"
-                >Herramientas para trabajar</small
-              >
-            </div>
-            <div class="industry-card">
-              <span class="industry-icon">⌂</span
-              ><strong data-i18n="audience4">Pymes</strong
-              ><small data-i18n="audience4Sub">Operaciones y crecimiento</small>
-            </div>
-            <div class="industry-card">
-              <span class="industry-icon">◈</span
-              ><strong data-i18n="audience5">Equipos</strong
-              ><small data-i18n="audience5Sub">Software e integraciones</small>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="pilot-section section-dark">
+      <section class="pilot-section section-dark" id="work">
         <div class="container pilot-layout">
           <div class="pilot-graphic" aria-hidden="true">
             <div class="pilot-ring ring-a"></div>
@@ -587,21 +360,220 @@
           <div class="pilot-copy">
             <span class="eyebrow eyebrow-dark"
               ><span class="status-pulse"></span
-              ><span data-i18n="ctaEyebrow">HABLEMOS DE TU IDEA</span></span
+              ><span data-i18n="workEyebrow">PARA PROFESIONALES</span></span
             >
-            <h2 data-i18n="ctaTitle">
-              No necesitás saber programar.
-              <em>Solo saber qué querés mejorar.</em>
-            </h2>
-            <p data-i18n="ctaDesc">
-              Cotivanta está dando sus primeros pasos. Estamos recibiendo
-              consultas para evaluar proyectos y desarrollar propuestas
-              personalizadas. No publicamos clientes ficticios ni prometemos
-              entregas sin revisar el alcance.
+            <h2 data-i18n="workTitle">Trabajá <em>con Cotivanta.</em></h2>
+            <p data-i18n="workDesc">
+              ¿Tenés habilidades y querés conseguir nuevos proyectos? En
+              Cotivanta conectamos profesionales independientes con clientes que
+              necesitan sus servicios. Registrate, contanos qué sabés hacer y
+              formá parte de nuestra red de talentos.
             </p>
-            <a href="#request" class="btn btn-lime"
-              ><span data-i18n="ctaButton">Solicitar una propuesta</span> ↗</a
+            <ul class="work-points">
+              <li data-i18n="workPoint1">Sin cuentas ni contraseñas: completás una postulación y listo.</li>
+              <li data-i18n="workPoint2">Cada trabajo se acuerda antes de empezar, incluido el importe que cobrás.</li>
+              <li data-i18n="workPoint3">Postularte no garantiza recibir proyectos: te contactamos cuando hay una oportunidad compatible.</li>
+            </ul>
+            <a href="#apply" class="btn btn-lime"
+              ><span data-i18n="workCta">Quiero postularme</span> ↗</a
             >
+          </div>
+        </div>
+      </section>
+      <section class="access-section apply-section" id="apply">
+        <div class="container access-layout">
+          <div class="access-copy">
+            <span class="eyebrow eyebrow-light"
+              ><span class="eyebrow-line"></span
+              ><span data-i18n="applyEyebrow">POSTULACIÓN PROFESIONAL</span></span
+            >
+            <h2 data-i18n="applyTitle">
+              Contanos qué sabés <span>hacer.</span>
+            </h2>
+            <p data-i18n="applyDesc">
+              Completá tu perfil. Cotivanta revisará tu postulación y se pondrá
+              en contacto cuando exista una oportunidad compatible con tus
+              habilidades.
+            </p>
+            <div class="access-points">
+              <span
+                >✓
+                <span data-i18n="applyPoint1"
+                  >Podés elegir varias especialidades</span
+                ></span
+              ><span
+                >✓
+                <span data-i18n="applyPoint2"
+                  >Tu perfil no se publica ni se comparte con clientes</span
+                ></span
+              ><span
+                >✓
+                <span data-i18n="applyPoint3"
+                  >No pedimos DNI, contraseñas ni datos bancarios</span
+                ></span
+              >
+            </div>
+          </div>
+          <div class="form-card">
+            <div class="form-header">
+              <span class="form-tag" data-i18n="proTag">POSTULACIÓN</span>
+              <h3 data-i18n="proCardTitle">Sumate a nuestra red de talentos.</h3>
+              <p data-i18n="formCardDesc">Los campos con * son obligatorios.</p>
+              <p id="pro-intake-status" class="intake-status" role="status" data-i18n="proIntakeDisabled">Las postulaciones están temporalmente deshabilitadas. Podés escribirnos a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
+              <noscript><p>Este formulario necesita JavaScript. No ingreses datos aquí; escribí a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p></noscript>
+            </div>
+            <form
+              id="pro-form"
+              method="post"
+              action="index.html#apply"
+              data-privacy-version="2026-11-12.1-draft"
+              novalidate
+            >
+              <fieldset id="pro-fields" disabled>
+                <div class="form-group" role="group" aria-labelledby="pro-g1">
+                  <h4 id="pro-g1" data-i18n="proGroupPerson">Sobre vos</h4>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="pro-name" data-i18n="proLabelName">Nombre y apellido *</label>
+                      <input id="pro-name" name="fullName" autocomplete="name" maxlength="100" minlength="2" required />
+                    </div>
+                    <div class="field">
+                      <label for="pro-email" data-i18n="labelEmail">Correo electrónico *</label>
+                      <input id="pro-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="pro-country" data-i18n="proLabelCountry">País de residencia *</label>
+                      <input id="pro-country" name="country" autocomplete="country-name" maxlength="80" minlength="2" required />
+                    </div>
+                    <div class="field">
+                      <label for="pro-city" data-i18n="proLabelCity">Ciudad (opcional)</label>
+                      <input id="pro-city" name="city" autocomplete="address-level2" maxlength="80" />
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="pro-whatsapp" data-i18n="labelWhatsapp">WhatsApp (opcional)</label>
+                    <input id="pro-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" />
+                  </div>
+                </div>
+                <div class="form-group" role="group" aria-labelledby="pro-g2">
+                  <h4 id="pro-g2" data-i18n="proGroupSkills">Qué sabés hacer</h4>
+                  <div class="field">
+                    <span class="field-label" id="pro-specialties-label" data-i18n="proLabelSpecialties">Especialidades profesionales * (elegí todas las que correspondan)</span>
+                    <div id="pro-specialties" class="spec-groups" role="group" aria-labelledby="pro-specialties-label"></div>
+                  </div>
+                  <div class="field">
+                    <label for="pro-other-specialty" data-i18n="proLabelOtherSpecialty">Otra especialidad (opcional)</label>
+                    <input id="pro-other-specialty" name="otherSpecialty" maxlength="100" />
+                  </div>
+                  <div class="field">
+                    <label for="pro-experience" data-i18n="proLabelExperience">Experiencia y habilidades *</label>
+                    <textarea id="pro-experience" name="experience" rows="5" minlength="30" maxlength="2000" required aria-describedby="pro-experience-hint"></textarea>
+                    <small class="field-hint" id="pro-experience-hint" data-i18n="proExperienceHint">Contanos qué hacés, con qué herramientas y qué tipo de trabajos realizaste (mínimo 30 caracteres).</small>
+                  </div>
+                  <div class="field">
+                    <label for="pro-years" data-i18n="proLabelYears">Años de experiencia (opcional)</label>
+                    <input id="pro-years" name="yearsExperience" type="number" inputmode="numeric" min="0" max="60" step="1" />
+                  </div>
+                </div>
+                <div class="form-group" role="group" aria-labelledby="pro-g3">
+                  <h4 id="pro-g3" data-i18n="proGroupLinks">Tu trabajo</h4>
+                  <div class="field">
+                    <label for="pro-portfolio" data-i18n="proLabelPortfolio">Enlace a tu portfolio o trabajos realizados *</label>
+                    <input id="pro-portfolio" name="portfolioUrl" type="url" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="300" required aria-describedby="pro-links-hint" />
+                  </div>
+                  <div class="field">
+                    <label for="pro-linkedin" data-i18n="proLabelLinkedin">LinkedIn (opcional)</label>
+                    <input id="pro-linkedin" name="linkedinUrl" type="url" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="300" aria-describedby="pro-links-hint" />
+                  </div>
+                  <div class="field">
+                    <label for="pro-links" data-i18n="proLabelLinks">Behance, GitHub, Vimeo u otras plataformas (opcional)</label>
+                    <textarea id="pro-links" name="otherLinks" rows="3" maxlength="1500" autocapitalize="off" spellcheck="false" aria-describedby="pro-links-hint"></textarea>
+                    <small class="field-hint" id="pro-links-hint" data-i18n="proLinksHint">Un enlace por línea (hasta 5). Tienen que empezar con https://</small>
+                  </div>
+                </div>
+                <div class="form-group" role="group" aria-labelledby="pro-g4">
+                  <h4 id="pro-g4" data-i18n="proGroupTerms">Idiomas y condiciones</h4>
+                  <div class="field">
+                    <span class="field-label" id="pro-languages-label" data-i18n="proLabelLanguages">Idiomas que hablás *</span>
+                    <div id="pro-languages" class="check-grid" role="group" aria-labelledby="pro-languages-label"></div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="pro-availability" data-i18n="proLabelAvailability">Disponibilidad para trabajar *</label>
+                      <select id="pro-availability" name="availability" required>
+                        <option value="" data-i18n="proChoose">Elegí una opción</option>
+                        <option value="full-time" data-i18n="proAvailFull">Tiempo completo</option>
+                        <option value="part-time" data-i18n="proAvailPart">Medio tiempo</option>
+                        <option value="project-based" data-i18n="proAvailProject">Por proyecto</option>
+                        <option value="limited" data-i18n="proAvailLimited">Pocas horas por semana</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="pro-rate-model" data-i18n="proLabelRateModel">Modalidad de cobro *</label>
+                      <select id="pro-rate-model" name="rateModel" required>
+                        <option value="" data-i18n="proChoose">Elegí una opción</option>
+                        <option value="per-project" data-i18n="proRateProject">Por proyecto</option>
+                        <option value="hourly" data-i18n="proRateHourly">Por hora</option>
+                        <option value="per-deliverable" data-i18n="proRateDeliverable">Por entregable</option>
+                        <option value="monthly" data-i18n="proRateMonthly">Mensual</option>
+                        <option value="to-discuss" data-i18n="proRateDiscuss">A convenir</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="pro-rate-amount" data-i18n="proLabelRateAmount">Tarifa orientativa (opcional)</label>
+                      <input id="pro-rate-amount" name="rateAmount" type="number" inputmode="decimal" min="0" step="any" aria-describedby="pro-rate-hint" />
+                    </div>
+                    <div class="field">
+                      <label for="pro-currency" data-i18n="proLabelCurrency">Moneda en la que preferís cobrar *</label>
+                      <select id="pro-currency" name="rateCurrency" required>
+                        <option value="" data-i18n="proChoose">Elegí una opción</option>
+                      </select>
+                    </div>
+                  </div>
+                  <small class="field-hint" id="pro-rate-hint" data-i18n="proRateHint">Es solo una referencia para entender tus expectativas: el importe de cada trabajo se acuerda antes de empezar.</small>
+                </div>
+                <div class="field hp-field" aria-hidden="true">
+                  <label for="pro-fax">Fax number</label
+                  ><input id="pro-fax" name="fax_number" tabindex="-1" autocomplete="off" />
+                </div>
+                <div class="captcha-wrap" id="pro-turnstile" aria-label="Verificación de seguridad"></div>
+                <label class="consent-label"
+                  ><input id="pro-consent" name="consent" type="checkbox" required /><span data-i18n="proConsentText"
+                    >Acepto que Cotivanta use estos datos para evaluar mi perfil y contactarme por oportunidades compatibles, y leí el
+                    <a href="privacy.html" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a> (abre otra pestaña).</span
+                  ></label
+                >
+                <div id="pro-message" class="form-message" role="status" aria-live="polite" hidden></div>
+                <button type="submit" class="btn btn-dark btn-submit" id="pro-submit" disabled>
+                  <span data-i18n="proSubmit">Enviar postulación</span><span>↗</span>
+                </button>
+                <p class="form-footnote" data-i18n="proFootnote">
+                  Postularte no implica una contratación ni garantiza que recibas trabajos. Cotivanta revisará tu perfil y se pondrá en contacto cuando exista una oportunidad compatible con tus habilidades.
+                </p>
+              </fieldset>
+              <details class="legal-disclosure">
+                <summary data-i18n="privacyDetailsTitle">Información de privacidad</summary>
+                <aside class="legal-summary" aria-label="Información sobre datos personales">
+                  <p data-i18n="proPrivacySummary"><strong>Responsable: Agustín Gonzales (Cotivanta).</strong> Contacto: <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>. Usamos tu postulación solo para evaluar tu perfil y contactarte por oportunidades compatibles; no la publicamos ni creamos un perfil público. Los campos con * son obligatorios. Podés solicitar acceso, rectificación o supresión por email. <a href="privacy.html">Leé la política de privacidad en español</a> (borrador).</p>
+                  <blockquote lang="es">LA AGENCIA DE ACCESO A LA INFORMACIÓN PÚBLICA, en su carácter de Órgano de Control de la Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.</blockquote>
+                </aside>
+              </details>
+            </form>
+            <div id="pro-success" class="success-state" role="status" tabindex="-1" hidden>
+              <div class="success-icon">✓</div>
+              <h3 data-i18n="proSuccessTitle">Postulación recibida.</h3>
+              <p data-i18n="proSuccessDesc">
+                Gracias por postularte. Cotivanta revisará tu perfil y se pondrá en contacto cuando exista una oportunidad compatible con tus habilidades.
+              </p>
+              <p id="pro-reference"></p>
+              <button type="button" class="text-link success-reset" id="pro-reset" data-i18n="proSuccessReset">
+                Enviar otra postulación ↗
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -617,47 +589,74 @@
           <div class="faq-accordion">
             <details>
               <summary>
-                <span data-i18n="faq1Q">¿Solo trabajan con empresas?</span
+                <span data-i18n="faq1Q">¿Qué servicios ofrece Cotivanta?</span
                 ><span class="faq-plus">+</span>
               </summary>
               <p data-i18n="faq1A">
-                No. Recibimos consultas de personas, profesionales,
-                emprendimientos y empresas. Evaluamos cada proyecto según su
-                alcance y viabilidad.
+                Trabajamos en cinco áreas: tecnología y desarrollo, diseño y creatividad, producción audiovisual, marketing y comunicación, y administración y negocios. En la sección de servicios está el detalle de cada una. Si lo que necesitás no figura, podés pedirlo igual.
               </p>
             </details>
             <details>
               <summary>
-                <span data-i18n="faq2Q">¿Cuánto cuesta un proyecto?</span
+                <span data-i18n="faq2Q">¿Cómo solicito un presupuesto?</span
                 ><span class="faq-plus">+</span>
               </summary>
               <p data-i18n="faq2A">
-                El precio depende de las funcionalidades, integraciones y
-                esfuerzo necesario. Primero conocemos tu idea y luego
-                presentamos una propuesta si podemos realizarla.
+                Completá el formulario de esta página con la categoría, el servicio, una descripción de lo que necesitás y, si querés, tu presupuesto aproximado y la fecha que tenés en mente. Revisamos tu pedido y, si podemos resolverlo, te respondemos con una propuesta. Pedir un presupuesto no tiene costo ni te obliga a contratar.
               </p>
             </details>
             <details>
               <summary>
-                <span data-i18n="faq3Q"
-                  >¿Puedo pedir algo que no aparece en servicios?</span
+                <span data-i18n="faq3Q">¿Cómo se determina el precio?</span
                 ><span class="faq-plus">+</span>
               </summary>
               <p data-i18n="faq3A">
-                Sí. Seleccioná «Otro proyecto» y explicá qué necesitás. Te
-                diremos si podemos ayudarte; no todos los proyectos serán
-                aceptados.
+                Depende del alcance de cada pedido: qué hay que hacer, su complejidad y el tiempo que requiere. Por eso no publicamos precios fijos. Te presentamos un presupuesto antes de empezar y el trabajo solo avanza si lo aceptás.
               </p>
             </details>
             <details>
               <summary>
-                <span data-i18n="faq4Q">¿La consulta tiene costo?</span
+                <span data-i18n="faq4Q">¿Quién realiza los trabajos?</span
                 ><span class="faq-plus">+</span>
               </summary>
               <p data-i18n="faq4A">
-                Enviar la solicitud inicial no tiene costo ni genera un
-                compromiso de contratación. Cualquier trabajo pago requiere una
-                propuesta acordada previamente.
+                Cotivanta coordina cada proyecto y lo ejecutan profesionales independientes que trabajan con nosotros. Vos tratás con Cotivanta, que busca a la persona adecuada, supervisa el trabajo y revisa el resultado antes de entregártelo.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq5Q">¿Puedo contratar un servicio personalizado?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq5A">
+                Sí. Elegí «Otros servicios» o la opción «Algo personalizado» y contanos qué necesitás. Evaluamos cada caso y te avisamos si podemos ayudarte; no todos los pedidos pueden aceptarse.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq6Q">¿Cómo puedo trabajar con Cotivanta?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq6A">
+                Si sos profesional independiente, completá el formulario de postulación en la sección «Trabajá con Cotivanta». Revisamos tu perfil y te contactamos cuando surge un trabajo compatible con tus habilidades.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq7Q">¿Necesito experiencia para postularme?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq7A">
+                No pedimos una cantidad mínima de años, pero sí que puedas mostrar trabajos realizados: el formulario incluye un enlace a tu portfolio. Evaluamos cada perfil según los trabajos que tengamos.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq8Q">¿Cotivanta garantiza que recibiré proyectos?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq8A">
+                No. Postularte no implica una contratación ni te asegura trabajo. Cotivanta se pone en contacto cuando aparece una oportunidad compatible con tus habilidades; cada trabajo y su importe se acuerdan antes de empezar.
               </p>
             </details>
           </div>
@@ -671,23 +670,23 @@
               ><span data-i18n="formEyebrow">EMPECEMOS</span></span
             >
             <h2 data-i18n="formTitle">
-              Contanos tu idea. <span>Nosotros vemos cómo crearla.</span>
+              Contanos qué necesitás. <span>Nosotros lo coordinamos.</span>
             </h2>
             <p data-i18n="formDesc">
-              Describí lo que necesitás con tus palabras. Revisaremos tu
-              solicitud y, si podemos trabajar en ella, te contactaremos para
-              conversar sobre el alcance.
+              Describí tu pedido y, si podemos resolverlo, te enviaremos un
+              presupuesto con el alcance definido. Cotivanta está dando sus
+              primeros pasos y evalúa cada pedido antes de comprometerse.
             </p>
             <div class="access-points">
               <span
                 >✓
                 <span data-i18n="formPoint1"
-                  >Consultas de personas y empresas</span
+                  >Presupuesto adaptado a cada pedido</span
                 ></span
               ><span
                 >✓
                 <span data-i18n="formPoint2"
-                  >Presupuesto adaptado a cada proyecto</span
+                  >Un solo interlocutor: Cotivanta</span
                 ></span
               ><span
                 >✓
@@ -700,10 +699,10 @@
           <div class="form-card">
             <div class="form-header">
               <span class="form-tag" data-i18n="formTag"
-                >SOLICITUD DE PROYECTO</span
+                >SOLICITUD DE SERVICIO</span
               >
               <h3 data-i18n="formCardTitle">
-                Hablemos de lo que querés construir.
+                Pedí tu presupuesto.
               </h3>
               <p data-i18n="formCardDesc">Los campos con * son obligatorios.</p>
               <p id="intake-status" class="intake-status" role="status" data-i18n="intakeDisabled">El formulario está temporalmente deshabilitado. Podés contactarnos en <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
@@ -713,207 +712,141 @@
               id="project-form"
               method="post"
               action="index.html#request"
-              data-privacy-version="2026-10-30.1-draft"
+              data-privacy-version="2026-11-12.1-draft"
               novalidate
             >
               <fieldset id="request-fields" disabled>
-              <div class="form-row">
-                <div class="field">
-                  <label for="name" data-i18n="labelName"
-                    >Nombre completo *</label
-                  ><input
-                    id="name"
-                    name="name"
-                    autocomplete="name"
-                    maxlength="100"
-                    minlength="2"
-                    required
-                    data-placeholder="namePlaceholder"
-                    placeholder="Tu nombre"
-                  />
+                <div class="form-group" role="group" aria-labelledby="req-g1">
+                  <h4 id="req-g1" data-i18n="groupNeed">1 · Qué necesitás</h4>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="category" data-i18n="labelCategory">Categoría *</label>
+                      <select id="category" name="category" required>
+                        <option value="" data-i18n="categoryChoose">Elegí una categoría</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="service" data-i18n="labelService">Servicio *</label>
+                      <select id="service" name="service" required>
+                        <option value="" data-i18n="serviceChoose">Elegí un servicio</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="description" data-i18n="labelDescription">Describí lo que necesitás *</label>
+                    <textarea
+                      id="description"
+                      name="description"
+                      rows="5"
+                      minlength="20"
+                      maxlength="2500"
+                      required
+                      aria-describedby="description-hint"
+                      data-placeholder="descriptionPlaceholder"
+                      placeholder="¿Qué necesitás conseguir? ¿Para quién es? ¿Tenés ejemplos o referencias?"
+                    ></textarea
+                    ><small class="field-hint" id="description-hint" data-i18n="descriptionHint"
+                      >No hace falta que sea técnico. Cuantos más detalles, mejor podemos entenderlo (mínimo 20 caracteres).</small
+                    >
+                  </div>
                 </div>
-                <div class="field">
-                  <label for="email" data-i18n="labelEmail"
-                    >Correo electrónico *</label
-                  ><input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
-                    maxlength="254"
-                    required
-                    placeholder="tu@correo.com"
-                  />
+                <div class="form-group" role="group" aria-labelledby="req-g2">
+                  <h4 id="req-g2" data-i18n="groupBudget">2 · Presupuesto y plazo</h4>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="budget" data-i18n="labelBudget">Presupuesto aproximado</label>
+                      <select id="budget" name="budget">
+                        <option value="unsure" data-i18n="budgetUnsure">Todavía no lo sé</option>
+                        <option value="amount" data-i18n="budgetAmount">Tengo un monto aproximado</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="timeline" data-i18n="labelTimeline">Plazo deseado</label>
+                      <select id="timeline" name="timeline">
+                        <option value="flexible" data-i18n="timelineFlexible">Flexible / por definir</option>
+                        <option value="within-month" data-i18n="timelineMonth">Dentro de 1 mes</option>
+                        <option value="1-3-months" data-i18n="timelineQuarter">En 1 a 3 meses</option>
+                        <option value="later" data-i18n="timelineLater">Más adelante</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row" id="budget-amount-row" hidden>
+                    <div class="field">
+                      <label for="budget-currency" data-i18n="labelCurrency">Moneda *</label>
+                      <select id="budget-currency" name="budgetCurrency"></select>
+                    </div>
+                    <div class="field">
+                      <label for="budget-amount" data-i18n="labelAmount">Monto aproximado *</label>
+                      <input id="budget-amount" name="budgetAmount" type="number" inputmode="decimal" min="1" max="1000000000" step="any" />
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="deadline" data-i18n="labelDeadline">Fecha límite deseada (opcional)</label>
+                    <input id="deadline" name="deadline" type="date" />
+                  </div>
                 </div>
-              </div>
-              <div class="form-row">
-                <div class="field">
-                  <label for="client-type" data-i18n="labelClient"
-                    >Sos... *</label
-                  ><select id="client-type" name="client-type" required>
-                    <option value="" data-i18n="clientChoose">
-                      Elegí una opción
-                    </option>
-                    <option value="individual" data-i18n="clientIndividual">
-                      Particular
-                    </option>
-                    <option value="entrepreneur" data-i18n="clientEntrepreneur">
-                      Emprendedor/a
-                    </option>
-                    <option value="professional" data-i18n="clientProfessional">
-                      Profesional
-                    </option>
-                    <option value="business" data-i18n="clientBusiness">
-                      Empresa / equipo
-                    </option>
-                  </select>
+                <div class="form-group" role="group" aria-labelledby="req-g3">
+                  <h4 id="req-g3" data-i18n="groupContact">3 · Tus datos</h4>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="name" data-i18n="labelName">Nombre completo *</label>
+                      <input id="name" name="name" autocomplete="name" maxlength="100" minlength="2" required data-placeholder="namePlaceholder" placeholder="Tu nombre" />
+                    </div>
+                    <div class="field">
+                      <label for="email" data-i18n="labelEmail">Correo electrónico *</label>
+                      <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="tu@correo.com" />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="whatsapp" data-i18n="labelWhatsapp">WhatsApp (opcional)</label>
+                      <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="+54 9 11 1234 5678" />
+                    </div>
+                    <div class="field">
+                      <label for="organization" data-i18n="labelOrganization">Empresa o marca (opcional)</label>
+                      <input id="organization" name="organization" maxlength="150" autocomplete="organization" data-placeholder="organizationPlaceholder" placeholder="Tu marca" />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="client-type" data-i18n="labelClient">Sos… (opcional)</label>
+                      <select id="client-type" name="client-type">
+                        <option value="" data-i18n="clientChoose">Elegí una opción</option>
+                        <option value="individual" data-i18n="clientIndividual">Particular</option>
+                        <option value="entrepreneur" data-i18n="clientEntrepreneur">Emprendedor/a</option>
+                        <option value="professional" data-i18n="clientProfessional">Profesional</option>
+                        <option value="business" data-i18n="clientBusiness">Empresa / equipo</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="language" data-i18n="labelLanguage">Idioma preferido</label>
+                      <select id="language" name="language">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
-                <div class="field">
-                  <label for="service" data-i18n="labelService"
-                    >Qué necesitás *</label
-                  ><select id="service" name="service" required>
-                    <option value="" data-i18n="serviceChoose">
-                      Elegí un servicio
-                    </option>
-                    <option value="website" data-i18n="optWebsite">
-                      Página web
-                    </option>
-                    <option value="app" data-i18n="optApp">
-                      App web o móvil
-                    </option>
-                    <option value="automation" data-i18n="optAuto">
-                      Automatización
-                    </option>
-                    <option value="custom-software" data-i18n="optSoftware">
-                      Software a medida
-                    </option>
-                    <option value="integrations" data-i18n="optIntegration">
-                      Integración de herramientas
-                    </option>
-                    <option value="other" data-i18n="optOther">
-                      Otro proyecto
-                    </option>
-                  </select>
+                <div class="field hp-field" aria-hidden="true">
+                  <label for="fax_number">Fax number</label
+                  ><input id="fax_number" name="fax_number" tabindex="-1" autocomplete="off" />
                 </div>
-              </div>
-              <div class="field">
-                <label for="description" data-i18n="labelDescription"
-                  >Describí tu proyecto *</label
-                ><textarea
-                  id="description"
-                  name="description"
-                  rows="5"
-                  minlength="20"
-                  maxlength="2500"
-                  required
-                  data-placeholder="descriptionPlaceholder"
-                  placeholder="¿Qué problema querés resolver? ¿Para quién sería? ¿Qué debería poder hacer?"
-                ></textarea
-                ><small class="field-hint" data-i18n="descriptionHint"
-                  >No hace falta que sea técnico. Unos pocos detalles nos ayudan
-                  a entenderlo.</small
+                <div class="captcha-wrap" id="turnstile-container" aria-label="Verificación de seguridad"></div>
+                <label class="consent-label"
+                  ><input id="consent" name="consent" type="checkbox" required /><span data-i18n="consentText"
+                    >Acepto que Cotivanta use estos datos para evaluar y responder
+                    mi solicitud, y leí el
+                    <a href="privacy.html" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a>.</span
+                  ></label
                 >
-              </div>
-              <div class="form-row">
-                <div class="field">
-                  <label for="budget" data-i18n="labelBudget"
-                    >Presupuesto estimado</label
-                  ><select id="budget" name="budget">
-                    <option value="unsure" data-i18n="budgetUnsure">
-                      Todavía no lo sé
-                    </option>
-                    <option value="under-500" data-i18n="budgetUnder">Menos de US$500</option>
-                    <option value="500-1500">US$500–1.500</option>
-                    <option value="1500-5000">US$1.500–5.000</option>
-                    <option value="over-5000" data-i18n="budgetOver">Más de US$5.000</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="timeline" data-i18n="labelTimeline"
-                    >¿Para cuándo lo necesitás?</label
-                  ><select id="timeline" name="timeline">
-                    <option value="flexible" data-i18n="timelineFlexible">
-                      Flexible / por definir
-                    </option>
-                    <option value="within-month" data-i18n="timelineMonth">
-                      Dentro de 1 mes
-                    </option>
-                    <option value="1-3-months" data-i18n="timelineQuarter">
-                      En 1 a 3 meses
-                    </option>
-                    <option value="later" data-i18n="timelineLater">
-                      Más adelante
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="field">
-                  <label for="organization" data-i18n="labelOrganization"
-                    >Empresa o marca (opcional)</label
-                  ><input
-                    id="organization"
-                    name="organization"
-                    maxlength="150"
-                    autocomplete="organization"
-                    data-placeholder="organizationPlaceholder"
-                    placeholder="Tu marca"
-                  />
-                </div>
-                <div class="field">
-                  <label for="language" data-i18n="labelLanguage"
-                    >Idioma preferido</label
-                  ><select id="language" name="language">
-                    <option value="es">Español</option>
-                    <option value="en">English</option>
-                  </select>
-                </div>
-              </div>
-              <div class="field hp-field" aria-hidden="true">
-                <label for="fax_number">Fax number</label
-                ><input
-                  id="fax_number"
-                  name="fax_number"
-                  tabindex="-1"
-                  autocomplete="off"
-                />
-              </div>
-              <div
-                class="captcha-wrap"
-                id="turnstile-container"
-                aria-label="Verificación de seguridad"
-              ></div>
-              <label class="consent-label"
-                ><input
-                  id="consent"
-                  name="consent"
-                  type="checkbox"
-                  required
-                /><span data-i18n="consentText"
-                  >Acepto que Cotivanta use estos datos para evaluar y responder
-                  mi solicitud, y leí el
-                  <a href="privacy.html" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a>.</span
-                ></label
-              >
-              <div
-                id="form-message"
-                class="form-message"
-                role="status"
-                aria-live="polite"
-                hidden
-              ></div>
-              <button
-                type="submit"
-                class="btn btn-dark btn-submit"
-                id="submit-button"
-                disabled
-              >
-                <span data-i18n="formSubmit">Enviar solicitud</span
-                ><span>↗</span>
-              </button>
-              <p class="form-footnote" data-i18n="formFootnote">
-                Enviar la consulta no garantiza la aceptación del proyecto.
-              </p>
+                <div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div>
+                <button type="submit" class="btn btn-dark btn-submit" id="submit-button" disabled>
+                  <span data-i18n="formSubmit">Enviar solicitud</span
+                  ><span>↗</span>
+                </button>
+                <p class="form-footnote" data-i18n="formFootnote">
+                  Enviar la consulta no garantiza la aceptación del pedido ni genera un compromiso de contratación.
+                </p>
               </fieldset>
               <details class="legal-disclosure">
                 <summary data-i18n="privacyDetailsTitle">Información de privacidad</summary>
@@ -928,8 +861,7 @@
               <div class="success-icon">✓</div>
               <h3 data-i18n="successTitle">Solicitud recibida.</h3>
               <p data-i18n="successDesc">
-                Gracias por contarnos tu proyecto. Vamos a revisarlo y te
-                contactaremos si podemos ayudarte.
+                Gracias por contarnos qué necesitás. Vamos a revisar tu pedido y, si podemos resolverlo, te enviaremos un presupuesto.
               </p>
               <p id="request-reference"></p>
               <button
@@ -954,17 +886,18 @@
             ><span>cotivanta</span></a
           >
           <p data-i18n="footerTag">
-            Ideas que se convierten en soluciones digitales.
+            Conectamos ideas con el talento adecuado.
           </p>
           <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>
         </div>
-        <div class="footer-nav">
+        <nav class="footer-nav" aria-label="Enlaces del pie de página" data-i18n-aria="footerNav">
           <a href="#services" data-i18n="footerServices">Servicios</a
+          ><a href="#process" data-i18n="footerProcess">Cómo funciona</a
+          ><a href="#work" data-i18n="footerWork">Trabajá con nosotros</a
           ><a href="#request" data-i18n="footerRequest">Pedir presupuesto</a
           ><a href="privacy.html" data-i18n="footerPrivacy">Privacidad</a
-          ><a href="policies.html" data-i18n="footerPolicies">Políticas y términos</a
-          >
-        </div>
+          ><a href="policies.html" data-i18n="footerPolicies">Políticas y términos</a>
+        </nav>
       </div>
       <div class="container footer-bottom">
         <span
@@ -973,7 +906,7 @@
             >Todos los derechos reservados.</span
           ></span
         ><span data-i18n="footerStage"
-          >Estudio digital independiente · Recibiendo consultas.</span
+          >Agencia de servicios profesionales · Recibiendo consultas y postulaciones.</span
         >
       </div>
     </footer>

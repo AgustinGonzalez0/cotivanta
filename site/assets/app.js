@@ -506,19 +506,28 @@
     unavailable: "The service is unavailable. Your draft remains on this page; please try later.",
     reference: "Your inquiry reference: ", trimmedInvalid: "Enter valid information, not only spaces.",
   });
+  // Textos de la versión «agencia» (assets/agency-copy.js): tienen prioridad sobre las claves históricas de arriba.
+  Object.assign(translations.es, window.COTIVANTA_COPY?.es);
+  Object.assign(translations.en, window.COTIVANTA_COPY?.en);
   let formMessageKey = "";
   let lang = (navigator.language || "").toLowerCase().startsWith("en")
     ? "en"
     : "es";
   const copy = () => translations[lang];
   const get = (id) => document.getElementById(id);
+  // Campos opcionales o añadidos después: si el elemento no existe, el valor es "".
+  const optionalValue = (id) => (get(id)?.value ?? "").trim();
+  const metaTitle = { es: "Cotivanta — Agencia de servicios profesionales", en: "Cotivanta — Professional services agency" };
+  const metaDescription = {
+    es: "Cotivanta es una agencia de servicios profesionales: tecnología, diseño, producción audiovisual, marketing y negocios. Contanos qué necesitás y coordinamos el talento adecuado.",
+    en: "Cotivanta is a professional services agency: technology, design, audiovisual production, marketing and business. Tell us what you need and we coordinate the right talent.",
+  };
   function translate(next) {
     lang = next;
     document.documentElement.lang = lang;
-    document.title =
-      lang === "es"
-        ? "Cotivanta — Desarrollo y soluciones digitales a medida"
-        : "Cotivanta — Custom digital development & services";
+    document.title = metaTitle[lang];
+    document.querySelectorAll('meta[name="description"],meta[property="og:description"]').forEach((el) => el.setAttribute("content", metaDescription[lang]));
+    document.querySelectorAll('meta[property="og:title"]').forEach((el) => el.setAttribute("content", metaTitle[lang]));
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const k = el.dataset.i18n;
       if (copy()[k] !== undefined) el.innerHTML = copy()[k];
@@ -572,21 +581,15 @@
       menu.focus();
     }
   });
-  document.querySelectorAll(".service-choose").forEach((button) =>
-    button.addEventListener("click", () => {
-      const choice = button.closest("[data-service]")?.dataset.service;
-      if (choice) get("service").value = choice;
-      get("request").scrollIntoView({ behavior: "smooth", block: "start" });
-      get("service").focus({ preventScroll: true });
-    }),
-  );
   translate(lang);
   const engine = get("creation-engine");
+  // Demostración conceptual del hero: cada categoría cambia el resultado y su descripción (textos en agency-copy.js).
   const engineModes = {
-    web: ["WEB EXPERIENCE", "engineWebDesc"],
-    app: ["APP EXPERIENCE", "engineAppDesc"],
-    automation: ["AUTOMATION FLOW", "engineAutomationDesc"],
-    software: ["CUSTOM SOFTWARE", "engineSoftwareDesc"],
+    tech: ["engineTechName", "engineTechDesc"],
+    design: ["engineDesignName", "engineDesignDesc"],
+    audiovisual: ["engineVideoName", "engineVideoDesc"],
+    marketing: ["engineMarketingName", "engineMarketingDesc"],
+    business: ["engineBusinessName", "engineBusinessDesc"],
   };
   engine?.querySelectorAll("[data-engine]").forEach((button) =>
     button.addEventListener("click", () => {
@@ -598,41 +601,17 @@
         .forEach((item) =>
           item.setAttribute("aria-pressed", String(item === button)),
         );
-      engine.querySelector(".output-name").textContent = engineModes[mode][0];
+      const [nameKey, descKey] = engineModes[mode];
+      const name = engine.querySelector(".output-name");
+      name.dataset.i18n = nameKey;
+      name.textContent = copy()[nameKey];
       const desc = engine.querySelector(".engine-description");
-      desc.dataset.i18n = engineModes[mode][1];
-      desc.textContent = copy()[engineModes[mode][1]];
+      desc.dataset.i18n = descKey;
+      desc.textContent = copy()[descKey];
     }),
   );
-  const labRun = get("lab-run");
-  let labTimers = [];
-  labRun?.addEventListener("click", () => {
-    labTimers.forEach(clearTimeout);
-    labTimers = [];
-    const steps = [...document.querySelectorAll(".lab-step")];
-    steps.forEach((step) => step.classList.remove("is-active"));
-    labRun.disabled = true;
-    get("lab-status").textContent = copy().labRunning;
-    const reduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-    steps.forEach((step, index) =>
-      labTimers.push(
-        setTimeout(
-          () => {
-            step.classList.add("is-active");
-            if (index === steps.length - 1) {
-              labRun.disabled = false;
-              get("lab-status").textContent = copy().labDone;
-            }
-          },
-          reduced ? 0 : index * 650,
-        ),
-      ),
-    );
-  });
   const motionTargets = document.querySelectorAll(
-    ".service-card,.industry-card,.workflow-step,.faq-accordion details,.form-card,.access-copy,.proof-heading,.proof-stat,.proof-card",
+    ".service-card,.workflow-step,.faq-accordion details,.form-card,.access-copy,.proof-heading,.proof-stat",
   );
   if ("IntersectionObserver" in window) {
     const motionObserver = new IntersectionObserver(
@@ -672,6 +651,11 @@
       })
       .catch(() => {});
   }
+  const phoneIsValid = (value) => value === "" || (/^\+?[0-9\s().-]{6,30}$/.test(value) && value.replace(/\D/g, "").length >= 7 && value.replace(/\D/g, "").length <= 15);
+  const localToday = () => {
+    const now = new Date();
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  };
   let captchaToken = "", widgetId, inFlight = false, submissionKey = "", signature = "";
   const enabled = cfg.projectRequestsEnabled === true && !!cfg.apiUrl && !!cfg.turnstileSiteKey && !!http && typeof window.crypto?.randomUUID === "function";
   const fields = get("request-fields");
@@ -715,6 +699,15 @@
       input.value = input.value.trim();
       input.setCustomValidity(input.value.length < minimum ? copy().trimmedInvalid : "");
     }
+    // Campos del modelo de agencia (si no existen en la página, se omiten y el formulario sigue siendo válido).
+    const amountInput = get("budget-amount"), whatsappInput = get("whatsapp"), deadlineInput = get("deadline");
+    const amountMode = get("budget").value === "amount";
+    if (amountInput) amountInput.setCustomValidity(amountMode && !(Number(amountInput.value) > 0) ? copy().amountInvalid : "");
+    if (whatsappInput) {
+      whatsappInput.value = whatsappInput.value.trim();
+      whatsappInput.setCustomValidity(phoneIsValid(whatsappInput.value) ? "" : copy().whatsappInvalid);
+    }
+    if (deadlineInput) deadlineInput.setCustomValidity(deadlineInput.value && deadlineInput.value < localToday() ? copy().deadlineInvalid : "");
     if (!form.checkValidity()) {
       form.reportValidity();
       showMessage("invalid");
@@ -725,14 +718,20 @@
       return;
     }
     const payload = {
+      form: "project-request",
       name: get("name").value.trim(),
       email: get("email").value.trim(),
       clientType: get("client-type").value,
+      category: optionalValue("category"),
       service: get("service").value,
       description: get("description").value.trim(),
       budget: get("budget").value,
+      budgetAmount: amountMode ? Number(optionalValue("budget-amount")) : undefined,
+      budgetCurrency: amountMode ? optionalValue("budget-currency") : undefined,
       timeline: get("timeline").value,
+      desiredDate: optionalValue("deadline"),
       organization: get("organization").value.trim(),
+      whatsapp: optionalValue("whatsapp"),
       language: get("language").value,
       consent: get("consent").checked,
       privacyVersion: form.dataset.privacyVersion,

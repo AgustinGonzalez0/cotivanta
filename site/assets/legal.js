@@ -26,21 +26,21 @@
       privacyIntro: `
         <span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span>PRIVACY · ARGENTINA</span>
         <h1>How we handle <span>your data.</span></h1>
-        <p>Information for people who tell us about a problem or project and request a quote.</p>
-        <p class="legal-updated">Last updated: <time datetime="2026-10-30">October 30, 2026</time> · Version 2026-10-30.1-draft · Draft, not approved for receiving real personal data.</p>`,
+        <p>Information for people who tell us what they need and request a quote, and for professionals who apply to work with Cotivanta.</p>
+        <p class="legal-updated">Last updated: <time datetime="2026-11-12">November 12, 2026</time> · Version 2026-11-12.1-draft · Draft, not approved for receiving real personal data.</p>`,
       privacyNotice: `
         <strong id="draft-title">Review required before enabling the form</strong>
         <p>The controller's legal address, applicable tax information, an approved retention period, the review of providers and international transfers, and the organization of support and security procedures are still pending. This policy does not certify legal compliance or confirm registration with the AAIP.</p>`,
       responsible: `
         <span class="legal-number">01 / DATA CONTROLLER</span>
         <h2 id="responsible-title">Who processes the data</h2>
-        <p>The controller of Cotivanta's inquiry database is <strong>Agustín Gonzales</strong>, in Argentina. For general inquiries or to exercise your personal data rights, email <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
+        <p>The controller of Cotivanta's inquiry and application databases is <strong>Agustín Gonzales</strong>, in Argentina. For general inquiries or to exercise your personal data rights, email <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
         <p><strong>Legal address:</strong> pending. <strong>CUIT (tax identification number) and applicable tax information:</strong> pending. The controller must complete this identification before receiving real personal data.</p>`,
       data: `
         <span class="legal-number">02 / DATA AND THE FORM</span>
         <h2 id="data-title">What we ask for and what happens if you do not provide it</h2>
-        <p>The required fields are full name, email address, client type, requested service, and a description of the problem or project. Acceptance of the privacy notice is required in this form. Without these fields and acceptance, the site does not allow the inquiry to be submitted; no obligation to purchase services arises.</p>
-        <p>Budget, timeline, and company or brand are optional. The selected language is also recorded. You may leave the budget or timeline undecided. Inaccurate data, especially the email address, may prevent us from responding or assessing the request correctly.</p>
+        <p>In the service request form, the required fields are full name, email address, category, requested service, and a description of what you need. Acceptance of the privacy notice is required. Without these fields and acceptance, the site does not allow the inquiry to be submitted; no obligation to purchase services arises.</p>
+        <p>The approximate budget (amount and currency), timeline, desired deadline, WhatsApp number, client type, and company or brand are optional. The selected language is also recorded. You may leave the budget or timeline undecided. Inaccurate data, especially the email address, may prevent us from responding or assessing the request correctly.</p>
         <p>The backend implementation records the acceptance date and the policy version associated with each new request. These records are only created if the form and database are configured and submission completes successfully.</p>
         <p>We do not ask for sensitive data, identity documents, passwords, or credentials. Do not include that information or unnecessary personal data about other people in the description.</p>`,
       purpose: `
@@ -56,7 +56,9 @@
         <ul>
           <li><strong>Supabase:</strong> the intended provider for receiving and storing inquiry data and acceptance records.</li>
           <li><strong>Cloudflare Turnstile:</strong> the intended verification and abuse-prevention service. It may process technical data, such as IP addresses and browser information, when configured and loaded on the site.</li>
-          <li><strong>Google / Gmail:</strong> communications sent to cotivanta@gmail.com are processed by the email provider; it would also be used to respond if the team manages inquiries there. The form does not automatically send an email.</li>
+          <li><strong>Resend:</strong> the intended provider for sending Cotivanta an internal email notice every time an inquiry or an application arrives. The notice reproduces the data submitted in the form (for example, name, email and description) and lets the team reply to the person who wrote.</li>
+          <li><strong>Google / Gmail:</strong> notices and communications sent to cotivanta@gmail.com are processed by the email provider; it would also be used to respond if the team manages inquiries and applications there.</li>
+          <li><strong>Independent professionals:</strong> Cotivanta coordinates jobs with independent professionals. If a quote is accepted, the information about the request that is needed to carry it out may be shared with the assigned professional, under a confidentiality commitment that must be documented before launch. Other people's contact details and inquiries that were not accepted are not shared.</li>
           <li><strong>Web hosting:</strong> the final provider is yet to be confirmed; it may process technical browsing and security logs.</li>
         </ul>
         <p>There are no plans to sell data or share it for advertising. Disclosures required by a legal obligation or a valid request from a competent authority may occur.</p>
@@ -91,11 +93,18 @@
         <h2 id="cookies-title">No built-in analytics or advertising</h2>
         <p>The current code does not include Analytics, Pixel, or newsletters and does not save the language in cookies or local storage. Hosting and third-party technologies must be checked during deployment. If non-essential technologies are added, their information and consent requirements must be reviewed before loading them.</p>
         <a class="text-link" href="policies.html#cookies">View the cookies and storage policy ↗</a>`,
+      professionals: `
+        <span class="legal-number">09 / PROFESSIONAL APPLICATIONS</span>
+        <h2 id="professionals-title">If you apply to work with Cotivanta</h2>
+        <p>The “Work with Cotivanta” form asks for your full name, email address, country of residence, specialties, a description of your experience, a link to your portfolio, languages, availability, pricing model and preferred currency. City, WhatsApp number, years of experience, LinkedIn, other links and an indicative rate are optional. The links you share should point to work or professional profiles you want to show us.</p>
+        <p>We do not ask for ID numbers, passwords, bank details or sensitive information. Do not include them in the description or in the links. We record the date of the application, the version of this policy you accepted and an initial internal status of “pending”.</p>
+        <p>We use the application only to assess your profile and to contact you when an opportunity matches your skills. <strong>We do not create a public profile or a directory of professionals, we do not create an account for you and we do not share your application with clients.</strong> Applying does not mean you are hired or guarantee you will receive work. If a job is agreed, the information needed to carry it out will be shared only to the extent strictly necessary.</p>
+        <p>Processing is based on your freely given, express, informed consent, under the same access, provider, transfer, retention and rights rules described in the other sections. The retention period for applications is also <strong>pending approval</strong>. You may request access, rectification or deletion by writing to <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>`,
       versions: `
-        <span class="legal-number">09 / VERSIONS AND LEGAL FRAMEWORK</span>
+        <span class="legal-number">10 / VERSIONS AND LEGAL FRAMEWORK</span>
         <h2 id="versions-title">Policy history</h2>
-        <p>The version accompanying the form is <strong>2026-10-30.1-draft</strong>. It is a draft that has not taken effect for receiving real personal data. Subsequent changes must be identified and retained without modifying historical files.</p>
-        <ul><li>Current working version: 2026-10-30.1-draft, published on this page.</li><li><a href="privacy/initial-draft.txt">Previous draft — October 2026 (historical archive, in Spanish)</a>.</li></ul>
+        <p>The version accompanying the forms is <strong>2026-11-12.1-draft</strong>. It is a draft that has not taken effect for receiving real personal data. Subsequent changes must be identified and retained without modifying historical files.</p>
+        <ul><li>Current working version: 2026-11-12.1-draft, published on this page.</li><li><a href="privacy/2026-10-30.1-draft.txt">Version 2026-10-30.1-draft — text in force until November 12, 2026 (historical archive, in Spanish)</a>.</li><li><a href="privacy/initial-draft.txt">Previous draft — October 2026 (historical archive, in Spanish)</a>.</li></ul>
         <p>Framework consulted: <a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/actualizacion">Law 25,326</a>, <a href="https://www.argentina.gob.ar/normativa/nacional/decreto-1558-2001-70368/actualizacion">Decree 1558/2001</a>, and <a href="https://www.argentina.gob.ar/normativa/nacional/norma-307621/texto">AAIP Resolution 14/2018</a>. This general information requires legal review for Cotivanta's actual circumstances.</p>`,
       policiesIntro: `
         <span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span>LEGAL INFORMATION</span>

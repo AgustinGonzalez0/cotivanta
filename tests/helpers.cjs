@@ -7,7 +7,8 @@ const root = resolve(__dirname, "..");
 const read = file => readFileSync(resolve(root, file), "utf8");
 function factory(file, name, overrides = {}) {
   const source = stripTypeScriptTypes(read(file).replace(/^export /gm, ""));
-  const context = { Request, Response, TextEncoder, TextDecoder, Uint8Array, AbortSignal, crypto: webcrypto, setTimeout, clearTimeout, ...overrides };
+  // URL is a global in the Deno runtime where these files really run; the sandbox must expose it too.
+  const context = { Request, Response, TextEncoder, TextDecoder, Uint8Array, AbortSignal, URL, crypto: webcrypto, setTimeout, clearTimeout, ...overrides };
   vm.runInNewContext(source + `\nglobalThis.result = ${name};`, context);
   return context.result;
 }

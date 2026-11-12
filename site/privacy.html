@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a1721">
   <meta name="robots" content="noindex, follow">
-  <meta name="privacy-version" content="2026-10-30.1-draft">
-  <meta name="description" content="Borrador de la política de privacidad de Cotivanta para consultas y cotizaciones en Argentina.">
+  <meta name="privacy-version" content="2026-11-12.1-draft">
+  <meta name="description" content="Borrador de la política de privacidad de Cotivanta para consultas, cotizaciones y postulaciones de profesionales en Argentina.">
   <title>Cotivanta — Política de privacidad (borrador)</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=3">
   <link rel="stylesheet" href="assets/styles.css">
@@ -33,8 +33,8 @@
     <div class="legal-intro" data-i18n="privacyIntro">
       <span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span>PRIVACIDAD · ARGENTINA</span>
       <h1>Cómo tratamos <span>tus datos.</span></h1>
-      <p>Información para quienes nos cuentan un problema o proyecto y solicitan una cotización.</p>
-      <p class="legal-updated">Última actualización: <time datetime="2026-10-30">30 de octubre de 2026</time> · Versión 2026-10-30.1-draft · Borrador, no habilitado para recepción de datos reales.</p>
+      <p>Información para quienes nos cuentan qué necesitan y solicitan un presupuesto, y para los profesionales que se postulan para trabajar con Cotivanta.</p>
+      <p class="legal-updated">Última actualización: <time datetime="2026-11-12">12 de noviembre de 2026</time> · Versión 2026-11-12.1-draft · Borrador, no habilitado para recepción de datos reales.</p>
     </div>
     <aside class="legal-notice" aria-labelledby="draft-title" data-i18n="privacyNotice">
       <strong id="draft-title">Revisión pendiente antes de habilitar el formulario</strong>
@@ -45,15 +45,15 @@
       <section class="legal-document" id="responsable" aria-labelledby="responsible-title" data-i18n="responsible">
         <span class="legal-number">01 / RESPONSABLE</span>
         <h2 id="responsible-title">Quién trata los datos</h2>
-        <p>El responsable de la base de consultas de Cotivanta es <strong>Agustín Gonzales</strong>, en Argentina. Para consultas generales o para ejercer derechos sobre datos personales, escribí a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
+        <p>El responsable de las bases de consultas y de postulaciones de Cotivanta es <strong>Agustín Gonzales</strong>, en Argentina. Para consultas generales o para ejercer derechos sobre datos personales, escribí a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
         <p><strong>Domicilio legal:</strong> pendiente de informar. <strong>CUIT e información fiscal aplicable:</strong> pendientes de completar. El responsable debe completar esta identificación antes de recibir datos reales.</p>
       </section>
 
       <section class="legal-document" id="datos" aria-labelledby="data-title" data-i18n="data">
         <span class="legal-number">02 / DATOS Y FORMULARIO</span>
         <h2 id="data-title">Qué solicitamos y qué ocurre si no lo proporcionás</h2>
-        <p>Los campos obligatorios son nombre completo, correo electrónico, tipo de cliente, servicio solicitado y descripción del problema o proyecto. La aceptación del aviso de privacidad es necesaria en este formulario. Sin estos campos y la aceptación, el sitio no permite enviar la consulta; no se genera una obligación de contratar.</p>
-        <p>El presupuesto, el plazo y la empresa o marca son opcionales. También se registra el idioma seleccionado. Se puede dejar el presupuesto o el plazo sin definir. Los datos inexactos, especialmente el correo, pueden impedir que podamos responder o evaluar correctamente la solicitud.</p>
+        <p>En el formulario de pedido de servicios, los campos obligatorios son nombre completo, correo electrónico, categoría, servicio solicitado y descripción de lo que necesitás. La aceptación del aviso de privacidad es necesaria. Sin estos campos y la aceptación, el sitio no permite enviar la consulta; no se genera una obligación de contratar.</p>
+        <p>El presupuesto aproximado (monto y moneda), el plazo, la fecha límite deseada, el WhatsApp, el tipo de cliente y la empresa o marca son opcionales. También se registra el idioma seleccionado. Se puede dejar el presupuesto o el plazo sin definir. Los datos inexactos, especialmente el correo, pueden impedir que podamos responder o evaluar correctamente la solicitud.</p>
         <p>La implementación del backend registra la fecha de aceptación y la versión de la política asociada a cada nueva solicitud. Estos registros solo se generan si el formulario y la base están configurados y el envío se completa correctamente.</p>
         <p>No pedimos datos sensibles, documentos de identidad, contraseñas ni credenciales. No incluyas esa información ni datos personales innecesarios de otras personas en la descripción.</p>
       </section>
@@ -73,7 +73,9 @@
         <ul>
           <li><strong>Supabase:</strong> proveedor previsto para recibir y almacenar los datos de la consulta y sus registros de aceptación.</li>
           <li><strong>Cloudflare Turnstile:</strong> servicio previsto de verificación y prevención de abuso. Puede procesar datos técnicos, como IP e información del navegador, cuando se configure y cargue en el sitio.</li>
-          <li><strong>Google / Gmail:</strong> las comunicaciones dirigidas a cotivanta@gmail.com son procesadas por el proveedor del correo; se utilizaría también para responder si el equipo gestiona allí las consultas. El formulario no envía automáticamente un email.</li>
+          <li><strong>Resend:</strong> proveedor previsto para enviar a Cotivanta un aviso interno por correo cada vez que llega una consulta o una postulación. El aviso reproduce los datos enviados en el formulario (por ejemplo, nombre, correo y descripción) y permite responder a la persona que escribió.</li>
+          <li><strong>Google / Gmail:</strong> los avisos y las comunicaciones dirigidas a cotivanta@gmail.com son procesados por el proveedor del correo; se utilizaría también para responder si el equipo gestiona allí las consultas y postulaciones.</li>
+          <li><strong>Profesionales independientes:</strong> Cotivanta coordina los trabajos con profesionales independientes. Si un presupuesto es aceptado, la información del pedido que sea necesaria para realizarlo puede compartirse con el profesional asignado, bajo un compromiso de confidencialidad que debe documentarse antes del lanzamiento. No se comparten los datos de contacto de otras personas ni consultas no aceptadas.</li>
           <li><strong>Alojamiento web:</strong> proveedor definitivo pendiente de confirmar; puede tratar registros técnicos de navegación y seguridad.</li>
         </ul>
         <p>No se prevé vender los datos ni compartirlos para publicidad. Podrán existir comunicaciones exigidas por una obligación legal o un requerimiento válido de autoridad competente.</p>
@@ -118,11 +120,20 @@
         <a class="text-link" href="policies.html#cookies">Consultar la política de cookies y almacenamiento ↗</a>
       </section>
 
+      <section class="legal-document" id="profesionales" aria-labelledby="professionals-title" data-i18n="professionals">
+        <span class="legal-number">09 / POSTULACIONES DE PROFESIONALES</span>
+        <h2 id="professionals-title">Si te postulás para trabajar con Cotivanta</h2>
+        <p>El formulario «Trabajá con Cotivanta» solicita nombre y apellido, correo electrónico, país de residencia, especialidades, descripción de tu experiencia, un enlace a tu portfolio, idiomas, disponibilidad, modalidad de cobro y moneda preferida. Son opcionales la ciudad, el WhatsApp, los años de experiencia, LinkedIn, otros enlaces y una tarifa orientativa. Los enlaces que compartas deben apuntar a trabajos o perfiles profesionales que quieras mostrarnos.</p>
+        <p>No pedimos DNI, contraseñas, datos bancarios ni información sensible. No los incluyas en la descripción ni en los enlaces. Registramos la fecha de la postulación, la versión de esta política que aceptaste y un estado interno inicial «pendiente».</p>
+        <p>Usamos la postulación únicamente para evaluar tu perfil y contactarte cuando exista una oportunidad compatible con tus habilidades. <strong>No creamos un perfil público ni un directorio de profesionales, no te creamos una cuenta y no compartimos tu postulación con clientes.</strong> Postularte no implica una contratación ni garantiza que recibas trabajos. Si se acuerda un trabajo, la información necesaria para ejecutarlo se compartirá solo en la medida indispensable.</p>
+        <p>El tratamiento se plantea sobre tu consentimiento libre, expreso e informado, con las mismas reglas de acceso, proveedores, transferencias, conservación y derechos descritas en las demás secciones. El plazo de conservación de las postulaciones también está <strong>pendiente de aprobación</strong>. Podés pedir su acceso, rectificación o supresión escribiendo a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
+      </section>
+
       <section class="legal-document" id="versiones" aria-labelledby="versions-title" data-i18n="versions">
-        <span class="legal-number">09 / VERSIONES Y MARCO LEGAL</span>
+        <span class="legal-number">10 / VERSIONES Y MARCO LEGAL</span>
         <h2 id="versions-title">Historial de la política</h2>
-        <p>La versión que acompaña al formulario es <strong>2026-10-30.1-draft</strong>. Es un borrador sin entrada en vigor para la recepción de datos reales. Los cambios posteriores deben identificarse y conservarse sin modificar los archivos históricos.</p>
-        <ul><li>Versión de trabajo actual: 2026-10-30.1-draft, publicada en esta página.</li><li><a href="privacy/initial-draft.txt">Borrador anterior — octubre de 2026 (archivo histórico)</a>.</li></ul>
+        <p>La versión que acompaña a los formularios es <strong>2026-11-12.1-draft</strong>. Es un borrador sin entrada en vigor para la recepción de datos reales. Los cambios posteriores deben identificarse y conservarse sin modificar los archivos históricos.</p>
+        <ul><li>Versión de trabajo actual: 2026-11-12.1-draft, publicada en esta página.</li><li><a href="privacy/2026-10-30.1-draft.txt">Versión 2026-10-30.1-draft — texto vigente hasta el 12 de noviembre de 2026 (archivo histórico)</a>.</li><li><a href="privacy/initial-draft.txt">Borrador anterior — octubre de 2026 (archivo histórico)</a>.</li></ul>
         <p>Marco consultado: <a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/actualizacion">Ley 25.326</a>, <a href="https://www.argentina.gob.ar/normativa/nacional/decreto-1558-2001-70368/actualizacion">Decreto 1558/2001</a> y <a href="https://www.argentina.gob.ar/normativa/nacional/norma-307621/texto">Resolución AAIP 14/2018</a>. Esta información general requiere revisión jurídica para las condiciones reales de Cotivanta.</p>
       </section>
     </div>

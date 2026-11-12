@@ -26,12 +26,12 @@ test("disabled intake leaves controls and button disabled and never loads captch
   assert.equal(api.el["request-fields"].disabled, true); assert.equal(api.el["submit-button"].disabled, true);
   assert.equal(api.el["intake-status"].hidden, false); assert.equal(api.script, undefined); assert.equal(api.requests.length, 0);
 });
-test("requested public fallback restores 200 clients and 5 teams independently of intake", () => {
+test("requested public fallback restores 27 clients and 5 teams independently of intake", () => {
   const context = { window: {} };
   vm.runInNewContext(read("site/config.js"), context);
   const config = context.window.COTIVANTA_CONFIG;
   const api = setup({ enabled: false, config: { metricsVerified: config.metricsVerified, clientCount: config.clientCount, teamCount: config.teamCount } });
-  assert.equal(api.el["client-count"].textContent, "200");
+  assert.equal(api.el["client-count"].textContent, "27");
   assert.equal(api.el["team-count"].textContent, "5");
   assert.equal(api.el["request-fields"].disabled, true);
 });

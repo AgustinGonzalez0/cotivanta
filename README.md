@@ -1,4 +1,13 @@
-# Cotivanta — Estudio de desarrollo digital (web bilingüe)
+# Cotivanta — Agencia de servicios profesionales (web bilingüe)
+
+**Modelo (noviembre 2026):** Cotivanta vende y gestiona servicios de cinco áreas (tecnología, diseño, audiovisual, marketing y negocios, más una categoría abierta) y los ejecuta con **profesionales independientes** a los que paga un importe acordado de antemano. No es un marketplace: el cliente solo trata con Cotivanta. La web tiene dos recorridos: «Quiero contratar un servicio» (formulario de presupuesto) y «Quiero trabajar con Cotivanta» (postulación de profesionales, sin cuentas ni perfiles públicos). Despliegue y pruebas: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+
+- `site/assets/catalog.js`: catálogo único de categorías, servicios, monedas e idiomas (alimenta tarjetas, selectores y especialidades).
+- `site/assets/agency-copy.js`: textos ES/EN de la portada de agencia (tienen prioridad sobre las claves históricas de `app.js`).
+- `site/assets/agency.js` / `professional.js` / `agency.css`: tarjetas y formulario de clientes ampliado / postulación de profesionales / estilos.
+- `supabase/migrations/20261112010000_agency_services.sql`: columnas nuevas de consultas, `professional_applications`, su cola de avisos y RLS.
+- La única función pública sigue siendo `project-request` (atiende ambos formularios); `notify-requests` envía los avisos de las dos colas. Secretos nuevos: `PROFESSIONAL_APPLICATIONS_ENABLED` y `NOTIFICATION_JOB_SECRET` también en `project-request`.
+- La portada **no enlaza** al panel administrativo (`admin.html` sigue existiendo y se abre escribiendo su dirección).
 
 > **Estado actual:** formulario habilitado temporalmente en la configuración pública a pedido del responsable. No se activó ni verificó la recepción en Supabase; siguen pendientes la revisión legal y el despliegue coordinado. Ver [despliegue](docs/DEPLOYMENT.md) y [seguridad](docs/SECURITY.md); estas guías sustituyen las instrucciones históricas de activación de abajo.
 

@@ -1,0 +1,179 @@
+COTIVANTA — Política de privacidad (borrador)
+Versión 2026-10-30.1-draft — ARCHIVO HISTÓRICO, no modificar.
+Texto vigente hasta el 12 de noviembre de 2026, antes de incorporar el modelo de agencia y las postulaciones profesionales.
+
+PRIVACIDAD · ARGENTINA
+      Cómo tratamos tus datos.
+
+      Información para quienes nos cuentan un problema o proyecto y solicitan una cotización.
+
+      Última actualización: 30 de octubre de 2026 · Versión 2026-10-30.1-draft · Borrador, no habilitado para recepción de datos reales.
+
+    
+
+    
+      Revisión pendiente antes de habilitar el formulario
+      Faltan el domicilio legal del responsable, la información fiscal aplicable, un plazo de conservación aprobado, la revisión de proveedores y transferencias internacionales y la organización de los procedimientos de atención y seguridad. Esta política no certifica cumplimiento legal ni acredita una inscripción ante la AAIP.
+
+    
+
+
+    
+      
+        
+01 / RESPONSABLE
+
+        Quién trata los datos
+
+        El responsable de la base de consultas de Cotivanta es Agustín Gonzales, en Argentina. Para consultas generales o para ejercer derechos sobre datos personales, escribí a cotivanta@gmail.com (mailto:cotivanta@gmail.com).
+
+        Domicilio legal: pendiente de informar. CUIT e información fiscal aplicable: pendientes de completar. El responsable debe completar esta identificación antes de recibir datos reales.
+
+      
+
+
+      
+        
+02 / DATOS Y FORMULARIO
+
+        Qué solicitamos y qué ocurre si no lo proporcionás
+
+        Los campos obligatorios son nombre completo, correo electrónico, tipo de cliente, servicio solicitado y descripción del problema o proyecto. La aceptación del aviso de privacidad es necesaria en este formulario. Sin estos campos y la aceptación, el sitio no permite enviar la consulta; no se genera una obligación de contratar.
+
+        El presupuesto, el plazo y la empresa o marca son opcionales. También se registra el idioma seleccionado. Se puede dejar el presupuesto o el plazo sin definir. Los datos inexactos, especialmente el correo, pueden impedir que podamos responder o evaluar correctamente la solicitud.
+
+        La implementación del backend registra la fecha de aceptación y la versión de la política asociada a cada nueva solicitud. Estos registros solo se generan si el formulario y la base están configurados y el envío se completa correctamente.
+
+        No pedimos datos sensibles, documentos de identidad, contraseñas ni credenciales. No incluyas esa información ni datos personales innecesarios de otras personas en la descripción.
+
+      
+
+
+      
+        
+03 / FINALIDAD Y CONSENTIMIENTO
+
+        Para qué usaríamos la información
+
+        La única finalidad comercial prevista es recibir el problema o proyecto que necesitás resolver, evaluar su viabilidad, contactarte para aclaraciones y preparar o dar seguimiento a una cotización. No utilizamos el formulario para crear cuentas, suscribirte a newsletters, realizar publicidad ni incorporar herramientas de analítica.
+
+        El tratamiento de la consulta se plantea sobre el consentimiento libre, expreso e informado, de acuerdo con los artículos 5 y 6 de la Ley 25.326. El checkbox está desmarcado inicialmente. Podés revocar el consentimiento sin efectos retroactivos escribiendo al correo de contacto; esto puede impedir continuar la evaluación o el contacto si no existe otra causa legítima de conservación.
+
+        Si contratás un proyecto, habrá que informarte sobre el tratamiento adicional necesario para esa relación. Una consulta no autoriza usos incompatibles con su finalidad ni acepta por sí misma un contrato de servicios.
+
+      
+
+
+      
+        
+04 / ACCESO Y PROVEEDORES
+
+        Quién puede acceder a la información
+
+        El acceso debe limitarse al responsable y a los integrantes del equipo que necesiten intervenir en la evaluación y respuesta, sujetos a confidencialidad. Antes del lanzamiento se deben asignar y comprobar sus permisos individuales.
+
+        
+          - Supabase: proveedor previsto para recibir y almacenar los datos de la consulta y sus registros de aceptación.
+
+          - Cloudflare Turnstile: servicio previsto de verificación y prevención de abuso. Puede procesar datos técnicos, como IP e información del navegador, cuando se configure y cargue en el sitio.
+
+          - Google / Gmail: las comunicaciones dirigidas a cotivanta@gmail.com son procesadas por el proveedor del correo; se utilizaría también para responder si el equipo gestiona allí las consultas. El formulario no envía automáticamente un email.
+
+          - Alojamiento web: proveedor definitivo pendiente de confirmar; puede tratar registros técnicos de navegación y seguridad.
+
+        
+        No se prevé vender los datos ni compartirlos para publicidad. Podrán existir comunicaciones exigidas por una obligación legal o un requerimiento válido de autoridad competente.
+
+        Fuentes de los proveedores: Supabase (https://supabase.com/privacy), Cloudflare (https://www.cloudflare.com/privacypolicy/) y Google (https://policies.google.com/privacy?hl=es). Sus políticas no sustituyen las obligaciones del responsable ni los acuerdos que correspondan.
+
+      
+
+
+      
+        
+05 / TRANSFERENCIAS INTERNACIONALES
+
+        Supabase en Estados Unidos
+
+        El responsable informó que su proyecto Supabase está alojado en Estados Unidos. Antes de habilitar el formulario se debe comprobar la región exacta y revisar los destinos adicionales de soporte, subproveedores, correo y servicios de seguridad; no se afirma que todos los tratamientos ocurran únicamente en ese país.
+
+        Estados Unidos no figura en la lista de destinos adecuados de la AAIP consultada para este borrador. Las transferencias deben resolverse conforme al artículo 12 de la Ley 25.326, su Decreto reglamentario 1558/2001 y las normas complementarias: por ejemplo, mediante garantías contractuales aplicables o consentimiento expreso para la transferencia cuando corresponda.
+
+        Mecanismo pendiente de verificarNo se declara que ya existan cláusulas contractuales válidas para el caso ni se interpreta la aceptación general de esta política como consentimiento expreso a una transferencia internacional. Antes de recibir datos se debe seleccionar, documentar e implementar la vía que corresponda e informar sus condiciones.
+
+
+        Información oficial: AAIP — Transferencias internacionales (https://www.argentina.gob.ar/transferencias-internacionales).
+
+      
+
+
+      
+        
+06 / CONSERVACIÓN Y SEGURIDAD
+
+        Conservación, eliminación y protección
+
+        El plazo concreto de conservación de consultas está pendiente de aprobación antes del lanzamiento. No se presenta el plazo de 12 meses del borrador anterior como una regla legal ni como un borrado ya implementado. Conforme al artículo 4 de la Ley 25.326, los datos deben suprimirse cuando dejen de ser necesarios o pertinentes, sin perjuicio de las obligaciones de conservación que correspondan.
+
+        El procedimiento debe abarcar la base, las comunicaciones por correo, las copias y los respaldos según sus ciclos de retención; también debe contemplar excepciones justificadas por obligaciones legales o derechos de terceros.
+
+        El código incluye validación de entradas, controles de origen, verificación de Turnstile y una base con RLS y sin permisos públicos de lectura o escritura. La aplicación efectiva de esos controles depende de desplegar y configurar correctamente el backend. Antes del lanzamiento deben verificarse HTTPS, permisos, secretos, autenticación de administradores, copias, recuperación y respuesta a incidentes. No se garantiza seguridad absoluta ni se afirma haber auditado el servicio en producción.
+
+      
+
+
+      
+        
+07 / DERECHOS Y RECLAMOS
+
+        Cómo ejercer tus derechos en Argentina
+
+        Escribí a cotivanta@gmail.com (mailto:cotivanta@gmail.com), dirigido a Agustín Gonzales, indicando si solicitás acceso, rectificación, actualización, supresión, confidencialidad o revocación del consentimiento y un medio para responder. No se exige una fórmula específica. Se verificará tu identidad por medios proporcionales; no envíes documentos sensibles sin una indicación fundada y un canal adecuado.
+
+        
+          - Acceso: respuesta dentro de 10 días corridos desde la intimación fehaciente. Es gratuito a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo, conforme al artículo 14.
+
+          - Rectificación, actualización o supresión: las operaciones que correspondan deben realizarse en un máximo de 5 días hábiles desde el reclamo o desde que se advierta el error, conforme al artículo 16.
+
+          - Gratuidad: la rectificación, actualización o supresión de datos inexactos o incompletos se realiza sin cargo, conforme al artículo 19.
+
+          - Límites de la supresión: puede no corresponder cuando exista una obligación legal de conservar o se perjudiquen derechos o intereses legítimos de terceros; cualquier respuesta debe explicar su fundamento.
+
+        
+        LA AGENCIA DE ACCESO A LA INFORMACIÓN PÚBLICA, en su carácter de Órgano de Control de la Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.
+
+        Podés consultar los canales oficiales para ejercer derechos y presentar reclamos en argentina.gob.ar/aaip/datospersonales (https://www.argentina.gob.ar/aaip/datospersonales). El responsable debe organizar la atención del correo y los plazos antes de recibir solicitudes reales.
+
+      
+
+
+      
+        
+08 / COOKIES
+
+        Sin analítica ni publicidad incorporada
+
+        El código actual no incorpora Analytics, Pixel ni newsletters y no guarda el idioma en cookies o almacenamiento local. Deben comprobarse las tecnologías del hosting y de los terceros al desplegar. Si se agregan tecnologías no esenciales, habrá que revisar sus requisitos de información y consentimiento antes de cargarlas.
+
+        Consultar la política de cookies y almacenamiento ↗ (policies.html#cookies)
+      
+
+
+      
+        
+09 / VERSIONES Y MARCO LEGAL
+
+        Historial de la política
+
+        La versión que acompaña al formulario es 2026-10-30.1-draft. Es un borrador sin entrada en vigor para la recepción de datos reales. Los cambios posteriores deben identificarse y conservarse sin modificar los archivos históricos.
+
+        - Versión de trabajo actual: 2026-10-30.1-draft, publicada en esta página.
+- Borrador anterior — octubre de 2026 (archivo histórico) (privacy/initial-draft.txt).
+
+        Marco consultado: Ley 25.326 (https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/actualizacion), Decreto 1558/2001 (https://www.argentina.gob.ar/normativa/nacional/decreto-1558-2001-70368/actualizacion) y Resolución AAIP 14/2018 (https://www.argentina.gob.ar/normativa/nacional/norma-307621/texto). Esta información general requiere revisión jurídica para las condiciones reales de Cotivanta.
+
+      
+
+    
+
+    ← Ver todas las políticas y términos (policies.html)

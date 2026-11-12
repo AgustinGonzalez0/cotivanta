@@ -54,16 +54,16 @@ async function launch() {
       const fulfill = (body, status = 200, type = "application/json") => send("Fetch.fulfillRequest", { requestId, responseCode: status, responseHeaders: [{ name: "Content-Type", value: type }, { name: "Access-Control-Allow-Origin", value: base }, { name: "Access-Control-Allow-Headers", value: "content-type,apikey,authorization,prefer" }, { name: "Access-Control-Allow-Methods", value: "GET,POST,PATCH,OPTIONS" }], body: Buffer.from(typeof body === "string" ? body : JSON.stringify(body)).toString("base64") }, sessionId);
       try {
         if (request.method === "OPTIONS") return await fulfill("", 204);
-        if (request.url.includes("config.js")) return await fulfill(`window.COTIVANTA_CONFIG=${JSON.stringify({ projectRequestsEnabled: options.enabled === true, apiUrl: "https://eucejksxzyerpuingidd.supabase.co/functions/v1/project-request", supabaseUrl: "https://eucejksxzyerpuingidd.supabase.co", supabasePublishableKey: "synthetic-public", turnstileSiteKey: "synthetic", metricsVerified: false })}`, 200, "application/javascript");
+        if (request.url.includes("config.js")) return await fulfill(`window.COTIVANTA_CONFIG=${JSON.stringify({ projectRequestsEnabled: options.enabled === true, professionalApplicationsEnabled: options.enabled === true, apiUrl: "https://eucejksxzyerpuingidd.supabase.co/functions/v1/project-request", supabaseUrl: "https://eucejksxzyerpuingidd.supabase.co", supabasePublishableKey: "synthetic-public", turnstileSiteKey: "synthetic", metricsVerified: false })}`, 200, "application/javascript");
         if (request.url.includes("assets/app.js") && options.noApp || request.url.includes("assets/admin.js") && options.noAdmin) return await send("Fetch.failRequest", { requestId, errorReason: "BlockedByClient" }, sessionId);
         if (!request.url.startsWith("https://")) return await send("Fetch.continueRequest", { requestId }, sessionId);
         requests.push(request);
-        if (request.url.includes("challenges.cloudflare.com/turnstile/v0/api.js")) return await fulfill("window.turnstile={render:(selector,options)=>{window.__captcha=options.callback;options.callback('synthetic');return 1},reset:()=>window.__captcha('fresh-synthetic')};", 200, "application/javascript");
+        if (request.url.includes("challenges.cloudflare.com/turnstile/v0/api.js")) return await fulfill("window.__widgets={};window.turnstile={render:(selector,options)=>{const id=Object.keys(window.__widgets).length+1;window.__widgets[id]=options;if(options.action==='project_request')window.__captcha=options.callback;else window.__captchaPro=options.callback;options.callback('synthetic');return id},reset:(id)=>window.__widgets[id].callback('fresh-synthetic')};", 200, "application/javascript");
         if (request.url.includes("functions/v1/project-request")) {
           const body = JSON.parse(request.postData);
-          if (!receipts.has(body.submissionKey)) receipts.set(body.submissionKey, "11111111-1111-4111-8111-111111111111");
+          if (!receipts.has(body.submissionKey)) receipts.set(body.submissionKey, body.form === "professional-application" ? "22222222-2222-4222-8222-222222222222" : "11111111-1111-4111-8111-111111111111");
           if (options.dropFirst && requests.filter(item => item.url.includes("functions/v1/project-request")).length === 1) return await send("Fetch.failRequest", { requestId, errorReason: "ConnectionClosed" }, sessionId);
-          return await fulfill({ ok: true, requestId: receipts.get(body.submissionKey) });
+          return await fulfill(body.form === "professional-application" ? { ok: true, applicationId: receipts.get(body.submissionKey) } : { ok: true, requestId: receipts.get(body.submissionKey) });
         }
         if (request.url.includes("auth/v1/token")) return await fulfill({ access_token: "aal1-synthetic", expires_in: 300, user: { app_metadata: { cotivanta_admin: true }, factors: [{ id: "synthetic-factor", factor_type: "totp", status: "verified" }] } });
         if (request.url.includes("/challenge")) return await fulfill({ id: "synthetic-challenge" });
