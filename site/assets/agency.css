@@ -284,3 +284,62 @@ ol.steps-panel {
     transition: none;
   }
 }
+
+/* ---------- Dos formularios lado a lado ---------- */
+.forms-section {
+  background: #d3edbb;
+  scroll-margin-top: 10px;
+}
+.forms-duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  align-items: start;
+  position: relative;
+}
+.form-col {
+  min-width: 0;
+  scroll-margin-top: 90px;
+}
+.form-col-head {
+  margin-bottom: 24px;
+}
+.form-col-kicker {
+  display: inline-block;
+  background: #1f4d2b;
+  color: #eaf8d8;
+  padding: 7px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+.form-col-head h2 {
+  margin: 14px 0 10px;
+  font-size: clamp(30px, 3.6vw, 46px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #15361f;
+}
+.form-col-head h2 span {
+  color: #527f54;
+}
+.form-col-head p {
+  color: #547158;
+  font-size: 15px;
+  max-width: 460px;
+}
+@media (max-width: 1000px) {
+  .forms-duo {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1240px) {
+  .forms-duo .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+.forms-duo .form-card {
+  padding: 28px;
+}

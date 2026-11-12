@@ -17,7 +17,7 @@ function dictionaries() {
 const attr = name => [...html.matchAll(new RegExp(`\\b${name}="([^"]+)"`, "g"))].map(match => match[1]);
 
 test("the page follows the requested structure, in order", () => {
-  const order = ['class="site-header"', 'class="hero section-dark"', 'id="services"', 'id="process"', 'id="work"', 'id="apply"', 'id="faq"', 'id="request"', "<footer"].map(marker => html.indexOf(marker));
+  const order = ['class="site-header"', 'class="hero section-dark"', 'id="services"', 'id="process"', 'id="work"', 'id="request"', 'id="apply"', 'id="faq"', "<footer"].map(marker => html.indexOf(marker));
   assert.ok(order.every(index => index > 0), `missing section: ${order}`);
   assert.deepEqual(order, [...order].sort((a, b) => a - b));
   assert.equal((html.match(/<h1\b/g) || []).length, 1);

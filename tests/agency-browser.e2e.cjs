@@ -240,7 +240,7 @@ for (const language of ["es", "en"]) test(`mobile layout (${language}): no horiz
 test("desktop layout has no horizontal overflow with every section rendered", async () => {
   const page = await browser.page(base, "/", { enabled: true }); await ready(page, "pro-fields");
   assert.equal(await page.evaluate("document.documentElement.scrollWidth<=innerWidth"), true);
-  assert.equal(await page.evaluate("[...document.querySelectorAll('main section')].map(s=>s.id).filter(Boolean).join()"), "proof,services,process,work,apply,faq,request");
+  assert.equal(await page.evaluate("[...document.querySelectorAll('main section')].map(s=>s.id).filter(Boolean).join()"), "proof,services,process,work,forms,faq");
   assert.equal(page.errors.length, 0); await page.close();
 });
 test("every in-page navigation target exists and the document language follows the switch", async () => {

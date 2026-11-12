@@ -380,322 +380,14 @@
           </div>
         </div>
       </section>
-      <section class="access-section apply-section" id="apply">
-        <div class="container access-layout">
-          <div class="access-copy">
-            <span class="eyebrow eyebrow-light"
-              ><span class="eyebrow-line"></span
-              ><span data-i18n="applyEyebrow">POSTULACIÓN PROFESIONAL</span></span
-            >
-            <h2 data-i18n="applyTitle">
-              Contanos qué sabés <span>hacer.</span>
-            </h2>
-            <p data-i18n="applyDesc">
-              Completá tu perfil. Cotivanta revisará tu postulación y se pondrá
-              en contacto cuando exista una oportunidad compatible con tus
-              habilidades.
-            </p>
-            <div class="access-points">
-              <span
-                >✓
-                <span data-i18n="applyPoint1"
-                  >Podés elegir varias especialidades</span
-                ></span
-              ><span
-                >✓
-                <span data-i18n="applyPoint2"
-                  >Tu perfil no se publica ni se comparte con clientes</span
-                ></span
-              ><span
-                >✓
-                <span data-i18n="applyPoint3"
-                  >No pedimos DNI, contraseñas ni datos bancarios</span
-                ></span
-              >
+      <section class="access-section forms-section" id="forms">
+        <div class="container forms-duo">
+          <div class="form-col" id="request">
+            <div class="form-col-head">
+              <span class="form-col-kicker" data-i18n="duoClientKicker">PARA CLIENTES</span>
+              <h2 data-i18n="duoClientTitle">Necesito contratar <span>un servicio.</span></h2>
+              <p data-i18n="duoClientDesc">Contanos qué necesitás y te enviamos un presupuesto sin compromiso.</p>
             </div>
-          </div>
-          <div class="form-card">
-            <div class="form-header">
-              <span class="form-tag" data-i18n="proTag">POSTULACIÓN</span>
-              <h3 data-i18n="proCardTitle">Sumate a nuestra red de talentos.</h3>
-              <p data-i18n="formCardDesc">Los campos con * son obligatorios.</p>
-              <p id="pro-intake-status" class="intake-status" role="status" data-i18n="proIntakeDisabled">Las postulaciones están temporalmente deshabilitadas. Podés escribirnos a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
-              <noscript><p>Este formulario necesita JavaScript. No ingreses datos aquí; escribí a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p></noscript>
-            </div>
-            <form
-              id="pro-form"
-              method="post"
-              action="index.html#apply"
-              data-privacy-version="2026-11-12.1-draft"
-              novalidate
-            >
-              <fieldset id="pro-fields" disabled>
-                <div class="form-group" role="group" aria-labelledby="pro-g1">
-                  <h4 id="pro-g1" data-i18n="proGroupPerson">Sobre vos</h4>
-                  <div class="form-row">
-                    <div class="field">
-                      <label for="pro-name" data-i18n="proLabelName">Nombre y apellido *</label>
-                      <input id="pro-name" name="fullName" autocomplete="name" maxlength="100" minlength="2" required />
-                    </div>
-                    <div class="field">
-                      <label for="pro-email" data-i18n="labelEmail">Correo electrónico *</label>
-                      <input id="pro-email" name="email" type="email" autocomplete="email" maxlength="254" required />
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="field">
-                      <label for="pro-country" data-i18n="proLabelCountry">País de residencia *</label>
-                      <input id="pro-country" name="country" autocomplete="country-name" maxlength="80" minlength="2" required />
-                    </div>
-                    <div class="field">
-                      <label for="pro-city" data-i18n="proLabelCity">Ciudad (opcional)</label>
-                      <input id="pro-city" name="city" autocomplete="address-level2" maxlength="80" />
-                    </div>
-                  </div>
-                  <div class="field">
-                    <label for="pro-whatsapp" data-i18n="labelWhatsapp">WhatsApp (opcional)</label>
-                    <input id="pro-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" />
-                  </div>
-                </div>
-                <div class="form-group" role="group" aria-labelledby="pro-g2">
-                  <h4 id="pro-g2" data-i18n="proGroupSkills">Qué sabés hacer</h4>
-                  <div class="field">
-                    <span class="field-label" id="pro-specialties-label" data-i18n="proLabelSpecialties">Especialidades profesionales * (elegí todas las que correspondan)</span>
-                    <div id="pro-specialties" class="spec-groups" role="group" aria-labelledby="pro-specialties-label"></div>
-                  </div>
-                  <div class="field">
-                    <label for="pro-other-specialty" data-i18n="proLabelOtherSpecialty">Otra especialidad (opcional)</label>
-                    <input id="pro-other-specialty" name="otherSpecialty" maxlength="100" />
-                  </div>
-                  <div class="field">
-                    <label for="pro-experience" data-i18n="proLabelExperience">Experiencia y habilidades *</label>
-                    <textarea id="pro-experience" name="experience" rows="5" minlength="30" maxlength="2000" required aria-describedby="pro-experience-hint"></textarea>
-                    <small class="field-hint" id="pro-experience-hint" data-i18n="proExperienceHint">Contanos qué hacés, con qué herramientas y qué tipo de trabajos realizaste (mínimo 30 caracteres).</small>
-                  </div>
-                  <div class="field">
-                    <label for="pro-years" data-i18n="proLabelYears">Años de experiencia (opcional)</label>
-                    <input id="pro-years" name="yearsExperience" type="number" inputmode="numeric" min="0" max="60" step="1" />
-                  </div>
-                </div>
-                <div class="form-group" role="group" aria-labelledby="pro-g3">
-                  <h4 id="pro-g3" data-i18n="proGroupLinks">Tu trabajo</h4>
-                  <div class="field">
-                    <label for="pro-portfolio" data-i18n="proLabelPortfolio">Enlace a tu portfolio o trabajos realizados *</label>
-                    <input id="pro-portfolio" name="portfolioUrl" type="url" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="300" required aria-describedby="pro-links-hint" />
-                  </div>
-                  <div class="field">
-                    <label for="pro-linkedin" data-i18n="proLabelLinkedin">LinkedIn (opcional)</label>
-                    <input id="pro-linkedin" name="linkedinUrl" type="url" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="300" aria-describedby="pro-links-hint" />
-                  </div>
-                  <div class="field">
-                    <label for="pro-links" data-i18n="proLabelLinks">Behance, GitHub, Vimeo u otras plataformas (opcional)</label>
-                    <textarea id="pro-links" name="otherLinks" rows="3" maxlength="1500" autocapitalize="off" spellcheck="false" aria-describedby="pro-links-hint"></textarea>
-                    <small class="field-hint" id="pro-links-hint" data-i18n="proLinksHint">Un enlace por línea (hasta 5). Tienen que empezar con https://</small>
-                  </div>
-                </div>
-                <div class="form-group" role="group" aria-labelledby="pro-g4">
-                  <h4 id="pro-g4" data-i18n="proGroupTerms">Idiomas y condiciones</h4>
-                  <div class="field">
-                    <span class="field-label" id="pro-languages-label" data-i18n="proLabelLanguages">Idiomas que hablás *</span>
-                    <div id="pro-languages" class="check-grid" role="group" aria-labelledby="pro-languages-label"></div>
-                  </div>
-                  <div class="form-row">
-                    <div class="field">
-                      <label for="pro-availability" data-i18n="proLabelAvailability">Disponibilidad para trabajar *</label>
-                      <select id="pro-availability" name="availability" required>
-                        <option value="" data-i18n="proChoose">Elegí una opción</option>
-                        <option value="full-time" data-i18n="proAvailFull">Tiempo completo</option>
-                        <option value="part-time" data-i18n="proAvailPart">Medio tiempo</option>
-                        <option value="project-based" data-i18n="proAvailProject">Por proyecto</option>
-                        <option value="limited" data-i18n="proAvailLimited">Pocas horas por semana</option>
-                      </select>
-                    </div>
-                    <div class="field">
-                      <label for="pro-rate-model" data-i18n="proLabelRateModel">Modalidad de cobro *</label>
-                      <select id="pro-rate-model" name="rateModel" required>
-                        <option value="" data-i18n="proChoose">Elegí una opción</option>
-                        <option value="per-project" data-i18n="proRateProject">Por proyecto</option>
-                        <option value="hourly" data-i18n="proRateHourly">Por hora</option>
-                        <option value="per-deliverable" data-i18n="proRateDeliverable">Por entregable</option>
-                        <option value="monthly" data-i18n="proRateMonthly">Mensual</option>
-                        <option value="to-discuss" data-i18n="proRateDiscuss">A convenir</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="field">
-                      <label for="pro-rate-amount" data-i18n="proLabelRateAmount">Tarifa orientativa (opcional)</label>
-                      <input id="pro-rate-amount" name="rateAmount" type="number" inputmode="decimal" min="0" step="any" aria-describedby="pro-rate-hint" />
-                    </div>
-                    <div class="field">
-                      <label for="pro-currency" data-i18n="proLabelCurrency">Moneda en la que preferís cobrar *</label>
-                      <select id="pro-currency" name="rateCurrency" required>
-                        <option value="" data-i18n="proChoose">Elegí una opción</option>
-                      </select>
-                    </div>
-                  </div>
-                  <small class="field-hint" id="pro-rate-hint" data-i18n="proRateHint">Es solo una referencia para entender tus expectativas: el importe de cada trabajo se acuerda antes de empezar.</small>
-                </div>
-                <div class="field hp-field" aria-hidden="true">
-                  <label for="pro-fax">Fax number</label
-                  ><input id="pro-fax" name="fax_number" tabindex="-1" autocomplete="off" />
-                </div>
-                <div class="captcha-wrap" id="pro-turnstile" aria-label="Verificación de seguridad"></div>
-                <label class="consent-label"
-                  ><input id="pro-consent" name="consent" type="checkbox" required /><span data-i18n="proConsentText"
-                    >Acepto que Cotivanta use estos datos para evaluar mi perfil y contactarme por oportunidades compatibles, y leí el
-                    <a href="privacy.html" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a> (abre otra pestaña).</span
-                  ></label
-                >
-                <div id="pro-message" class="form-message" role="status" aria-live="polite" hidden></div>
-                <button type="submit" class="btn btn-dark btn-submit" id="pro-submit" disabled>
-                  <span data-i18n="proSubmit">Enviar postulación</span><span>↗</span>
-                </button>
-                <p class="form-footnote" data-i18n="proFootnote">
-                  Postularte no implica una contratación ni garantiza que recibas trabajos. Cotivanta revisará tu perfil y se pondrá en contacto cuando exista una oportunidad compatible con tus habilidades.
-                </p>
-              </fieldset>
-              <details class="legal-disclosure">
-                <summary data-i18n="privacyDetailsTitle">Información de privacidad</summary>
-                <aside class="legal-summary" aria-label="Información sobre datos personales">
-                  <p data-i18n="proPrivacySummary"><strong>Responsable: Agustín Gonzales (Cotivanta).</strong> Contacto: <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>. Usamos tu postulación solo para evaluar tu perfil y contactarte por oportunidades compatibles; no la publicamos ni creamos un perfil público. Los campos con * son obligatorios. Podés solicitar acceso, rectificación o supresión por email. <a href="privacy.html">Leé la política de privacidad en español</a> (borrador).</p>
-                  <blockquote lang="es">LA AGENCIA DE ACCESO A LA INFORMACIÓN PÚBLICA, en su carácter de Órgano de Control de la Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.</blockquote>
-                </aside>
-              </details>
-            </form>
-            <div id="pro-success" class="success-state" role="status" tabindex="-1" hidden>
-              <div class="success-icon">✓</div>
-              <h3 data-i18n="proSuccessTitle">Postulación recibida.</h3>
-              <p data-i18n="proSuccessDesc">
-                Gracias por postularte. Cotivanta revisará tu perfil y se pondrá en contacto cuando exista una oportunidad compatible con tus habilidades.
-              </p>
-              <p id="pro-reference"></p>
-              <button type="button" class="text-link success-reset" id="pro-reset" data-i18n="proSuccessReset">
-                Enviar otra postulación ↗
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="faq-section section-light" id="faq">
-        <div class="container faq-layout">
-          <div>
-            <span class="eyebrow eyebrow-light"
-              ><span class="eyebrow-line"></span
-              ><span data-i18n="faqEyebrow">PREGUNTAS FRECUENTES</span></span
-            >
-            <h2 data-i18n="faqTitle">Resolvemos tus<br />primeras dudas.</h2>
-          </div>
-          <div class="faq-accordion">
-            <details>
-              <summary>
-                <span data-i18n="faq1Q">¿Qué servicios ofrece Cotivanta?</span
-                ><span class="faq-plus">+</span>
-              </summary>
-              <p data-i18n="faq1A">
-                Trabajamos en cinco áreas: tecnología y desarrollo, diseño y creatividad, producción audiovisual, marketing y comunicación, y administración y negocios. En la sección de servicios está el detalle de cada una. Si lo que necesitás no figura, podés pedirlo igual.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span data-i18n="faq2Q">¿Cómo solicito un presupuesto?</span
-                ><span class="faq-plus">+</span>
-              </summary>
-              <p data-i18n="faq2A">
-                Completá el formulario de esta página con la categoría, el servicio, una descripción de lo que necesitás y, si querés, tu presupuesto aproximado y la fecha que tenés en mente. Revisamos tu pedido y, si podemos resolverlo, te respondemos con una propuesta. Pedir un presupuesto no tiene costo ni te obliga a contratar.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span data-i18n="faq3Q">¿Cómo se determina el precio?</span
-                ><span class="faq-plus">+</span>
-              </summary>
-              <p data-i18n="faq3A">
-                Depende del alcance de cada pedido: qué hay que hacer, su complejidad y el tiempo que requiere. Por eso no publicamos precios fijos. Te presentamos un presupuesto antes de empezar y el trabajo solo avanza si lo aceptás.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span data-i18n="faq4Q">¿Quién realiza los trabajos?</span
-                ><span class="faq-plus">+</span>
-              </summary>
-              <p data-i18n="faq4A">
-                Cotivanta coordina cada proyecto y lo ejecutan profesionales independientes que trabajan con nosotros. Vos tratás con Cotivanta, que busca a la persona adecuada, supervisa el trabajo y revisa el resultado antes de entregártelo.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span data-i18n="faq5Q">¿Puedo contratar un servicio personalizado?</span
-                ><span class="faq-plus">+</span>
-              </summary>
-              <p data-i18n="faq5A">
-                Sí. Elegí «Otros servicios» o la opción «Algo personalizado» y contanos qué necesitás. Evaluamos cada caso y te avisamos si podemos ayudarte; no todos los pedidos pueden aceptarse.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span data-i18n="faq6Q">¿Cómo puedo trabajar con Cotivanta?</span
-                ><span class="faq-plus">+</span>
-              </summary>
-              <p data-i18n="faq6A">
-                Si sos profesional independiente, completá el formulario de postulación en la sección «Trabajá con Cotivanta». Revisamos tu perfil y te contactamos cuando surge un trabajo compatible con tus habilidades.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span data-i18n="faq7Q">¿Necesito experiencia para postularme?</span
-                ><span class="faq-plus">+</span>
-              </summary>
-              <p data-i18n="faq7A">
-                No pedimos una cantidad mínima de años, pero sí que puedas mostrar trabajos realizados: el formulario incluye un enlace a tu portfolio. Evaluamos cada perfil según los trabajos que tengamos.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span data-i18n="faq8Q">¿Cotivanta garantiza que recibiré proyectos?</span
-                ><span class="faq-plus">+</span>
-              </summary>
-              <p data-i18n="faq8A">
-                No. Postularte no implica una contratación ni te asegura trabajo. Cotivanta se pone en contacto cuando aparece una oportunidad compatible con tus habilidades; cada trabajo y su importe se acuerdan antes de empezar.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-      <section class="access-section" id="request">
-        <div class="container access-layout">
-          <div class="access-copy">
-            <span class="eyebrow eyebrow-light"
-              ><span class="eyebrow-line"></span
-              ><span data-i18n="formEyebrow">EMPECEMOS</span></span
-            >
-            <h2 data-i18n="formTitle">
-              Contanos qué necesitás. <span>Nosotros lo coordinamos.</span>
-            </h2>
-            <p data-i18n="formDesc">
-              Describí tu pedido y, si podemos resolverlo, te enviaremos un
-              presupuesto con el alcance definido. Cotivanta está dando sus
-              primeros pasos y evalúa cada pedido antes de comprometerse.
-            </p>
-            <div class="access-points">
-              <span
-                >✓
-                <span data-i18n="formPoint1"
-                  >Presupuesto adaptado a cada pedido</span
-                ></span
-              ><span
-                >✓
-                <span data-i18n="formPoint2"
-                  >Un solo interlocutor: Cotivanta</span
-                ></span
-              ><span
-                >✓
-                <span data-i18n="formPoint3"
-                  >Sin obligación de contratar</span
-                ></span
-              >
-            </div>
-          </div>
           <div class="form-card">
             <div class="form-header">
               <span class="form-tag" data-i18n="formTag"
@@ -873,6 +565,260 @@
                 Enviar otra solicitud ↗
               </button>
             </div>
+          </div>
+          </div>
+          <div class="form-col" id="apply">
+            <div class="form-col-head">
+              <span class="form-col-kicker" data-i18n="duoProKicker">PARA PROFESIONALES</span>
+              <h2 data-i18n="duoProTitle">Quiero <span>trabajar con Cotivanta.</span></h2>
+              <p data-i18n="duoProDesc">Postulate, contanos qué sabés hacer y te avisamos cuando haya un proyecto compatible.</p>
+            </div>
+          <div class="form-card">
+            <div class="form-header">
+              <span class="form-tag" data-i18n="proTag">POSTULACIÓN</span>
+              <h3 data-i18n="proCardTitle">Sumate a nuestra red de talentos.</h3>
+              <p data-i18n="formCardDesc">Los campos con * son obligatorios.</p>
+              <p id="pro-intake-status" class="intake-status" role="status" data-i18n="proIntakeDisabled">Las postulaciones están temporalmente deshabilitadas. Podés escribirnos a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p>
+              <noscript><p>Este formulario necesita JavaScript. No ingreses datos aquí; escribí a <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>.</p></noscript>
+            </div>
+            <form
+              id="pro-form"
+              method="post"
+              action="index.html#apply"
+              data-privacy-version="2026-11-12.1-draft"
+              novalidate
+            >
+              <fieldset id="pro-fields" disabled>
+                <div class="form-group" role="group" aria-labelledby="pro-g1">
+                  <h4 id="pro-g1" data-i18n="proGroupPerson">Sobre vos</h4>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="pro-name" data-i18n="proLabelName">Nombre y apellido *</label>
+                      <input id="pro-name" name="fullName" autocomplete="name" maxlength="100" minlength="2" required />
+                    </div>
+                    <div class="field">
+                      <label for="pro-email" data-i18n="labelEmail">Correo electrónico *</label>
+                      <input id="pro-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="pro-country" data-i18n="proLabelCountry">País de residencia *</label>
+                      <input id="pro-country" name="country" autocomplete="country-name" maxlength="80" minlength="2" required />
+                    </div>
+                    <div class="field">
+                      <label for="pro-city" data-i18n="proLabelCity">Ciudad (opcional)</label>
+                      <input id="pro-city" name="city" autocomplete="address-level2" maxlength="80" />
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="pro-whatsapp" data-i18n="labelWhatsapp">WhatsApp (opcional)</label>
+                    <input id="pro-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" />
+                  </div>
+                </div>
+                <div class="form-group" role="group" aria-labelledby="pro-g2">
+                  <h4 id="pro-g2" data-i18n="proGroupSkills">Qué sabés hacer</h4>
+                  <div class="field">
+                    <span class="field-label" id="pro-specialties-label" data-i18n="proLabelSpecialties">Especialidades profesionales * (elegí todas las que correspondan)</span>
+                    <div id="pro-specialties" class="spec-groups" role="group" aria-labelledby="pro-specialties-label"></div>
+                  </div>
+                  <div class="field">
+                    <label for="pro-other-specialty" data-i18n="proLabelOtherSpecialty">Otra especialidad (opcional)</label>
+                    <input id="pro-other-specialty" name="otherSpecialty" maxlength="100" />
+                  </div>
+                  <div class="field">
+                    <label for="pro-experience" data-i18n="proLabelExperience">Experiencia y habilidades *</label>
+                    <textarea id="pro-experience" name="experience" rows="5" minlength="30" maxlength="2000" required aria-describedby="pro-experience-hint"></textarea>
+                    <small class="field-hint" id="pro-experience-hint" data-i18n="proExperienceHint">Contanos qué hacés, con qué herramientas y qué tipo de trabajos realizaste (mínimo 30 caracteres).</small>
+                  </div>
+                  <div class="field">
+                    <label for="pro-years" data-i18n="proLabelYears">Años de experiencia (opcional)</label>
+                    <input id="pro-years" name="yearsExperience" type="number" inputmode="numeric" min="0" max="60" step="1" />
+                  </div>
+                </div>
+                <div class="form-group" role="group" aria-labelledby="pro-g3">
+                  <h4 id="pro-g3" data-i18n="proGroupLinks">Tu trabajo</h4>
+                  <div class="field">
+                    <label for="pro-portfolio" data-i18n="proLabelPortfolio">Enlace a tu portfolio o trabajos realizados *</label>
+                    <input id="pro-portfolio" name="portfolioUrl" type="url" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="300" required aria-describedby="pro-links-hint" />
+                  </div>
+                  <div class="field">
+                    <label for="pro-linkedin" data-i18n="proLabelLinkedin">LinkedIn (opcional)</label>
+                    <input id="pro-linkedin" name="linkedinUrl" type="url" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="300" aria-describedby="pro-links-hint" />
+                  </div>
+                  <div class="field">
+                    <label for="pro-links" data-i18n="proLabelLinks">Behance, GitHub, Vimeo u otras plataformas (opcional)</label>
+                    <textarea id="pro-links" name="otherLinks" rows="3" maxlength="1500" autocapitalize="off" spellcheck="false" aria-describedby="pro-links-hint"></textarea>
+                    <small class="field-hint" id="pro-links-hint" data-i18n="proLinksHint">Un enlace por línea (hasta 5). Tienen que empezar con https://</small>
+                  </div>
+                </div>
+                <div class="form-group" role="group" aria-labelledby="pro-g4">
+                  <h4 id="pro-g4" data-i18n="proGroupTerms">Idiomas y condiciones</h4>
+                  <div class="field">
+                    <span class="field-label" id="pro-languages-label" data-i18n="proLabelLanguages">Idiomas que hablás *</span>
+                    <div id="pro-languages" class="check-grid" role="group" aria-labelledby="pro-languages-label"></div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="pro-availability" data-i18n="proLabelAvailability">Disponibilidad para trabajar *</label>
+                      <select id="pro-availability" name="availability" required>
+                        <option value="" data-i18n="proChoose">Elegí una opción</option>
+                        <option value="full-time" data-i18n="proAvailFull">Tiempo completo</option>
+                        <option value="part-time" data-i18n="proAvailPart">Medio tiempo</option>
+                        <option value="project-based" data-i18n="proAvailProject">Por proyecto</option>
+                        <option value="limited" data-i18n="proAvailLimited">Pocas horas por semana</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="pro-rate-model" data-i18n="proLabelRateModel">Modalidad de cobro *</label>
+                      <select id="pro-rate-model" name="rateModel" required>
+                        <option value="" data-i18n="proChoose">Elegí una opción</option>
+                        <option value="per-project" data-i18n="proRateProject">Por proyecto</option>
+                        <option value="hourly" data-i18n="proRateHourly">Por hora</option>
+                        <option value="per-deliverable" data-i18n="proRateDeliverable">Por entregable</option>
+                        <option value="monthly" data-i18n="proRateMonthly">Mensual</option>
+                        <option value="to-discuss" data-i18n="proRateDiscuss">A convenir</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field">
+                      <label for="pro-rate-amount" data-i18n="proLabelRateAmount">Tarifa orientativa (opcional)</label>
+                      <input id="pro-rate-amount" name="rateAmount" type="number" inputmode="decimal" min="0" step="any" aria-describedby="pro-rate-hint" />
+                    </div>
+                    <div class="field">
+                      <label for="pro-currency" data-i18n="proLabelCurrency">Moneda en la que preferís cobrar *</label>
+                      <select id="pro-currency" name="rateCurrency" required>
+                        <option value="" data-i18n="proChoose">Elegí una opción</option>
+                      </select>
+                    </div>
+                  </div>
+                  <small class="field-hint" id="pro-rate-hint" data-i18n="proRateHint">Es solo una referencia para entender tus expectativas: el importe de cada trabajo se acuerda antes de empezar.</small>
+                </div>
+                <div class="field hp-field" aria-hidden="true">
+                  <label for="pro-fax">Fax number</label
+                  ><input id="pro-fax" name="fax_number" tabindex="-1" autocomplete="off" />
+                </div>
+                <div class="captcha-wrap" id="pro-turnstile" aria-label="Verificación de seguridad"></div>
+                <label class="consent-label"
+                  ><input id="pro-consent" name="consent" type="checkbox" required /><span data-i18n="proConsentText"
+                    >Acepto que Cotivanta use estos datos para evaluar mi perfil y contactarme por oportunidades compatibles, y leí el
+                    <a href="privacy.html" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a> (abre otra pestaña).</span
+                  ></label
+                >
+                <div id="pro-message" class="form-message" role="status" aria-live="polite" hidden></div>
+                <button type="submit" class="btn btn-dark btn-submit" id="pro-submit" disabled>
+                  <span data-i18n="proSubmit">Enviar postulación</span><span>↗</span>
+                </button>
+                <p class="form-footnote" data-i18n="proFootnote">
+                  Postularte no implica una contratación ni garantiza que recibas trabajos. Cotivanta revisará tu perfil y se pondrá en contacto cuando exista una oportunidad compatible con tus habilidades.
+                </p>
+              </fieldset>
+              <details class="legal-disclosure">
+                <summary data-i18n="privacyDetailsTitle">Información de privacidad</summary>
+                <aside class="legal-summary" aria-label="Información sobre datos personales">
+                  <p data-i18n="proPrivacySummary"><strong>Responsable: Agustín Gonzales (Cotivanta).</strong> Contacto: <a href="mailto:cotivanta@gmail.com">cotivanta@gmail.com</a>. Usamos tu postulación solo para evaluar tu perfil y contactarte por oportunidades compatibles; no la publicamos ni creamos un perfil público. Los campos con * son obligatorios. Podés solicitar acceso, rectificación o supresión por email. <a href="privacy.html">Leé la política de privacidad en español</a> (borrador).</p>
+                  <blockquote lang="es">LA AGENCIA DE ACCESO A LA INFORMACIÓN PÚBLICA, en su carácter de Órgano de Control de la Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.</blockquote>
+                </aside>
+              </details>
+            </form>
+            <div id="pro-success" class="success-state" role="status" tabindex="-1" hidden>
+              <div class="success-icon">✓</div>
+              <h3 data-i18n="proSuccessTitle">Postulación recibida.</h3>
+              <p data-i18n="proSuccessDesc">
+                Gracias por postularte. Cotivanta revisará tu perfil y se pondrá en contacto cuando exista una oportunidad compatible con tus habilidades.
+              </p>
+              <p id="pro-reference"></p>
+              <button type="button" class="text-link success-reset" id="pro-reset" data-i18n="proSuccessReset">
+                Enviar otra postulación ↗
+              </button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq-section section-light" id="faq">
+        <div class="container faq-layout">
+          <div>
+            <span class="eyebrow eyebrow-light"
+              ><span class="eyebrow-line"></span
+              ><span data-i18n="faqEyebrow">PREGUNTAS FRECUENTES</span></span
+            >
+            <h2 data-i18n="faqTitle">Resolvemos tus<br />primeras dudas.</h2>
+          </div>
+          <div class="faq-accordion">
+            <details>
+              <summary>
+                <span data-i18n="faq1Q">¿Qué servicios ofrece Cotivanta?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq1A">
+                Trabajamos en cinco áreas: tecnología y desarrollo, diseño y creatividad, producción audiovisual, marketing y comunicación, y administración y negocios. En la sección de servicios está el detalle de cada una. Si lo que necesitás no figura, podés pedirlo igual.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq2Q">¿Cómo solicito un presupuesto?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq2A">
+                Completá el formulario de esta página con la categoría, el servicio, una descripción de lo que necesitás y, si querés, tu presupuesto aproximado y la fecha que tenés en mente. Revisamos tu pedido y, si podemos resolverlo, te respondemos con una propuesta. Pedir un presupuesto no tiene costo ni te obliga a contratar.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq3Q">¿Cómo se determina el precio?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq3A">
+                Depende del alcance de cada pedido: qué hay que hacer, su complejidad y el tiempo que requiere. Por eso no publicamos precios fijos. Te presentamos un presupuesto antes de empezar y el trabajo solo avanza si lo aceptás.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq4Q">¿Quién realiza los trabajos?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq4A">
+                Cotivanta coordina cada proyecto y lo ejecutan profesionales independientes que trabajan con nosotros. Vos tratás con Cotivanta, que busca a la persona adecuada, supervisa el trabajo y revisa el resultado antes de entregártelo.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq5Q">¿Puedo contratar un servicio personalizado?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq5A">
+                Sí. Elegí «Otros servicios» o la opción «Algo personalizado» y contanos qué necesitás. Evaluamos cada caso y te avisamos si podemos ayudarte; no todos los pedidos pueden aceptarse.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq6Q">¿Cómo puedo trabajar con Cotivanta?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq6A">
+                Si sos profesional independiente, completá el formulario de postulación en la sección «Trabajá con Cotivanta». Revisamos tu perfil y te contactamos cuando surge un trabajo compatible con tus habilidades.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq7Q">¿Necesito experiencia para postularme?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq7A">
+                No pedimos una cantidad mínima de años, pero sí que puedas mostrar trabajos realizados: el formulario incluye un enlace a tu portfolio. Evaluamos cada perfil según los trabajos que tengamos.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span data-i18n="faq8Q">¿Cotivanta garantiza que recibiré proyectos?</span
+                ><span class="faq-plus">+</span>
+              </summary>
+              <p data-i18n="faq8A">
+                No. Postularte no implica una contratación ni te asegura trabajo. Cotivanta se pone en contacto cuando aparece una oportunidad compatible con tus habilidades; cada trabajo y su importe se acuerdan antes de empezar.
+              </p>
+            </details>
           </div>
         </div>
       </section>
