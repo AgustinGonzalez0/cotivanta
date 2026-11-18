@@ -12,5 +12,5 @@
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm test && npm run test:db && npm run test:browser && npm run build"
   },
-  "devDependencies": { "@electric-sql/pglite": "0.5.15", "typescript": "7.0.2" }
+  "devDependencies": { "@electric-sql/pglite": "0.5.16", "typescript": "7.0.2" }
 }
